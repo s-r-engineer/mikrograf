@@ -57,8 +57,8 @@ You can use this plugin like this in Telegraf:
   # Optional. Better not to ignore
   # ignore_error = false
 
-  # data format MUST be line protocol
-  data_format = "lineprotocol"
+  # data format MUST be influx
+  data_format = "influx"
 ```
 
 ... or for clarity of the configuration you can separate hosts between multiple plugins:
@@ -66,10 +66,10 @@ You can use this plugin like this in Telegraf:
 [[inputs.exec]]
   commands = ["/usr/local/bin/mikrograf"]
   environment = ["MIKROGRAF_TARGET_HOSTS=https://admin22:password@192.168.99.1?ignoreCertificate=true&modules=all&ignoreComments=very_secret_shit"]
-  data_format = "lineprotocol"
+  data_format = "influx"
 
 [[inputs.exec]]
   commands = ["/usr/local/bin/mikrograf"]
   environment = ["MIKROGRAF_TARGET_HOSTS=http://admin:password@192.168.88.1:5987?modules=interface,interface_wireguard_peers,interface_wireless_registration,ip_dhcp_server_lease,ipv6_firewall_filter,ipv6_firewall_nat,ipv6_firewall_mangle,system_script,system_resourses&ignoreComments=ignore_this,ignore_that&ignoreDisabled=false"]
-  data_format = "lineprotocol"
+  data_format = "influx"
 ```

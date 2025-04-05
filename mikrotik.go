@@ -36,11 +36,21 @@ type Mikrotik struct {
 }
 
 func newMikrotik(node string, accumulator *lineProtocol.Accumulator) (m Mikrotik, err error) {
+	if node == "" {
+		return m, fmt.Errorf("mikrotik init -> empty configuration")
+	}
+
 	nodeURLObject, err := url.Parse(node)
 	if err != nil {
 		return m, err
 	}
 
+	if nodeURLObject.Host == "" {
+		return m, fmt.Errorf("mikrotik init -> wrong configuration: %s", node)
+	}
+
+	m.Address = fmt.Sprintf("%s://%s", nodeURLObject.Scheme, nodeURLObject.Host)
+	
 	queryParams := nodeURLObject.Query()
 
 	var (
@@ -67,8 +77,6 @@ func newMikrotik(node string, accumulator *lineProtocol.Accumulator) (m Mikrotik
 		modulesArray = strings.Split(modulesArrayRaw[0], ",")
 		modulesOk = true
 	}
-
-	m.Address = fmt.Sprintf("%s://%s", nodeURLObject.Scheme, nodeURLObject.Host)
 
 	if nodeURLObject.User != nil {
 		m.Username = nodeURLObject.User.Username()
