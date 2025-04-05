@@ -1,6 +1,6 @@
 # Mikrograf
 
-This tool is an input "plugin" for Telegraf to collect data from Mikrotik devices
+This tool is an input "plugin" for Telegraf to collect data from Mikrotik devices using REST, so web shall be enabled
 
 ## Configuration
 
