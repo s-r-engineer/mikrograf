@@ -87,6 +87,10 @@ var durationParseFieldNames = []string{
 	"uptime",
 }
 
+var timeFields = []string{
+	"last-modified",
+}
+
 var systemResources = []string{
 	"architecture-name",
 	"board-name",

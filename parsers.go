@@ -31,6 +31,12 @@ func parse(data common, ignoreCommentsFunction func(commonData) bool) (points []
 					if err != nil {
 						errorList = append(errorList, err)
 					}
+				} else if slices.Contains(timeFields, fieldName) {
+					timeFromField, err := parseTimeIntoTime(data[i][fieldName])
+					if err != nil {
+						errorList = append(errorList, err)
+					}
+					fields[fieldName] = timeFromField.Unix()
 				} else if strings.Contains(data[i][fieldName], ",") {
 					rxTxValues := strings.Split(data[i][fieldName], ",")
 					fields[fieldName+"_tx"], err = strconv.ParseInt(rxTxValues[0], 10, 64)
@@ -100,4 +106,8 @@ func parseUptimeIntoDuration(uptime string) (int64, error) {
 	}
 
 	return int64(duration / time.Second), nil
+}
+
+func parseTimeIntoTime(uptime string) (time.Time, error) {
+	return time.Parse("2006-01-02 15:04:05", uptime)
 }
