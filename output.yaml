@@ -1,0 +1,7926 @@
+modules:
+  /caps-man/access-list:
+    tags:
+      - action
+      - allow-signal-out-of-range
+      - ap-tx-limit
+      - client-to-client-forwarding
+      - client-tx-limit
+      - comment
+      - disabled
+      - interface
+      - mac-address
+      - mac-address-mask
+      - private-passphrase
+      - radius-accounting
+      - signal-range
+      - ssid-regexp
+      - time
+      - vlan-id
+      - vlan-mode
+  /caps-man/actual-interface-configuration:
+    tags:
+      - arp
+      - arp-timeout
+      - bound
+      - channel.band
+      - channel.control-channel-width
+      - channel.extension-channel
+      - channel.frequency
+      - channel.reselect-interval
+      - channel.save-selected
+      - channel.secondary-frequency
+      - channel.skip-dfs-channels
+      - channel.tx-power
+      - comment
+      - configuration.country
+      - configuration.disconnect-timeout
+      - configuration.distance
+      - configuration.frame-lifetime
+      - configuration.guard-interval
+      - configuration.hide-ssid
+      - configuration.hw-protection-mode
+      - configuration.hw-retries
+      - configuration.installation
+      - configuration.keepalive-frames
+      - configuration.load-balancing-group
+      - configuration.max-sta-count
+      - configuration.mode
+      - configuration.multicast-helper
+      - configuration.rx-chains
+      - configuration.ssid
+      - configuration.tx-chains
+      - datapath.bridge
+      - datapath.bridge-cost
+      - datapath.bridge-horizon
+      - datapath.client-to-client-forwarding
+      - datapath.interface-list
+      - datapath.local-forwarding
+      - datapath.openflow-switch
+      - datapath.vlan-id
+      - datapath.vlan-mode
+      - disable-running-check
+      - disabled
+      - dynamic
+      - inactive
+      - l2mtu
+      - mac-address
+      - master
+      - master-interface
+      - mtu
+      - name
+      - radio-mac
+      - running
+      - security.authentication-types
+      - security.disable-pmkid
+      - security.eap-methods
+      - security.eap-radius-accounting
+      - security.encryption
+      - security.group-encryption
+      - security.group-key-update
+      - security.passphrase
+      - security.tls-certificate
+      - security.tls-mode
+  /caps-man/channel:
+    tags:
+      - band
+      - comment
+      - control-channel-width
+      - extension-channel
+      - frequency
+      - name
+      - reselect-interval
+      - save-selected
+      - secondary-frequency
+      - skip-dfs-channels
+      - tx-power
+  /caps-man/configuration:
+    tags:
+      - channel
+      - channel.band
+      - channel.control-channel-width
+      - channel.extension-channel
+      - channel.frequency
+      - channel.reselect-interval
+      - channel.save-selected
+      - channel.secondary-frequency
+      - channel.skip-dfs-channels
+      - channel.tx-power
+      - comment
+      - country
+      - datapath
+      - datapath.arp
+      - datapath.bridge
+      - datapath.bridge-cost
+      - datapath.bridge-horizon
+      - datapath.client-to-client-forwarding
+      - datapath.interface-list
+      - datapath.l2mtu
+      - datapath.local-forwarding
+      - datapath.mtu
+      - datapath.openflow-switch
+      - datapath.vlan-id
+      - datapath.vlan-mode
+      - disconnect-timeout
+      - distance
+      - frame-lifetime
+      - guard-interval
+      - hide-ssid
+      - hw-protection-mode
+      - hw-retries
+      - installation
+      - keepalive-frames
+      - load-balancing-group
+      - max-sta-count
+      - mode
+      - multicast-helper
+      - name
+      - rates
+      - rates.basic
+      - rates.ht-basic-mcs
+      - rates.ht-supported-mcs
+      - rates.supported
+      - rates.vht-basic-mcs
+      - rates.vht-supported-mcs
+      - rx-chains
+      - security
+      - security.authentication-types
+      - security.disable-pmkid
+      - security.eap-methods
+      - security.eap-radius-accounting
+      - security.encryption
+      - security.group-encryption
+      - security.group-key-update
+      - security.passphrase
+      - security.tls-certificate
+      - security.tls-mode
+      - ssid
+      - tx-chains
+  /caps-man/datapath:
+    tags:
+      - arp
+      - bridge
+      - bridge-cost
+      - bridge-horizon
+      - client-to-client-forwarding
+      - comment
+      - interface-list
+      - l2mtu
+      - local-forwarding
+      - mtu
+      - name
+      - openflow-switch
+      - vlan-id
+      - vlan-mode
+  /caps-man/interface:
+    tags:
+      - arp
+      - arp-timeout
+      - bound
+      - channel
+      - channel.band
+      - channel.control-channel-width
+      - channel.extension-channel
+      - channel.frequency
+      - channel.reselect-interval
+      - channel.save-selected
+      - channel.secondary-frequency
+      - channel.skip-dfs-channels
+      - channel.tx-power
+      - comment
+      - configuration
+      - configuration.country
+      - configuration.disconnect-timeout
+      - configuration.distance
+      - configuration.frame-lifetime
+      - configuration.guard-interval
+      - configuration.hide-ssid
+      - configuration.hw-protection-mode
+      - configuration.hw-retries
+      - configuration.installation
+      - configuration.keepalive-frames
+      - configuration.load-balancing-group
+      - configuration.max-sta-count
+      - configuration.mode
+      - configuration.multicast-helper
+      - configuration.rx-chains
+      - configuration.ssid
+      - configuration.tx-chains
+      - current-authorized-clients
+      - current-basic-rate-set
+      - current-channel
+      - current-rate-set
+      - current-registered-clients
+      - current-state
+      - datapath
+      - datapath.bridge
+      - datapath.bridge-cost
+      - datapath.bridge-horizon
+      - datapath.client-to-client-forwarding
+      - datapath.interface-list
+      - datapath.local-forwarding
+      - datapath.openflow-switch
+      - datapath.vlan-id
+      - datapath.vlan-mode
+      - disable-running-check
+      - disabled
+      - dynamic
+      - inactive
+      - l2mtu
+      - mac-address
+      - master
+      - master-interface
+      - mtu
+      - name
+      - radio-mac
+      - radio-name
+      - rates
+      - rates.basic
+      - rates.ht-basic-mcs
+      - rates.ht-supported-mcs
+      - rates.supported
+      - rates.vht-basic-mcs
+      - rates.vht-supported-mcs
+      - running
+      - security
+      - security.authentication-types
+      - security.disable-pmkid
+      - security.eap-methods
+      - security.eap-radius-accounting
+      - security.encryption
+      - security.group-encryption
+      - security.group-key-update
+      - security.passphrase
+      - security.tls-certificate
+      - security.tls-mode
+  /caps-man/manager/interface:
+    tags:
+      - comment
+      - default
+      - disabled
+      - dynamic
+      - forbid
+      - interface
+  /caps-man/manager:
+    tags:
+  /caps-man/provisioning:
+    tags:
+      - action
+      - comment
+      - common-name-regexp
+      - disabled
+      - hw-supported-modes
+      - identity-regexp
+      - ip-address-ranges
+      - master-configuration
+      - name-format
+      - name-prefix
+      - radio-mac
+      - slave-configurations
+  /caps-man/radio:
+    tags:
+      - interface
+      - local
+      - provisioned
+      - radio-mac
+      - remote-cap-identity
+      - remote-cap-name
+  /caps-man/rates:
+    tags:
+      - basic
+      - comment
+      - ht-basic-mcs
+      - ht-supported-mcs
+      - name
+      - supported
+      - vht-basic-mcs
+      - vht-supported-mcs
+  /caps-man/registration-table:
+    tags:
+      - bytes
+      - comment
+      - eap-identity
+      - interface
+      - mac-address
+      - packets
+      - radio-name
+      - rx-rate
+      - rx-signal
+      - ssid
+      - tx-rate
+      - tx-rate-set
+      - tx-signal
+      - uptime
+      - vlan-id
+  /caps-man/remote-cap:
+    tags:
+      - address
+      - base-mac
+      - board
+      - identity
+      - name
+      - radios
+      - serial
+      - state
+      - version
+  /caps-man/security:
+    tags:
+      - authentication-types
+      - comment
+      - disable-pmkid
+      - eap-methods
+      - eap-radius-accounting
+      - encryption
+      - group-encryption
+      - group-key-update
+      - name
+      - passphrase
+      - tls-certificate
+      - tls-mode
+  /certificate/crl:
+    tags:
+      - cert
+      - dynamic
+      - expired
+      - fingerprint
+      - invalid
+      - last-update
+      - next-update
+      - num
+      - revoked
+      - signature
+      - url
+  /certificate:
+    tags:
+      - akid
+      - authority
+      - ca
+      - ca-crl-host
+      - ca-fingerprint
+      - challenge-password
+      - common-name
+      - country
+      - crl
+      - days-valid
+      - digest-algorithm
+      - expired
+      - expires-after
+      - fingerprint
+      - invalid-after
+      - invalid-before
+      - issued
+      - issuer
+      - key-size
+      - key-type
+      - key-usage
+      - locality
+      - name
+      - organization
+      - private-key
+      - req-fingerprint
+      - revoked
+      - revoked
+      - scep-url
+      - serial-number
+      - skid
+      - smart-card-key
+      - state
+      - status
+      - subject-alt-name
+      - trusted
+      - trusted
+      - unit
+  /certificate/scep-server/otp:
+    tags:
+      - expired
+      - expires
+      - password
+      - used
+  /certificate/scep-server:
+    tags:
+      - ca-cert
+      - days-valid
+      - disabled
+      - next-ca-cert
+      - path
+      - request-lifetime
+  /certificate/scep-server/ra:
+    tags:
+      - ca-fingerprint
+      - ca-identity
+      - challenge-password
+      - disabled
+      - fingerprint-algorithm
+      - name
+      - on-smart-card
+      - ra-path
+      - ra-transaction-lifetime
+      - req-fingerprint
+      - server-url
+      - smart-card-key
+      - status
+      - template
+  /certificate/scep-server/requests:
+    tags:
+      - authority
+      - common-name
+      - country
+      - created
+      - locality
+      - organization
+      - req-fingerprint
+      - serial-number
+      - state
+      - status
+      - subject-alt-name
+      - transaction-id
+      - unit
+  /certificate/settings:
+    tags:
+  /console/settings:
+    tags:
+  /container/config:
+    tags:
+  /container/envs:
+    tags:
+      - comment
+      - key
+      - name
+      - value
+  /container/mounts:
+    tags:
+      - comment
+      - dst
+      - name
+      - src
+  /container:
+    tags:
+      - arch
+      - cmd
+      - comment
+      - dns
+      - domain-name
+      - entrypoint
+      - envlist
+      - file
+      - hostname
+      - interface
+      - logging
+      - mounts
+      - name
+      - os
+      - remote-image
+      - repo
+      - root-dir
+      - start-on-boot
+      - status
+      - stop-signal
+      - user
+      - workdir
+  /disk/btrfs/filesystem:
+    tags:
+      - balance-status
+      - balancing
+      - corruption-errors
+      - default-subvolume
+      - devs
+      - flush-errors
+      - generation-errors
+      - label
+      - missing-devs
+      - present-devs
+      - read-errors
+      - replace-status
+      - replacing
+      - scrub-status
+      - scrubbing
+      - spaces
+      - uuid
+      - write-errors
+  /disk/btrfs/subvolume:
+    tags:
+      - creation-time
+      - dead
+      - dead
+      - default
+      - fs
+      - fullname
+      - generation
+      - mount
+      - mounted
+      - mountpoint
+      - name
+      - parent
+      - path
+      - read-only
+      - read-only
+      - received-uuid
+      - recv-time
+      - recv-trans-id
+      - send-time
+      - send-trans-id
+      - snapshot
+      - snapshot
+      - snapshots
+      - subvolume-id
+      - top-level
+      - uuid
+  /disk/btrfs/transfer:
+    tags:
+      - bytes
+      - file
+      - fs
+      - send-parent
+      - send-subvolumes
+      - ssh-address
+      - ssh-port
+      - ssh-receive-mount
+      - ssh-user
+      - status
+      - type
+  /disk:
+    tags:
+      - active-time
+      - available-spare
+      - available-spare-threshold
+      - block-device
+      - comment
+      - compress
+      - controller-busy-time
+      - critical-temperature
+      - critical-temperature-time
+      - critical-warning
+      - crypted-backend
+      - disabled
+      - discard-bytes
+      - discard-merges
+      - discard-ops
+      - discard-time
+      - empty
+      - encrypted
+      - encryption-key
+      - file-offset
+      - file-path
+      - file-size
+      - flush-ops
+      - flush-time
+      - formatting
+      - free
+      - fs
+      - fs-label
+      - fs-uuid
+      - fw-version
+      - guid-partition-table
+      - host-read-bytes
+      - host-read-cmds
+      - host-write-bytes
+      - host-write-cmds
+      - in-flight-ops
+      - interface
+      - interface-speed
+      - iscsi-address
+      - iscsi-export
+      - iscsi-export
+      - iscsi-iqn
+      - iscsi-port
+      - iscsi-state
+      - media-interface
+      - media-sharing
+      - media-sharing
+      - model
+      - mount-filesystem
+      - mount-point
+      - mount-point-template
+      - mount-read-only
+      - mounted
+      - nfs-address
+      - nfs-share
+      - nfs-sharing
+      - nfs-sharing
+      - nfs-state
+      - nvme-tcp-address
+      - nvme-tcp-export
+      - nvme-tcp-export
+      - nvme-tcp-host-name
+      - nvme-tcp-name
+      - nvme-tcp-password
+      - nvme-tcp-port
+      - nvme-tcp-secret
+      - nvme-tcp-server-allow-host-name
+      - nvme-tcp-server-password
+      - nvme-tcp-server-port
+      - nvme-tcp-server-secret
+      - nvme-tcp-state
+      - parent
+      - partition
+      - partition-number
+      - partition-offset
+      - partition-size
+      - percentage-used
+      - power-cycles
+      - power-on-time
+      - raid-chunk-size
+      - raid-device-count
+      - raid-master
+      - raid-max-component-size
+      - raid-member
+      - raid-member-failed
+      - raid-member-failed
+      - raid-member-state
+      - raid-role
+      - raid-state
+      - raid-type
+      - raid-uuid
+      - ramdisk-size
+      - read-bytes
+      - read-merges
+      - read-ops
+      - read-ops-per-second
+      - read-rate
+      - read-time
+      - sector-size
+      - self-encryption-password
+      - serial
+      - size
+      - slot
+      - slot-default
+      - smb-address
+      - smb-encryption
+      - smb-password
+      - smb-share
+      - smb-sharing
+      - smb-sharing
+      - smb-state
+      - smb-user
+      - sshfs-address
+      - sshfs-local-user
+      - sshfs-password
+      - sshfs-path
+      - sshfs-port
+      - sshfs-state
+      - sshfs-user
+      - swap
+      - swap-enabled
+      - tcg-opal-self-encryption-enabled
+      - tcg-opal-self-encryption-supported
+      - temperature
+      - temperatures
+      - tmpfs-max-size
+      - type
+      - unrecovered-integrity-errors
+      - unsafe-shutdowns
+      - use
+      - wait-time
+      - warning-temperature
+      - warning-temperature-time
+      - write-bytes
+      - write-merges
+      - write-ops
+      - write-ops-per-second
+      - write-rate
+      - write-time
+  /disk/settings:
+    tags:
+  /dude/agent:
+    tags:
+      - comment
+      - name
+  /dude/device:
+    tags:
+      - comment
+      - name
+  /dude/device-type:
+    tags:
+      - comment
+      - name
+  /dude/notification:
+    tags:
+      - comment
+      - name
+  /dude:
+    tags:
+  /dude/probe:
+    tags:
+      - comment
+      - name
+  /dude/ros/address:
+    tags:
+      - actual-interface
+      - address
+      - broadcast
+      - comment
+      - device
+      - disabled
+      - dynamic
+      - interface
+      - invalid
+      - netmask
+      - network
+  /dude/ros/arp:
+    tags:
+DHCP
+      - address
+      - comment
+      - complete
+      - device
+      - disabled
+      - dynamic
+      - interface
+      - invalid
+      - mac-address
+      - published
+      - published
+  /dude/ros/health:
+    tags:
+      - active-fan
+      - active-fan2
+      - battery
+      - board-temperature1
+      - board-temperature2
+      - board-temperature3
+      - cpu-overtemp-check
+      - cpu-overtemp-startup-delay
+      - cpu-overtemp-threshold
+      - cpu-temperature
+      - current
+      - device
+      - fan-mode
+      - fan-on-threshold
+      - fan-speed
+      - fan-speed2
+      - fan-switch
+      - fan1-speed
+      - fan2-speed
+      - fan3-speed
+      - fan4-speed
+      - fan5-speed
+      - fan6-speed
+      - power-consumption
+      - psu1-current
+      - psu1-state
+      - psu1-voltage
+      - psu2-current
+      - psu2-state
+      - psu2-voltage
+      - temperature
+      - use-fan
+      - use-fan2
+      - voltage
+  /dude/ros/interface:
+    tags:
+      - actual-mtu
+      - comment
+      - default-name
+      - device
+      - disabled
+      - dynamic
+      - fast-path
+      - fp-rx-byte
+      - fp-rx-packet
+      - fp-tx-byte
+      - fp-tx-packet
+      - l2mtu
+      - last-link-down-time
+      - last-link-up-time
+      - link-downs
+      - mac-address
+      - max-l2mtu
+      - mtu
+      - name
+      - running
+      - rx-byte
+      - rx-drop
+      - rx-error
+      - rx-packet
+      - slave
+      - tx-byte
+      - tx-drop
+      - tx-error
+      - tx-packet
+      - type
+  /dude/ros/lease:
+    tags:
+      - active-address
+      - active-client-id
+      - active-mac-address
+      - active-server
+      - address
+      - address-lists
+      - agent-circuit-id
+      - agent-remote-id
+      - always-broadcast
+      - block-access
+      - blocked
+      - client-id
+      - comment
+      - device
+      - dhcp-option
+      - dhcp-option-set
+      - disabled
+      - dynamic
+      - expires-after
+      - host-name
+      - insert-queue-before
+      - last-seen
+      - lease-time
+      - mac-address
+      - radius
+      - rate-limit
+      - server
+      - src-mac-address
+      - status
+      - use-src-mac
+  /dude/ros/neighbor:
+    tags:
+      - address
+      - address4
+      - address6
+      - age
+      - board
+      - device
+      - identity
+      - interface
+      - interface-name
+      - ipv6
+      - mac-address
+      - platform
+      - software-id
+      - unpack
+      - uptime
+      - version
+  /dude/ros/queue:
+    tags:
+      - bucket-size
+      - burst-limit
+      - burst-threshold
+      - burst-time
+      - bytes
+      - comment
+      - device
+      - disabled
+      - dropped
+      - dst
+      - dynamic
+      - invalid
+      - limit-at
+      - max-limit
+      - name
+      - packet-marks
+      - packet-rate
+      - packets
+      - parent
+      - pcq-queues
+      - priority
+      - queue
+      - queued-bytes
+      - queued-packets
+      - rate
+      - target
+      - time
+      - total-bucket-size
+      - total-burst-limit
+      - total-burst-threshold
+      - total-burst-time
+      - total-bytes
+      - total-dropped
+      - total-limit-at
+      - total-max-limit
+      - total-packet-rate
+      - total-packets
+      - total-pcq-queues
+      - total-priority
+      - total-queue
+      - total-queued-bytes
+      - total-queued-packets
+      - total-rate
+  /dude/ros/registration-table:
+    tags:
+      - 802.1x-port-enabled
+      - ack-timeout
+      - ap
+      - ap-tx-limit
+      - authentication-type
+      - bridge
+      - bytes
+      - client-tx-limit
+      - comment
+      - compression
+      - device
+      - distance
+      - encryption
+      - evm-ch0
+      - evm-ch1
+      - evm-ch2
+      - frame-bytes
+      - frames
+      - framing-current-size
+      - framing-limit
+      - framing-mode
+      - group-encryption
+      - hw-frame-bytes
+      - hw-frames
+      - interface
+      - last-activity
+      - last-ip
+      - mac-address
+      - management-protection
+      - nstreme
+      - p-throughput
+      - packed-bytes
+      - packed-frames
+      - packets
+      - radio-name
+      - routeros-version
+      - rx-ccq
+      - rx-rate
+      - signal-strength
+      - signal-strength-ch0
+      - signal-strength-ch1
+      - signal-strength-ch2
+      - signal-to-noise
+      - strength-at-rates
+      - tdma-retx
+      - tdma-rx-size
+      - tdma-timing-offset
+      - tdma-tx-size
+      - tdma-winfull
+      - tx-ccq
+      - tx-evm-ch0
+      - tx-evm-ch1
+      - tx-evm-ch2
+      - tx-frames-timed-out
+      - tx-rate
+      - tx-rate-set
+      - tx-signal-strength
+      - tx-signal-strength-ch0
+      - tx-signal-strength-ch1
+      - tx-signal-strength-ch2
+      - uptime
+      - wds
+      - wmm-enabled
+      - wmm-ps-enabled
+  /dude/ros/resource:
+    tags:
+      - architecture-name
+      - bad-blocks
+      - board-name
+      - build-time
+      - cpu
+      - cpu-count
+      - cpu-frequency
+      - cpu-load
+      - device
+      - free-hdd-space
+      - free-memory
+      - platform
+      - total-hdd-space
+      - total-memory
+      - uptime
+      - version
+      - write-sect-since-reboot
+      - write-sect-total
+  /dude/ros/route:
+    tags:
+      - active
+      - bgp
+      - bgp-as-path
+      - bgp-atomic-aggregate
+      - bgp-communities
+      - bgp-ext-communities
+      - bgp-local-pref
+      - bgp-med
+      - bgp-origin
+      - bgp-prepend
+      - bgp-weight
+      - blackhole
+      - check-gateway
+      - comment
+      - connect
+      - device
+      - disabled
+      - distance
+      - dst-address
+      - dynamic
+      - gateway
+      - gateway-status
+      - mme
+      - ospf
+      - ospf-metric
+      - ospf-type
+      - pref-src
+      - prohibit
+      - received-from
+      - rip
+      - route-tag
+      - routing-mark
+      - scope
+      - static
+      - target-scope
+      - type
+      - unreachable
+      - vrf-interface
+  /dude/ros/routerboard:
+    tags:
+      - current-firmware
+      - device
+      - factory-firmware
+      - firmware-type
+      - model
+      - routerboard
+      - serial-number
+      - upgrade-firmware
+  /dude/service:
+    tags:
+      - comment
+      - name
+  /dude/settings:
+    tags:
+  /environment:
+    tags:
+  /file:
+    tags:
+      - contents
+      - last-modified
+      - name
+      - package-architecture
+      - package-build-time
+      - package-name
+      - package-version
+      - size
+      - type
+  /file/rsync-daemon:
+    tags:
+  /file/sync:
+    tags:
+      - comment
+      - disabled
+      - dynamic
+      - invalid
+      - local-path
+      - mode
+      - password
+      - remote-address
+      - remote-path
+      - status
+      - user
+  /interface/6to4:
+    tags:
+      - actual-mtu
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dont-fragment
+      - dscp
+      - ipsec-secret
+      - keepalive
+      - local-address
+      - mtu
+      - name
+      - remote-address
+      - running
+  /interface/amt:
+    tags:
+      - comment
+      - disabled
+      - discovery-ip
+      - dont-fragment
+      - gateway-port
+      - interface
+      - local-ip
+      - mac-address
+      - max-tunnels
+      - mode
+      - name
+      - relay-port
+      - running
+  /interface/bonding:
+    tags:
+      - arp
+      - arp-interval
+      - arp-ip-targets
+      - arp-timeout
+      - comment
+      - disabled
+      - down-delay
+      - forced-mac-address
+      - lacp-rate
+      - lacp-user-key
+      - link-monitoring
+      - mac-address
+      - mii-interval
+      - min-links
+      - mode
+      - mtu
+      - name
+      - primary
+      - running
+      - slaves
+      - transmit-hash-policy
+      - up-delay
+  /interface/bridge/calea:
+    tags:
+      - 802.3-sap
+      - 802.3-type
+      - action
+      - arp-dst-address
+      - arp-dst-mac-address
+      - arp-gratuitous
+      - arp-hardware-type
+      - arp-opcode
+      - arp-packet-type
+      - arp-src-address
+      - arp-src-mac-address
+      - bytes
+      - chain
+      - comment
+      - disabled
+      - dst-address
+      - dst-address6
+      - dst-mac-address
+      - dst-port
+      - dynamic
+      - in-bridge
+      - in-bridge-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ip-protocol
+      - limit
+      - log
+      - log-prefix
+      - mac-protocol
+      - out-bridge
+      - out-bridge-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-type
+      - packets
+      - sniff-id
+      - sniff-target
+      - sniff-target-port
+      - src-address
+      - src-address6
+      - src-mac-address
+      - src-port
+      - stp-flags
+      - stp-forward-delay
+      - stp-hello-time
+      - stp-max-age
+      - stp-msg-age
+      - stp-port
+      - stp-root-address
+      - stp-root-cost
+      - stp-root-priority
+      - stp-sender-address
+      - stp-sender-priority
+      - stp-type
+      - tls-host
+      - vlan-encap
+      - vlan-id
+      - vlan-priority
+  /interface/bridge/filter:
+    tags:
+      - 802.3-sap
+      - 802.3-type
+      - action
+      - arp-dst-address
+      - arp-dst-mac-address
+      - arp-gratuitous
+      - arp-hardware-type
+      - arp-opcode
+      - arp-packet-type
+      - arp-src-address
+      - arp-src-mac-address
+      - bytes
+      - chain
+      - comment
+      - disabled
+      - dst-address
+      - dst-address6
+      - dst-mac-address
+      - dst-port
+      - dynamic
+      - in-bridge
+      - in-bridge-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ip-protocol
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - mac-protocol
+      - new-packet-mark
+      - new-priority
+      - out-bridge
+      - out-bridge-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-type
+      - packets
+      - passthrough
+      - src-address
+      - src-address6
+      - src-mac-address
+      - src-port
+      - stp-flags
+      - stp-forward-delay
+      - stp-hello-time
+      - stp-max-age
+      - stp-msg-age
+      - stp-port
+      - stp-root-address
+      - stp-root-cost
+      - stp-root-priority
+      - stp-sender-address
+      - stp-sender-priority
+      - stp-type
+      - tls-host
+      - vlan-encap
+      - vlan-id
+      - vlan-priority
+  /interface/bridge/host:
+    tags:
+      - bridge
+      - comment
+      - disabled
+      - dynamic
+      - external
+      - interface
+      - invalid
+      - local
+      - mac-address
+      - on-interface
+      - remote-ip
+      - vid
+  /interface/bridge/mdb:
+    tags:
+      - bridge
+      - comment
+      - disabled
+      - dynamic
+      - group
+      - invalid
+      - on-ports
+      - ports
+      - vid
+  /interface/bridge/msti:
+    tags:
+      - bridge
+      - comment
+      - disabled
+      - dynamic
+      - identifier
+      - priority
+      - vlan-mapping
+  /interface/bridge/nat:
+    tags:
+      - 802.3-sap
+      - 802.3-type
+      - action
+      - arp-dst-address
+      - arp-dst-mac-address
+      - arp-gratuitous
+      - arp-hardware-type
+      - arp-opcode
+      - arp-packet-type
+      - arp-src-address
+      - arp-src-mac-address
+      - bytes
+      - chain
+      - comment
+      - disabled
+      - dst-address
+      - dst-address6
+      - dst-mac-address
+      - dst-port
+      - dynamic
+      - in-bridge
+      - in-bridge-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ip-protocol
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - mac-protocol
+      - new-packet-mark
+      - new-priority
+      - out-bridge
+      - out-bridge-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-type
+      - packets
+      - passthrough
+      - src-address
+      - src-address6
+      - src-mac-address
+      - src-port
+      - stp-flags
+      - stp-forward-delay
+      - stp-hello-time
+      - stp-max-age
+      - stp-msg-age
+      - stp-port
+      - stp-root-address
+      - stp-root-cost
+      - stp-root-priority
+      - stp-sender-address
+      - stp-sender-priority
+      - stp-type
+      - tls-host
+      - to-arp-reply-mac-address
+      - to-dst-mac-address
+      - to-src-mac-address
+      - vlan-encap
+      - vlan-id
+      - vlan-priority
+  /interface/bridge/port/mst-override:
+    tags:
+      - comment
+      - debug-info
+      - disabled
+      - dynamic
+      - identifier
+      - interface
+      - internal-path-cost
+      - priority
+  /interface/bridge/port:
+    tags:
+      - auto-isolate
+      - bpdu-guard
+      - bridge
+      - broadcast-flood
+      - comment
+      - debug-info
+      - designated-bridge
+      - designated-cost
+      - designated-port-number
+      - disabled
+      - dynamic
+      - edge
+      - edge-port
+      - edge-port-discovery
+      - external-fdb-status
+      - fast-leave
+      - forwarding
+      - frame-types
+      - horizon
+      - hw
+      - hw-offload
+      - hw-offload
+      - hw-offload-group
+      - inactive
+      - ingress-filtering
+      - interface
+      - internal-path-cost
+      - learn
+      - learning
+      - multicast-router
+      - mvrp-applicant-state
+      - mvrp-registrar-state
+      - parent
+      - path-cost
+      - point-to-point
+      - point-to-point-port
+      - port-number
+      - priority
+      - pvid
+      - restricted-role
+      - restricted-tcn
+      - role
+      - root-path-cost
+      - sending-rstp
+      - status
+      - tag-stacking
+      - trusted
+      - unknown-multicast-flood
+      - unknown-unicast-flood
+  /interface/bridge:
+    tags:
+      - actual-mtu
+      - add-dhcp-option82
+      - admin-mac
+      - ageing-time
+      - arp
+      - arp-timeout
+      - auto-mac
+      - comment
+      - dhcp-snooping
+      - disabled
+      - dynamic
+      - ether-type
+      - fast-forward
+      - forward-delay
+      - forward-reserved-addresses
+      - frame-types
+      - igmp-snooping
+      - igmp-version
+      - ingress-filtering
+      - l2mtu
+      - last-member-interval
+      - last-member-query-count
+      - mac-address
+      - max-hops
+      - max-learned-entries
+      - max-message-age
+      - membership-interval
+      - mld-version
+      - mtu
+      - multicast-querier
+      - multicast-router
+      - mvrp
+      - name
+      - port-cost-mode
+      - priority
+      - protocol-mode
+      - pvid
+      - querier-interval
+      - query-interval
+      - query-response-interval
+      - region-name
+      - region-revision
+      - running
+      - startup-query-count
+      - startup-query-interval
+      - transmit-hold-count
+      - vlan-filtering
+  /interface/bridge/settings:
+    tags:
+  /interface/bridge/vlan/mvrp:
+    tags:
+      - applicant-state
+      - bridge
+      - last-event
+      - port
+      - registrar-state
+      - vlan-id
+  /interface/bridge/vlan:
+    tags:
+      - bridge
+      - comment
+      - current-tagged
+      - current-untagged
+      - disabled
+      - dynamic
+      - mvrp-forbidden
+      - tagged
+      - untagged
+      - vlan-ids
+  /interface/detect-internet:
+    tags:
+  /interface/detect-internet/state:
+    tags:
+      - cloud-rtt
+      - name
+      - state
+      - state-change-time
+  /interface/dot1x/client:
+    tags:
+      - anon-identity
+      - certificate
+      - comment
+      - disabled
+      - eap-methods
+      - identity
+      - inactive
+      - interface
+      - password
+      - status
+  /interface/dot1x/server/active:
+    tags:
+      - auth-info
+      - client-mac
+      - interface
+      - session-id
+      - username
+      - vlan-id
+  /interface/dot1x/server:
+    tags:
+      - accounting
+      - auth-timeout
+      - auth-types
+      - comment
+      - disabled
+      - guest-vlan-id
+      - inactive
+      - interface
+      - interim-update
+      - mac-auth-mode
+      - radius-mac-format
+      - reauth-timeout
+      - reject-vlan-id
+      - retrans-timeout
+      - server-fail-vlan-id
+  /interface/dot1x/server/state:
+    tags:
+      - interface
+      - status
+  /interface/eoip:
+    tags:
+      - actual-mtu
+      - allow-fast-path
+      - arp
+      - arp-timeout
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dont-fragment
+      - dscp
+      - ipsec-secret
+      - keepalive
+      - l2mtu
+      - local-address
+      - loop-protect
+      - loop-protect-disable-time
+      - loop-protect-send-interval
+      - loop-protect-status
+      - mac-address
+      - mtu
+      - name
+      - remote-address
+      - running
+      - tunnel-id
+  /interface/eoipv6:
+    tags:
+      - actual-mtu
+      - arp
+      - arp-timeout
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dscp
+      - ipsec-secret
+      - keepalive
+      - l2mtu
+      - local-address
+      - loop-protect
+      - loop-protect-disable-time
+      - loop-protect-send-interval
+      - loop-protect-status
+      - mac-address
+      - mtu
+      - name
+      - remote-address
+      - running
+      - tunnel-id
+  /interface/ethernet:
+    tags:
+      - advertise
+      - arp
+      - arp-timeout
+      - auto-negotiation
+      - cable-settings
+      - combo-mode
+      - comment
+      - current-learned
+      - custom-drop-packet
+      - default-name
+      - disable-running-check
+      - disabled
+      - driver-rx-byte
+      - driver-rx-packet
+      - driver-tx-byte
+      - driver-tx-packet
+      - fc-fec-block-corrected
+      - fc-fec-block-uncorrected
+      - fc-fec-rx-block
+      - fec-mode
+      - l2mtu
+      - loop-protect
+      - loop-protect-disable-time
+      - loop-protect-send-interval
+      - loop-protect-status
+      - mac-address
+      - mdix-enable
+      - mtu
+      - name
+      - not-learned
+      - orig-mac-address
+      - policy-drop-packet
+      - rs-fec-codewords
+      - rs-fec-corrected
+      - rs-fec-symbol-error
+      - rs-fec-uncorrected
+      - running
+      - rx-1024-1518
+      - rx-1024-max
+      - rx-128-255
+      - rx-1519-max
+      - rx-256-511
+      - rx-512-1023
+      - rx-64
+      - rx-65-127
+      - rx-align-error
+      - rx-broadcast
+      - rx-bytes
+      - rx-carrier-error
+      - rx-code-error
+      - rx-control
+      - rx-drop
+      - rx-error-events
+      - rx-fcs-error
+      - rx-flow-control
+      - rx-fragment
+      - rx-ip-header-checksum-error
+      - rx-jabber
+      - rx-length-error
+      - rx-multicast
+      - rx-overflow
+      - rx-packet
+      - rx-pause
+      - rx-tcp-checksum-error
+      - rx-too-long
+      - rx-too-short
+      - rx-udp-checksum-error
+      - rx-unicast
+      - rx-unknown-op
+      - sfp-ignore-rx-los
+      - sfp-rate-select
+      - sfp-shutdown-temperature
+      - slave
+      - speed
+      - tx-1024-1518
+      - tx-1024-max
+      - tx-128-255
+      - tx-1519-max
+      - tx-256-511
+      - tx-512-1023
+      - tx-64
+      - tx-65-127
+      - tx-all-queue-drop-byte
+      - tx-all-queue-drop-packet
+      - tx-broadcast
+      - tx-bytes
+      - tx-carrier-sense-error
+      - tx-collision
+      - tx-control
+      - tx-deferred
+      - tx-drop
+      - tx-excessive-collision
+      - tx-excessive-deferred
+      - tx-fcs-error
+      - tx-flow-control
+      - tx-fragment
+      - tx-jabber
+      - tx-late-collision
+      - tx-multicast
+      - tx-multiple-collision
+      - tx-packet
+      - tx-pause
+      - tx-pause-honored
+      - tx-queue-custom0-drop-byte
+      - tx-queue-custom0-drop-packet
+      - tx-queue-custom1-drop-byte
+      - tx-queue-custom1-drop-packet
+      - tx-queue0-byte
+      - tx-queue0-packet
+      - tx-queue1-byte
+      - tx-queue1-packet
+      - tx-queue2-byte
+      - tx-queue2-packet
+      - tx-queue3-byte
+      - tx-queue3-packet
+      - tx-queue4-byte
+      - tx-queue4-packet
+      - tx-queue5-byte
+      - tx-queue5-packet
+      - tx-queue6-byte
+      - tx-queue6-packet
+      - tx-queue7-byte
+      - tx-queue7-packet
+      - tx-rx-1024-1518
+      - tx-rx-1024-max
+      - tx-rx-128-255
+      - tx-rx-1519-max
+      - tx-rx-256-511
+      - tx-rx-512-1023
+      - tx-rx-64
+      - tx-rx-65-127
+      - tx-single-collision
+      - tx-too-long
+      - tx-too-short
+      - tx-total-collision
+      - tx-underrun
+      - tx-unicast
+  /interface/gre:
+    tags:
+      - actual-mtu
+      - allow-fast-path
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dont-fragment
+      - dscp
+      - ipsec-secret
+      - keepalive
+      - local-address
+      - mtu
+      - name
+      - remote-address
+      - running
+  /interface/gre6:
+    tags:
+      - actual-mtu
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dscp
+      - ipsec-secret
+      - keepalive
+      - local-address
+      - mtu
+      - name
+      - remote-address
+      - running
+  /interface/ipip:
+    tags:
+      - actual-mtu
+      - allow-fast-path
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dont-fragment
+      - dscp
+      - dynamic
+      - ipsec-secret
+      - keepalive
+      - local-address
+      - mtu
+      - name
+      - remote-address
+      - running
+  /interface/ipipv6:
+    tags:
+      - actual-mtu
+      - clamp-tcp-mss
+      - comment
+      - current-remote-address
+      - disabled
+      - dscp
+      - ipsec-secret
+      - keepalive
+      - local-address
+      - mtu
+      - name
+      - remote-address
+      - running
+  /interface/l2tp-client:
+    tags:
+      - add-default-route
+      - allow
+      - allow-fast-path
+      - comment
+      - connect-to
+      - default-route-distance
+      - dial-on-demand
+      - disabled
+      - ipsec-secret
+      - keepalive-timeout
+      - l2tp-proto-version
+      - l2tpv3-circuit-id
+      - l2tpv3-cookie-length
+      - l2tpv3-digest-hash
+      - max-mru
+      - max-mtu
+      - mrru
+      - name
+      - password
+      - profile
+      - random-source-port
+      - running
+      - src-address
+      - use-ipsec
+      - use-peer-dns
+      - user
+  /interface/l2tp-ether:
+    tags:
+      - actual-mtu
+      - allow-fast-path
+      - circuit-id
+      - comment
+      - connect-to
+      - cookie-length
+      - digest-hash
+      - disabled
+      - dynamic
+      - ipsec-secret
+      - l2tp-proto-version
+      - local-address
+      - local-session-id
+      - local-tunnel-id
+      - mac-address
+      - mtu
+      - name
+      - peer-cookie
+      - remote-session-id
+      - remote-tunnel-id
+      - running
+      - send-cookie
+      - unmanaged
+      - unmanaged-mode
+      - use-ipsec
+      - use-l2-specific-sublayer
+  /interface/l2tp-server:
+    tags:
+      - client-address
+      - comment
+      - disabled
+      - dynamic
+      - encoding
+      - mru
+      - mtu
+      - name
+      - running
+      - uptime
+      - user
+  /interface/l2tp-server/server:
+    tags:
+  /interface/list/member:
+    tags:
+      - comment
+      - disabled
+      - dynamic
+      - dynamic
+      - interface
+      - list
+  /interface/list:
+    tags:
+      - builtin
+      - comment
+      - dynamic
+      - dynamic
+      - exclude
+      - include
+      - name
+  /interface/lte/apn:
+    tags:
+      - add-default-route
+      - apn
+      - authentication
+      - comment
+      - default
+      - default-route-distance
+      - ip-type
+      - ipv6-interface
+      - name
+      - passthrough-interface
+      - passthrough-mac
+      - passthrough-subnet-size
+      - password
+      - use-network-apn
+      - use-peer-dns
+      - user
+  /interface/lte/esim:
+    tags:
+      - active
+      - interface
+      - name
+      - nickname
+      - spn
+      - uiccid
+  /interface/lte:
+    tags:
+      - allow-roaming
+      - apn-profiles
+      - band
+      - comment
+      - default-name
+      - disabled
+      - inactive
+      - master
+      - modem-init
+      - mtu
+      - name
+      - network-mode
+      - nr-band
+      - operator
+      - pin
+      - running
+      - sms-protocol
+      - sms-read
+  /interface/lte/settings:
+    tags:
+  /interface/macsec:
+    tags:
+      - cak
+      - ckn
+      - comment
+      - disabled
+      - inactive
+      - interface
+      - mtu
+      - name
+      - profile
+      - running
+      - status
+  /interface/macsec/profile:
+    tags:
+      - default
+      - default-name
+      - name
+      - server-priority
+  /interface/macvlan:
+    tags:
+      - arp
+      - arp-timeout
+      - comment
+      - disabled
+      - interface
+      - l2mtu
+      - loop-protect
+      - loop-protect-disable-time
+      - loop-protect-send-interval
+      - loop-protect-status
+      - mac-address
+      - mode
+      - mtu
+      - name
+      - running
+  /interface/mesh/fdb:
+    tags:
+      - active
+      - age
+      - lifetime
+      - mac-address
+      - mesh
+      - metric
+      - on-interface
+      - root
+      - seq-number
+      - type
+  /interface/mesh/port:
+    tags:
+      - active-port-type
+      - comment
+      - disabled
+      - dr-address
+      - dynamic
+      - hello-interval
+      - inactive
+      - interface
+      - mesh
+      - path-cost
+      - port-type
+  /interface/mesh:
+    tags:
+      - admin-mac
+      - arp
+      - arp-timeout
+      - auto-mac
+      - comment
+      - disabled
+      - hwmp-default-hoplimit
+      - hwmp-prep-lifetime
+      - hwmp-preq-destination-only
+      - hwmp-preq-reply-and-forward
+      - hwmp-preq-retries
+      - hwmp-preq-waiting-time
+      - hwmp-rann-interval
+      - hwmp-rann-lifetime
+      - hwmp-rann-propagation-delay
+      - mac-address
+      - mesh-portal
+      - mtu
+      - name
+      - reoptimize-paths
+      - running
+  /interface/ovpn-client:
+    tags:
+      - add-default-route
+      - auth
+      - certificate
+      - cipher
+      - comment
+      - connect-to
+      - disabled
+      - disconnect-notify
+      - hw-crypto
+      - mac-address
+      - max-mtu
+      - mode
+      - name
+      - password
+      - port
+      - profile
+      - protocol
+      - route-nopull
+      - running
+      - tls-auth
+      - tls-crypt
+      - tls-version
+      - use-peer-dns
+      - user
+      - verify-server-certificate
+  /interface/ovpn-server:
+    tags:
+      - client-address
+      - comment
+      - disabled
+      - dynamic
+      - encoding
+      - hw-crypto
+      - mtu
+      - name
+      - running
+      - uptime
+      - user
+  /interface/ovpn-server/server:
+    tags:
+      - auth
+      - certificate
+      - cipher
+      - comment
+      - default-profile
+      - disabled
+      - enable-tun-ipv6
+      - inactive
+      - ipv6-prefix-len
+      - keepalive-timeout
+      - mac-address
+      - max-mtu
+      - mode
+      - name
+      - netmask
+      - port
+      - protocol
+      - push-routes
+      - redirect-gateway
+      - reneg-sec
+      - require-client-certificate
+      - tls-version
+      - tun-server-ipv6
+      - user-auth-method
+      - vrf
+  /interface/ppp-client:
+    tags:
+      - add-default-route
+      - allow
+      - apn
+      - comment
+      - data-channel
+      - default-route-distance
+      - dial-command
+      - dial-on-demand
+      - disabled
+      - info-channel
+      - keepalive-timeout
+      - max-mru
+      - max-mtu
+      - modem-init
+      - mrru
+      - name
+      - null-modem
+      - password
+      - phone
+      - pin
+      - port
+      - profile
+      - remote-address
+      - running
+      - use-peer-dns
+      - user
+  /interface/ppp-server:
+    tags:
+      - authentication
+      - comment
+      - data-channel
+      - disabled
+      - max-mru
+      - max-mtu
+      - modem-init
+      - mrru
+      - name
+      - null-modem
+      - port
+      - profile
+      - ring-count
+      - running
+  /interface/pppoe-client:
+    tags:
+      - ac-name
+      - add-default-route
+      - allow
+      - comment
+      - default-route-distance
+      - dial-on-demand
+      - disabled
+      - host-uniq
+      - interface
+      - invalid
+      - keepalive-timeout
+      - max-mru
+      - max-mtu
+      - mrru
+      - name
+      - password
+      - profile
+      - running
+      - service-name
+      - use-peer-dns
+      - user
+  /interface/pppoe-server:
+    tags:
+      - comment
+      - disabled
+      - dynamic
+      - encoding
+      - interface
+      - mru
+      - mtu
+      - name
+      - remote-address
+      - running
+      - service
+      - uptime
+      - user
+      - vid
+  /interface/pppoe-server/server:
+    tags:
+      - accept-empty-service
+      - authentication
+      - comment
+      - default-profile
+      - disabled
+      - interface
+      - invalid
+      - keepalive-timeout
+      - max-mru
+      - max-mtu
+      - max-sessions
+      - mrru
+      - one-session-per-host
+      - pado-delay
+      - pppoe-over-vlan-range
+      - service-name
+  /interface/pptp-client:
+    tags:
+      - add-default-route
+      - allow
+      - comment
+      - connect-to
+      - default-route-distance
+      - dial-on-demand
+      - disabled
+      - keepalive-timeout
+      - max-mru
+      - max-mtu
+      - mrru
+      - name
+      - password
+      - profile
+      - running
+      - use-peer-dns
+      - user
+  /interface/pptp-server:
+    tags:
+      - client-address
+      - comment
+      - disabled
+      - dynamic
+      - encoding
+      - mru
+      - mtu
+      - name
+      - running
+      - uptime
+      - user
+  /interface/pptp-server/server:
+    tags:
+  /interface:
+    tags:
+      - actual-mtu
+      - comment
+      - default-name
+      - disabled
+      - dynamic
+      - fp-rx-byte
+      - fp-rx-packet
+      - fp-tx-byte
+      - fp-tx-packet
+      - inactive
+      - l2mtu
+      - last-link-down-time
+      - last-link-up-time
+      - link-downs
+      - mac-address
+      - max-l2mtu
+      - mtu
+      - name
+      - passthrough
+      - running
+      - rx-byte
+      - rx-drop
+      - rx-error
+      - rx-packet
+      - slave
+      - tx-byte
+      - tx-drop
+      - tx-error
+      - tx-packet
+      - tx-queue-drop
+      - type
+      - vrf
+  /interface/sstp-client:
+    tags:
+      - add-default-route
+      - add-sni
+      - authentication
+      - certificate
+      - ciphers
+      - comment
+      - connect-to
+      - default-route-distance
+      - dial-on-demand
+      - disabled
+      - http-proxy
+      - hw-crypto
+      - keepalive-timeout
+      - max-mru
+      - max-mtu
+      - mrru
+      - name
+      - password
+      - pfs
+      - port
+      - profile
+      - proxy-port
+      - running
+      - tls-version
+      - user
+      - verify-server-address-from-certificate
+      - verify-server-certificate
+  /interface/sstp-server:
+    tags:
+      - client-address
+      - comment
+      - disabled
+      - dynamic
+      - encoding
+      - hw-crypto
+      - mtu
+      - name
+      - running
+      - uptime
+      - user
+  /interface/sstp-server/server:
+    tags:
+  /interface/veth:
+    tags:
+      - address
+      - comment
+      - disabled
+      - gateway
+      - gateway6
+      - name
+      - running
+  /interface/vlan:
+    tags:
+      - arp
+      - arp-timeout
+      - comment
+      - disabled
+      - interface
+      - l2mtu
+      - loop-protect
+      - loop-protect-disable-time
+      - loop-protect-send-interval
+      - loop-protect-status
+      - mac-address
+      - mtu
+      - mvrp
+      - name
+      - running
+      - use-service-tag
+      - vlan-id
+  /interface/vpls:
+    tags:
+      - arp
+      - arp-timeout
+      - bgp-signaled
+      - bgp-vpls
+      - bgp-vpls-prfx
+      - bridge
+      - bridge-cost
+      - bridge-horizon
+      - bridge-pvid
+      - cisco-bgp-signaled
+      - cisco-static-id
+      - comment
+      - disable-running-check
+      - disabled
+      - dynamic
+      - mac-address
+      - mtu
+      - name
+      - peer
+      - pw-control-word
+      - pw-l2mtu
+      - pw-type
+      - running
+      - vpls-id
+  /interface/vrrp:
+    tags:
+      - arp
+      - arp-timeout
+      - authentication
+      - backup
+      - comment
+      - disabled
+      - failure
+      - group-authority
+      - group-master
+      - grp-authority
+      - grp-member
+      - interface
+      - interval
+      - invalid
+      - mac-address
+      - master
+      - mtu
+      - name
+      - on-backup
+      - on-fail
+      - on-master
+      - password
+      - preemption-mode
+      - priority
+      - remote-address
+      - running
+      - sync-connection-tracking
+      - v3-protocol
+      - version
+      - vrid
+  /interface/vxlan/fdb:
+    tags:
+      - interface
+      - mac-address
+      - remote-ip
+  /interface/vxlan:
+    tags:
+      - allow-fast-path
+      - arp
+      - arp-timeout
+      - bridge
+      - bridge-pvid
+      - comment
+      - disabled
+      - dont-fragment
+      - group
+      - hw
+      - hw-offloaded
+      - interface
+      - l2mtu
+      - local-address
+      - loop-protect
+      - loop-protect-disable-time
+      - loop-protect-send-interval
+      - loop-protect-status
+      - mac-address
+      - max-fdb-size
+      - mtu
+      - name
+      - port
+      - running
+      - ttl
+      - vni
+      - vrf
+      - vteps-ip-version
+  /interface/vxlan/vteps:
+    tags:
+      - comment
+      - disabled
+      - hw-offloaded
+      - interface
+      - remote-ip
+  /interface/wifi/aaa:
+    tags:
+      - called-format
+      - calling-format
+      - comment
+      - disabled
+      - interim-update
+      - mac-caching
+      - name
+      - nas-identifier
+      - password-format
+      - username-format
+  /interface/wifi/access-list:
+    tags:
+      - action
+      - allow-signal-out-of-range
+      - client-isolation
+      - comment
+      - disabled
+      - interface
+      - last-logged-in
+      - last-logged-out
+      - mac-address
+      - mac-address-mask
+      - match-count
+      - multi-passphrase-group
+      - passphrase
+      - radius-accounting
+      - signal-range
+      - ssid-regexp
+      - time
+      - vlan-id
+  /interface/wifi/cap:
+    tags:
+  /interface/wifi/capsman:
+    tags:
+  /interface/wifi/capsman/remote-cap:
+    tags:
+      - address
+      - base-mac
+      - board-name
+      - common-name
+      - identity
+      - serial
+      - state
+      - version
+  /interface/wifi/channel:
+    tags:
+      - band
+      - comment
+      - disabled
+      - frequency
+      - name
+      - reselect-interval
+      - secondary-frequency
+      - skip-dfs-channels
+      - width
+  /interface/wifi/configuration:
+    tags:
+      - aaa
+      - aaa.called-format
+      - aaa.calling-format
+      - aaa.interim-update
+      - aaa.mac-caching
+      - aaa.nas-identifier
+      - aaa.password-format
+      - aaa.username-format
+      - antenna-gain
+      - beacon-interval
+      - chains
+      - channel
+      - channel.band
+      - channel.frequency
+      - channel.reselect-interval
+      - channel.secondary-frequency
+      - channel.skip-dfs-channels
+      - channel.width
+      - comment
+      - country
+      - datapath
+      - datapath.bridge
+      - datapath.bridge-cost
+      - datapath.bridge-horizon
+      - datapath.client-isolation
+      - datapath.interface-list
+      - datapath.vlan-id
+      - disabled
+      - distance
+      - dtim-period
+      - hide-ssid
+      - installation
+      - interworking
+      - interworking.3gpp-info
+      - interworking.authentication-types
+      - interworking.connection-capabilities
+      - interworking.domain-names
+      - interworking.esr
+      - interworking.hessid
+      - interworking.hotspot20
+      - interworking.hotspot20-dgaf
+      - interworking.internet
+      - interworking.ipv4-availability
+      - interworking.ipv6-availability
+      - interworking.network-type
+      - interworking.operational-classes
+      - interworking.operator-names
+      - interworking.realms
+      - interworking.roaming-ois
+      - interworking.uesa
+      - interworking.venue
+      - interworking.venue-names
+      - interworking.wan-at-capacity
+      - interworking.wan-downlink
+      - interworking.wan-downlink-load
+      - interworking.wan-measurement-duration
+      - interworking.wan-status
+      - interworking.wan-symmetric
+      - interworking.wan-uplink
+      - interworking.wan-uplink-load
+      - manager
+      - max-clients
+      - mode
+      - multicast-enhance
+      - name
+      - qos-classifier
+      - security
+      - security.authentication-types
+      - security.connect-group
+      - security.connect-priority
+      - security.dh-groups
+      - security.disable-pmkid
+      - security.eap-accounting
+      - security.eap-anonymous-identity
+      - security.eap-certificate-mode
+      - security.eap-methods
+      - security.eap-password
+      - security.eap-tls-certificate
+      - security.eap-username
+      - security.encryption
+      - security.ft
+      - security.ft-mobility-domain
+      - security.ft-nas-identifier
+      - security.ft-over-ds
+      - security.ft-preserve-vlanid
+      - security.ft-r0-key-lifetime
+      - security.ft-reassociation-deadline
+      - security.group-encryption
+      - security.group-key-update
+      - security.management-encryption
+      - security.management-protection
+      - security.multi-passphrase-group
+      - security.owe-transition-interface
+      - security.passphrase
+      - security.sae-anti-clogging-threshold
+      - security.sae-max-failure-rate
+      - security.sae-pwe
+      - security.wps
+      - ssid
+      - station-roaming
+      - steering
+      - steering.2g-probe-delay
+      - steering.neighbor-group
+      - steering.rrm
+      - steering.wnm
+      - tx-chains
+      - tx-power
+  /interface/wifi/datapath:
+    tags:
+      - bridge
+      - bridge-cost
+      - bridge-horizon
+      - client-isolation
+      - comment
+      - disabled
+      - interface-list
+      - name
+      - vlan-id
+  /interface/wifi/interworking:
+    tags:
+      - 3gpp-info
+      - authentication-types
+      - comment
+      - connection-capabilities
+      - disabled
+      - domain-names
+      - esr
+      - hessid
+      - hotspot20
+      - hotspot20-dgaf
+      - internet
+      - ipv4-availability
+      - ipv6-availability
+      - name
+      - network-type
+      - operational-classes
+      - operator-names
+      - realms
+      - roaming-ois
+      - uesa
+      - venue
+      - venue-names
+      - wan-at-capacity
+      - wan-downlink
+      - wan-downlink-load
+      - wan-measurement-duration
+      - wan-status
+      - wan-symmetric
+      - wan-uplink
+      - wan-uplink-load
+  /interface/wifi:
+    tags:
+      - aaa
+      - aaa.called-format
+      - aaa.calling-format
+      - aaa.interim-update
+      - aaa.mac-caching
+      - aaa.nas-identifier
+      - aaa.password-format
+      - aaa.username-format
+      - arp
+      - arp-timeout
+      - bound
+      - channel
+      - channel.band
+      - channel.frequency
+      - channel.reselect-interval
+      - channel.secondary-frequency
+      - channel.skip-dfs-channels
+      - channel.width
+      - comment
+      - configuration
+      - configuration.antenna-gain
+      - configuration.beacon-interval
+      - configuration.chains
+      - configuration.country
+      - configuration.distance
+      - configuration.dtim-period
+      - configuration.hide-ssid
+      - configuration.installation
+      - configuration.manager
+      - configuration.max-clients
+      - configuration.mode
+      - configuration.multicast-enhance
+      - configuration.qos-classifier
+      - configuration.ssid
+      - configuration.station-roaming
+      - configuration.tx-chains
+      - configuration.tx-power
+      - datapath
+      - datapath.bridge
+      - datapath.bridge-cost
+      - datapath.bridge-horizon
+      - datapath.client-isolation
+      - datapath.interface-list
+      - datapath.vlan-id
+      - default-name
+      - disable-running-check
+      - disabled
+      - dynamic
+      - inactive
+      - interworking
+      - interworking.3gpp-info
+      - interworking.authentication-types
+      - interworking.connection-capabilities
+      - interworking.domain-names
+      - interworking.esr
+      - interworking.hessid
+      - interworking.hotspot20
+      - interworking.hotspot20-dgaf
+      - interworking.internet
+      - interworking.ipv4-availability
+      - interworking.ipv6-availability
+      - interworking.network-type
+      - interworking.operational-classes
+      - interworking.operator-names
+      - interworking.realms
+      - interworking.roaming-ois
+      - interworking.uesa
+      - interworking.venue
+      - interworking.venue-names
+      - interworking.wan-at-capacity
+      - interworking.wan-downlink
+      - interworking.wan-downlink-load
+      - interworking.wan-measurement-duration
+      - interworking.wan-status
+      - interworking.wan-symmetric
+      - interworking.wan-uplink
+      - interworking.wan-uplink-load
+      - l2mtu
+      - mac-address
+      - master
+      - master-interface
+      - mtu
+      - name
+      - radio-mac
+      - running
+      - security
+      - security.authentication-types
+      - security.connect-group
+      - security.connect-priority
+      - security.dh-groups
+      - security.disable-pmkid
+      - security.eap-accounting
+      - security.eap-anonymous-identity
+      - security.eap-certificate-mode
+      - security.eap-methods
+      - security.eap-password
+      - security.eap-tls-certificate
+      - security.eap-username
+      - security.encryption
+      - security.ft
+      - security.ft-mobility-domain
+      - security.ft-nas-identifier
+      - security.ft-over-ds
+      - security.ft-preserve-vlanid
+      - security.ft-r0-key-lifetime
+      - security.ft-reassociation-deadline
+      - security.group-encryption
+      - security.group-key-update
+      - security.management-encryption
+      - security.management-protection
+      - security.multi-passphrase-group
+      - security.owe-transition-interface
+      - security.passphrase
+      - security.sae-anti-clogging-threshold
+      - security.sae-max-failure-rate
+      - security.sae-pwe
+      - security.wps
+      - steering
+      - steering.2g-probe-delay
+      - steering.neighbor-group
+      - steering.rrm
+      - steering.wnm
+  /interface/wifi/provisioning:
+    tags:
+      - action
+      - address-ranges
+      - comment
+      - common-name-regexp
+      - disabled
+      - identity-regexp
+      - master-configuration
+      - name-format
+      - radio-mac
+      - slave-configurations
+      - slave-name-format
+      - supported-bands
+  /interface/wifi/radio:
+    tags:
+      - 2g-channels
+      - 5g-channels
+      - afc-deployment
+      - bands
+      - cap
+      - ciphers
+      - countries
+      - current-channels
+      - current-country
+      - current-gopclasses
+      - current-halow-regdom
+      - current-max-reg-power
+      - hw-caps
+      - hw-type
+      - interface
+      - local
+      - max-interfaces
+      - max-peers
+      - max-station-interfaces
+      - max-vlans
+      - min-antenna-gain
+      - radio-mac
+      - rx-chains
+      - s1g-channels
+      - tx-chains
+  /interface/wifi/radio/settings:
+    tags:
+  /interface/wifi/registration-table:
+    tags:
+      - auth-type
+      - authorized
+      - band
+      - bytes
+      - comment
+      - interface
+      - last-activity
+      - mac-address
+      - packets
+      - rx-bits-per-second
+      - rx-rate
+      - signal
+      - ssid
+      - tx-bits-per-second
+      - tx-rate
+      - uptime
+      - vlan-id
+  /interface/wifi/security/multi-passphrase:
+    tags:
+      - comment
+      - disabled
+      - expired
+      - expires
+      - group
+      - isolation
+      - passphrase
+      - vlan-id
+  /interface/wifi/security:
+    tags:
+      - authentication-types
+      - comment
+      - connect-group
+      - connect-priority
+      - dh-groups
+      - disable-pmkid
+      - disabled
+      - eap-accounting
+      - eap-anonymous-identity
+      - eap-certificate-mode
+      - eap-methods
+      - eap-password
+      - eap-tls-certificate
+      - eap-username
+      - encryption
+      - ft
+      - ft-mobility-domain
+      - ft-nas-identifier
+      - ft-over-ds
+      - ft-preserve-vlanid
+      - ft-r0-key-lifetime
+      - ft-reassociation-deadline
+      - group-encryption
+      - group-key-update
+      - management-encryption
+      - management-protection
+      - multi-passphrase-group
+      - name
+      - owe-transition-interface
+      - passphrase
+      - sae-anti-clogging-threshold
+      - sae-max-failure-rate
+      - sae-pwe
+      - wps
+  /interface/wifi/steering/neighbor-group:
+    tags:
+      - bssids
+      - comment
+      - name
+  /interface/wifi/steering:
+    tags:
+      - 2g-probe-delay
+      - comment
+      - disabled
+      - name
+      - neighbor-group
+      - rrm
+      - wnm
+  /interface/wireguard/peers:
+    tags:
+      - allowed-address
+      - client-address
+      - client-dns
+      - client-endpoint
+      - client-keepalive
+      - client-listen-port
+      - comment
+      - current-endpoint-address
+      - current-endpoint-port
+      - disabled
+      - dynamic
+      - endpoint-address
+      - endpoint-port
+      - interface
+      - last-handshake
+      - name
+      - persistent-keepalive
+      - preshared-key
+      - private-key
+      - public-key
+      - responder
+      - rx
+      - tx
+  /interface/wireguard:
+    tags:
+      - comment
+      - disabled
+      - listen-port
+      - mtu
+      - name
+      - private-key
+      - public-key
+      - running
+  /interface/wireless/access-list:
+    tags:
+      - allow-signal-out-of-range
+      - ap-tx-limit
+      - authentication
+      - client-tx-limit
+      - comment
+      - disabled
+      - forwarding
+      - interface
+      - mac-address
+      - management-protection-key
+      - private-algo
+      - private-key
+      - private-pre-shared-key
+      - signal-range
+      - time
+      - vlan-id
+      - vlan-mode
+  /interface/wireless/align:
+    tags:
+  /interface/wireless/cap:
+    tags:
+  /interface/wireless/channels:
+    tags:
+      - band
+      - comment
+      - disabled
+      - extension-channel
+      - frequency
+      - list
+      - name
+      - width
+  /interface/wireless/connect-list:
+    tags:
+      - 3gpp
+      - allow-signal-out-of-range
+      - area-prefix
+      - comment
+      - connect
+      - disabled
+      - interface
+      - interworking
+      - iw-asra
+      - iw-authentication-types
+      - iw-connection-capabilities
+      - iw-esr
+      - iw-hessid
+      - iw-hotspot20
+      - iw-hotspot20-dgaf
+      - iw-internet
+      - iw-ipv4-availability
+      - iw-ipv6-availability
+      - iw-network-type
+      - iw-realms
+      - iw-roaming-ois
+      - iw-uesa
+      - iw-venue
+      - mac-address
+      - security-profile
+      - signal-range
+      - ssid
+      - wireless-protocol
+  /interface/wireless/interworking-profiles:
+    tags:
+      - 3gpp-info
+      - 3gpp-raw
+      - asra
+      - authentication-types
+      - comment
+      - connection-capabilities
+      - domain-names
+      - esr
+      - hessid
+      - hotspot20
+      - hotspot20-dgaf
+      - internet
+      - ipv4-availability
+      - ipv6-availability
+      - name
+      - network-type
+      - operational-classes
+      - operator-names
+      - realms
+      - realms-raw
+      - roaming-ois
+      - uesa
+      - venue
+      - venue-names
+      - wan-at-capacity
+      - wan-downlink
+      - wan-downlink-load
+      - wan-measurement-duration
+      - wan-status
+      - wan-symmetric
+      - wan-uplink
+      - wan-uplink-load
+  /interface/wireless/manual-tx-power-table:
+    tags:
+      - comment
+      - manual-tx-powers
+      - name
+  /interface/wireless/nstreme:
+    tags:
+      - comment
+      - disable-csma
+      - enable-nstreme
+      - enable-polling
+      - framer-limit
+      - framer-policy
+      - name
+  /interface/wireless/nstreme-dual:
+    tags:
+      - arp
+      - arp-timeout
+      - comment
+      - disable-csma
+      - disable-running-check
+      - disabled
+      - framer-limit
+      - framer-policy
+      - ht-channel-width
+      - ht-guard-interval
+      - ht-rates
+      - ht-streams
+      - l2mtu
+      - mac-address
+      - mtu
+      - name
+rates-a/g
+      - rates-b
+      - remote-mac
+      - running
+      - rx-band
+      - rx-channel-width
+      - rx-frequency
+      - rx-radio
+      - tx-band
+      - tx-channel-width
+      - tx-frequency
+      - tx-radio
+  /interface/wireless:
+    tags:
+      - adaptive-noise-immunity
+      - allow-sharedkey
+      - ampdu-priorities
+      - amsdu-limit
+      - amsdu-threshold
+      - antenna-gain
+      - antenna-mode
+      - area
+      - arp
+      - arp-timeout
+      - band
+basic-rates-a/g
+      - basic-rates-b
+      - bridge-mode
+      - burst-time
+      - channel-width
+      - comment
+      - compression
+      - country
+      - default-ap-tx-limit
+      - default-authentication
+      - default-client-tx-limit
+      - default-forwarding
+      - default-name
+      - disable-running-check
+      - disabled
+      - disconnect-timeout
+      - distance
+      - frame-lifetime
+      - frequency
+      - frequency-mode
+      - frequency-offset
+      - guard-interval
+      - hide-ssid
+      - ht-basic-mcs
+      - ht-supported-mcs
+      - hw-fragmentation-threshold
+      - hw-protection-mode
+      - hw-protection-threshold
+      - hw-retries
+      - installation
+      - interface-type
+      - interworking-profile
+      - keepalive-frames
+      - l2mtu
+      - mac-address
+      - master-interface
+      - max-station-count
+      - mode
+      - mtu
+      - multicast-buffering
+      - multicast-helper
+      - name
+      - noise-floor-threshold
+      - nv2-cell-radius
+      - nv2-downlink-ratio
+      - nv2-mode
+      - nv2-noise-floor-offset
+      - nv2-preshared-key
+      - nv2-qos
+      - nv2-queue-count
+      - nv2-security
+      - nv2-sync-secret
+      - on-fail-retry-time
+      - pci-info
+      - preamble-mode
+      - prism-cardtype
+      - radio-name
+      - rate-selection
+      - rate-set
+      - running
+      - rx-chains
+      - scan-list
+      - secondary-frequency
+      - security-profile
+      - skip-dfs-channels
+      - ssid
+      - station-bridge-clone-mac
+      - station-roaming
+supported-rates-a/g
+      - supported-rates-b
+      - tdma-period-size
+      - tx-chains
+      - tx-power
+      - tx-power-mode
+      - update-stats-interval
+      - vht-basic-mcs
+      - vht-supported-mcs
+      - vlan-id
+      - vlan-mode
+      - wds-cost-range
+      - wds-default-bridge
+      - wds-default-cost
+      - wds-ignore-ssid
+      - wds-mode
+      - wireless-protocol
+      - wmm-support
+      - wps-mode
+  /interface/wireless/registration-table:
+    tags:
+      - 802.1x-port-enabled
+      - ack-timeout
+      - ap
+      - ap-tx-limit
+      - authentication-type
+      - bridge
+      - bytes
+      - client-tx-limit
+      - comment
+      - compression
+      - distance
+      - encryption
+      - evm-ch0
+      - evm-ch1
+      - evm-ch2
+      - evm-ch3
+      - frame-bytes
+      - frames
+      - framing-current-size
+      - framing-limit
+      - framing-mode
+      - group-encryption
+      - hw-frame-bytes
+      - hw-frames
+      - interface
+      - last-activity
+      - last-ip
+      - mac-address
+      - management-protection
+      - nstreme
+      - nstreme-plus
+      - p-throughput
+      - packed-bytes
+      - packed-frames
+      - packets
+      - radio-name
+      - routeros-version
+      - rx-ccq
+      - rx-rate
+      - signal-strength
+      - signal-strength-ch0
+      - signal-strength-ch1
+      - signal-strength-ch2
+      - signal-strength-ch3
+      - signal-to-noise
+      - strength-at-rates
+      - tdma-retx
+      - tdma-rx-size
+      - tdma-timing-offset
+      - tdma-tx-size
+      - tdma-winfull
+      - tx-ccq
+      - tx-evm-ch0
+      - tx-evm-ch1
+      - tx-evm-ch2
+      - tx-evm-ch3
+      - tx-frames-timed-out
+      - tx-rate
+      - tx-rate-set
+      - tx-signal-strength
+      - tx-signal-strength-ch0
+      - tx-signal-strength-ch1
+      - tx-signal-strength-ch2
+      - tx-signal-strength-ch3
+      - uptime
+      - vlan-id
+      - wds
+      - wmm-enabled
+      - wmm-ps-enabled
+  /interface/wireless/security-profiles:
+    tags:
+      - authentication-types
+      - comment
+      - default
+      - disable-pmkid
+      - eap-methods
+      - group-ciphers
+      - group-key-update
+      - interim-update
+      - management-protection
+      - management-protection-key
+      - mode
+      - mschapv2-password
+      - mschapv2-username
+      - name
+      - radius-called-format
+      - radius-eap-accounting
+      - radius-mac-accounting
+      - radius-mac-authentication
+      - radius-mac-caching
+      - radius-mac-format
+      - radius-mac-mode
+      - static-algo-0
+      - static-algo-1
+      - static-algo-2
+      - static-algo-3
+      - static-key-0
+      - static-key-1
+      - static-key-2
+      - static-key-3
+      - static-sta-private-algo
+      - static-sta-private-key
+      - static-transmit-key
+      - supplicant-identity
+      - tls-certificate
+      - tls-mode
+      - unicast-ciphers
+      - wpa-pre-shared-key
+      - wpa2-pre-shared-key
+  /interface/wireless/sniffer/packet:
+    tags:
+      - channel
+      - crc-error
+      - dst
+      - interface
+      - signal-at-rate
+      - src
+      - time
+      - type
+  /interface/wireless/sniffer:
+    tags:
+  /interface/wireless/snooper:
+    tags:
+  /interface/wireless/wds:
+    tags:
+      - arp
+      - arp-timeout
+      - comment
+      - disable-running-check
+      - disabled
+      - dynamic
+      - l2mtu
+      - mac-address
+      - master-interface
+      - mtu
+      - name
+      - running
+      - wds-address
+  /iot/bluetooth/advertisers/ad-structures:
+    tags:
+      - data
+      - name
+      - type
+  /iot/bluetooth/advertisers:
+    tags:
+      - ad-size
+      - ad-structures
+      - channel-map
+      - device
+      - disabled
+      - max-interval
+      - min-interval
+      - own-address-type
+  /iot/bluetooth/connections/async-data:
+    tags:
+      - data-bytes
+      - data-hex
+      - data-text
+      - pdev
+      - time
+      - type
+      - uuid
+  /iot/bluetooth/connections/characteristics:
+    tags:
+      - handle
+      - name
+      - pdev
+      - props
+      - service-name
+      - service-uuid
+      - uuid
+  /iot/bluetooth/connections:
+    tags:
+      - direction
+      - name
+  /iot/bluetooth/peripheral-devices:
+    tags:
+      - address
+      - address-type
+      - beacon-types
+      - eddy-battery-voltage
+      - eddy-eid
+      - eddy-instance
+      - eddy-namespace
+      - eddy-packet-count
+      - eddy-rssi-at-1m
+      - eddy-temperature
+      - eddy-tx-power
+      - eddy-uptime
+      - eddy-version
+      - ibeacon-major
+      - ibeacon-minor
+      - ibeacon-rssi-at-1m
+      - ibeacon-uuid
+      - last-data
+      - last-seen
+      - mtik-acc-x
+      - mtik-acc-y
+      - mtik-acc-z
+      - mtik-battery
+      - mtik-encrypted
+      - mtik-flags
+      - mtik-key
+      - mtik-temperature
+      - mtik-uptime
+      - mtik-version
+      - name
+      - persist
+      - rssi
+  /iot/bluetooth:
+    tags:
+      - antenna
+      - name
+      - offline
+      - public-address
+      - random-static-address
+      - rx-acl
+      - rx-bytes
+      - rx-errors
+      - rx-evt
+      - tx-acl
+      - tx-bytes
+      - tx-cmd
+      - tx-errors
+  /iot/bluetooth/scanners/advertisements:
+    tags:
+      - address
+      - address-type
+      - data
+      - device
+      - epoch
+      - filter-comment
+      - length
+      - pdu-type
+      - rssi
+      - time
+  /iot/bluetooth/scanners:
+    tags:
+      - device
+      - disabled
+      - filter-duplicates
+      - filter-policy
+      - interval
+      - own-address-type
+      - type
+      - window
+  /iot/bluetooth/whitelist:
+    tags:
+      - address
+      - address-type
+      - comment
+      - device
+      - disabled
+  /iot/lora/channels:
+    tags:
+      - bandwidth
+      - datarate
+      - disabled
+      - freq
+      - freq-off
+      - name
+      - radio
+      - spread-factor
+      - type
+  /iot/lora/joineui:
+    tags:
+      - joineuis
+      - logging
+      - name
+  /iot/lora/netid:
+    tags:
+      - logging
+      - name
+      - netids
+  /iot/lora:
+    tags:
+      - alt
+      - antenna
+      - antenna-gain
+      - band
+      - channel-plan
+      - disabled
+      - eui-id
+      - firmware-id
+      - forward
+      - gateway-id
+      - lat
+      - lbt-enabled
+      - listen-time
+      - locks
+      - long
+      - name
+      - network
+      - rssi-threshold
+      - rx-packets
+      - servers
+      - spoof-gps
+      - src-address
+      - status
+      - tx-packets
+      - tx-toa
+  /iot/lora/radios:
+    tags:
+      - center-freq
+      - disabled
+      - name
+      - rssi-off
+      - tx-enabled
+      - tx-freq-max
+      - tx-freq-min
+      - type
+  /iot/lora/servers:
+    tags:
+      - address
+      - certificate
+      - down-port
+      - interval
+      - joineui
+      - key
+      - name
+      - netid
+      - port
+      - protocol
+      - ssl
+      - up-port
+  /iot/lora/traffic/options:
+    tags:
+  /iot/lora/traffic:
+    tags:
+      - band
+      - coderate
+      - counter
+      - crc
+      - data
+      - datarate
+      - devaddr
+      - deveui
+      - devnonce
+      - fcnt
+      - freq
+      - freqhz
+      - gwid
+      - ifchain
+      - invertpol
+      - joineui
+      - joinnonce
+      - mod
+      - msgtype
+      - mver
+      - netid
+      - nocrc
+      - noheader
+      - preamblen
+      - rfchain
+      - rfpow
+      - rssi
+      - rxcrc
+      - size
+      - snr
+      - snrmax
+      - snrmin
+      - time
+      - txmode
+      - type
+  /iot/modbus:
+    tags:
+  /iot/modbus/security-rules:
+    tags:
+      - allowed-function-codes
+      - comment
+      - disabled
+      - ip-range
+  /iot/mqtt/brokers:
+    tags:
+      - address
+      - auto-connect
+      - certificate
+      - client-id
+      - connected
+      - keep-alive
+      - name
+      - parallel-scripts-limit
+      - password
+      - port
+      - ssl
+      - username
+  /iot/mqtt:
+    tags:
+  /iot/mqtt/subscriptions:
+    tags:
+      - broker
+      - on-message
+      - qos
+      - topic
+  /iot/mqtt/subscriptions/recv:
+    tags:
+      - broker
+      - data
+      - time
+      - topic
+  /ip/address:
+    tags:
+      - actual-interface
+      - address
+      - broadcast
+      - comment
+      - disabled
+      - dynamic
+      - interface
+      - invalid
+      - netmask
+      - network
+      - slave
+  /ip/arp:
+    tags:
+      - address
+      - comment
+      - complete
+      - dhcp
+      - disabled
+      - dynamic
+      - interface
+      - invalid
+      - mac-address
+      - published
+      - published
+      - status
+  /ip/cloud/advanced:
+    tags:
+  /ip/cloud:
+    tags:
+  /ip/dhcp-client/option:
+    tags:
+      - code
+      - comment
+      - default
+      - name
+      - raw-value
+      - value
+  /ip/dhcp-client:
+    tags:
+      - add-default-route
+      - address
+      - caps-managers
+      - comment
+      - default-route-distance
+      - default-route-tables
+      - dhcp-options
+      - dhcp-server
+      - disabled
+      - dynamic
+      - expires-after
+      - gateway
+      - interface
+      - invalid
+      - netmask
+      - primary-dns
+      - primary-ntp
+      - script
+      - secondary-dns
+      - secondary-ntp
+      - status
+      - use-peer-dns
+      - use-peer-ntp
+  /ip/dhcp-relay:
+    tags:
+      - add-relay-info
+      - delay-threshold
+      - dhcp-server
+      - dhcp-server-vrf
+      - disabled
+      - interface
+      - invalid
+      - local-address
+      - local-address-as-src-ip
+      - name
+      - relay-info-remote-id
+  /ip/dhcp-server/alert:
+    tags:
+      - alert-timeout
+      - comment
+      - disabled
+      - interface
+      - invalid
+      - on-alert
+      - unknown-server
+      - valid-server
+  /ip/dhcp-server/config:
+    tags:
+  /ip/dhcp-server/lease:
+    tags:
+      - active-address
+      - active-client-id
+      - active-mac-address
+      - active-server
+      - address
+      - address-lists
+      - age
+      - agent-circuit-id
+      - agent-remote-id
+      - allow-dual-stack-queue
+      - always-broadcast
+      - block-access
+      - blocked
+      - class-id
+      - client-id
+      - comment
+      - dhcp-option
+      - dhcp-option-set
+      - disabled
+      - dynamic
+      - expires-after
+      - host-name
+      - insert-queue-before
+      - last-seen
+      - lease-time
+      - mac-address
+      - parent-queue
+      - queue-type
+      - radius
+      - rate-limit
+      - routes
+      - server
+      - src-mac-address
+      - status
+      - use-src-mac
+  /ip/dhcp-server/matcher:
+    tags:
+      - address-pool
+      - code
+      - comment
+      - disabled
+      - matching-type
+      - name
+      - option-set
+      - server
+      - value
+  /ip/dhcp-server/network:
+    tags:
+      - address
+      - boot-file-name
+      - caps-manager
+      - comment
+      - dhcp-option
+      - dhcp-option-set
+      - dns-
+      - dns-server
+      - domain
+      - dynamic
+      - gateway
+      - netmask
+      - next-server
+      - ntp-server
+      - wins-server
+  /ip/dhcp-server/option:
+    tags:
+      - code
+      - comment
+      - force
+      - name
+      - raw-value
+      - value
+  /ip/dhcp-server/option/sets:
+    tags:
+      - name
+      - options
+  /ip/dhcp-server:
+    tags:
+      - add-arp
+      - address-lists
+      - address-pool
+      - allow-dual-stack-queue
+      - always-broadcast
+      - authoritative
+      - bootp-lease-time
+      - bootp-support
+      - client-mac-limit
+      - comment
+      - conflict-detection
+      - delay-threshold
+      - dhcp-option-set
+      - disabled
+      - dynamic
+      - insert-queue-before
+      - interface
+      - invalid
+      - lease-script
+      - lease-time
+      - name
+      - parent-queue
+      - relay
+      - server-address
+      - use-framed-as-classless
+      - use-radius
+  /ip/dns/adlist:
+    tags:
+      - comment
+      - disabled
+      - file
+      - match-count
+      - name-count
+      - ssl-verify
+      - url
+  /ip/dns/cache/all:
+    tags:
+      - data
+      - expire
+      - minimum
+      - name
+      - negative
+      - refresh
+      - responsible
+      - retry
+      - serial
+      - static
+      - ttl
+      - type
+  /ip/dns/cache:
+    tags:
+      - data
+      - name
+      - static
+      - ttl
+      - type
+  /ip/dns/forwarders:
+    tags:
+      - comment
+      - disabled
+      - dns-servers
+      - doh-servers
+      - name
+      - verify-doh-cert
+  /ip/dns:
+    tags:
+  /ip/dns/static:
+    tags:
+      - address
+      - address-list
+      - cname
+      - comment
+      - disabled
+      - dynamic
+      - forward-to
+      - match-subdomain
+      - mx-exchange
+      - mx-preference
+      - name
+      - ns
+      - regexp
+      - srv-port
+      - srv-priority
+      - srv-target
+      - srv-weight
+      - text
+      - ttl
+      - type
+  /ip/firewall/address-list:
+    tags:
+      - address
+      - comment
+      - creation-time
+      - disabled
+      - dynamic
+      - dynamic
+      - list
+      - timeout
+  /ip/firewall/calea:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-rate
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - fragment
+      - hotspot
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - ipv4-options
+      - layer7-protocol
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - psd
+      - random
+      - realm
+      - routing-mark
+      - sniff-id
+      - sniff-target
+      - sniff-target-port
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-mss
+      - time
+      - tls-host
+      - ttl
+  /ip/firewall/connection:
+    tags:
+      - assured
+      - confirmed
+      - connection-mark
+      - connection-type
+      - dst-address
+      - dstnat
+      - dying
+      - expected
+      - fasttrack
+      - gre-key
+      - gre-protocol
+      - gre-version
+      - hw-offload
+      - icmp-code
+      - icmp-id
+      - icmp-type
+      - orig-bytes
+      - orig-fasttrack-bytes
+      - orig-fasttrack-packets
+      - orig-packets
+      - orig-rate
+      - protocol
+      - repl-bytes
+      - repl-fasttrack-bytes
+      - repl-fasttrack-packets
+      - repl-packets
+      - repl-rate
+      - reply-dst-address
+      - reply-src-address
+      - seen-reply
+      - src-address
+      - srcnat
+      - tcp-state
+      - timeout
+  /ip/firewall/connection/tracking:
+    tags:
+  /ip/firewall/filter:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-nat-state
+      - connection-rate
+      - connection-state
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - fragment
+      - hotspot
+      - hw-offload
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - ipv4-options
+      - jump-target
+      - layer7-protocol
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - p2p
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - psd
+      - random
+      - realm
+      - reject-with
+      - routing-mark
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-flags
+      - tcp-mss
+      - time
+      - tls-host
+      - ttl
+  /ip/firewall/layer7-protocol:
+    tags:
+      - comment
+      - name
+      - regexp
+  /ip/firewall/mangle:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-nat-state
+      - connection-rate
+      - connection-state
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - fragment
+      - hotspot
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - ipv4-options
+      - jump-target
+      - layer7-protocol
+      - limit
+      - log
+      - log-prefix
+      - new-connection-mark
+      - new-dscp
+      - new-mss
+      - new-packet-mark
+      - new-priority
+      - new-routing-mark
+      - new-ttl
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - p2p
+      - packet-mark
+      - packet-size
+      - packets
+      - passthrough
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - psd
+      - random
+      - realm
+      - route-dst
+      - routing-mark
+      - sniff-id
+      - sniff-target
+      - sniff-target-port
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-flags
+      - tcp-mss
+      - time
+      - tls-host
+      - ttl
+  /ip/firewall/nat:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-rate
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - fragment
+      - hotspot
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - ipv4-options
+      - jump-target
+      - layer7-protocol
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - psd
+      - random
+      - randomise-ports
+      - realm
+      - routing-mark
+      - same-not-by-dst
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-mss
+      - time
+      - to-addresses
+      - to-ports
+      - ttl
+  /ip/firewall/raw:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - fragment
+      - hotspot
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - ipv4-options
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - psd
+      - random
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-flags
+      - tcp-mss
+      - time
+      - tls-host
+      - ttl
+  /ip/firewall/service-port:
+    tags:
+      - disabled
+      - invalid
+      - name
+      - ports
+      - sip-direct-media
+      - sip-timeout
+  /ip/hotspot/active:
+    tags:
+      - address
+      - advertisement
+      - blocked
+      - bytes-in
+      - bytes-out
+      - comment
+      - domain
+      - idle-time
+      - idle-timeout
+      - keepalive-timeout
+      - limit-bytes-in
+      - limit-bytes-out
+      - limit-bytes-total
+      - login-by
+      - mac-address
+      - packets-in
+      - packets-out
+      - radius
+      - server
+      - session-time-left
+      - uptime
+      - user
+  /ip/hotspot/cookie:
+    tags:
+      - domain
+      - expires-in
+      - mac-address
+      - mac-cookie
+      - user
+  /ip/hotspot/host:
+    tags:
+DHCP
+      - address
+      - authorized
+      - bridge-port
+      - bypassed
+      - bytes-in
+      - bytes-out
+      - comment
+      - dynamic
+      - found-by
+      - host-dead-time
+      - http-proxy
+      - idle-time
+      - idle-timeout
+      - keepalive-timeout
+      - mac-address
+      - packets-in
+      - packets-out
+      - server
+      - static
+      - to-address
+      - uptime
+      - vlan-id
+  /ip/hotspot/ip-binding:
+    tags:
+      - address
+      - blocked
+      - bypassed
+      - comment
+      - disabled
+      - mac-address
+      - server
+      - to-address
+      - type
+  /ip/hotspot:
+    tags:
+HTTPS
+      - address-pool
+      - addresses-per-mac
+      - disabled
+      - idle-timeout
+      - interface
+      - invalid
+      - ip-of-dns-name
+      - keepalive-timeout
+      - login-timeout
+      - name
+      - profile
+      - proxy-status
+  /ip/hotspot/profile:
+    tags:
+      - default
+      - dns-name
+      - hotspot-address
+      - html-directory
+      - html-directory-override
+      - http-cookie-lifetime
+      - http-proxy
+      - install-hotspot-queue
+      - login-by
+      - mac-auth-mode
+      - mac-auth-password
+      - name
+      - nas-port-type
+      - radius-accounting
+      - radius-default-domain
+      - radius-interim-update
+      - radius-location-id
+      - radius-location-name
+      - radius-mac-format
+      - rate-limit
+      - smtp-server
+      - split-user-domain
+      - ssl-certificate
+      - trial-uptime-limit
+      - trial-uptime-reset
+      - trial-user-profile
+      - use-radius
+  /ip/hotspot/service-port:
+    tags:
+      - disabled
+      - name
+      - ports
+  /ip/hotspot/user:
+    tags:
+      - address
+      - bytes-in
+      - bytes-out
+      - comment
+      - default
+      - disabled
+      - dynamic
+      - email
+      - limit-bytes-in
+      - limit-bytes-out
+      - limit-bytes-total
+      - limit-uptime
+      - mac-address
+      - name
+      - packets-in
+      - packets-out
+      - password
+      - profile
+      - routes
+      - server
+      - uptime
+  /ip/hotspot/user/profile:
+    tags:
+      - add-mac-cookie
+      - address-list
+      - address-pool
+      - advertise
+      - advertise-interval
+      - advertise-timeout
+      - advertise-url
+      - default
+      - idle-timeout
+      - incoming-filter
+      - incoming-packet-mark
+      - insert-queue-before
+      - keepalive-timeout
+      - mac-cookie-timeout
+      - name
+      - on-login
+      - on-logout
+      - open-status-page
+      - outgoing-filter
+      - outgoing-packet-mark
+      - parent-queue
+      - queue-type
+      - rate-limit
+      - session-timeout
+      - shared-users
+      - status-autorefresh
+      - transparent-proxy
+  /ip/hotspot/walled-garden/ip:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - dst-address-list
+      - dst-host
+      - dst-port
+      - invalid
+      - protocol
+      - server
+      - src-address
+      - src-address-list
+  /ip/hotspot/walled-garden:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - dst-host
+      - dst-port
+      - dynamic
+      - hits
+      - method
+      - path
+      - server
+      - src-address
+  /ip/ipsec/active-peers:
+    tags:
+      - comment
+      - dynamic-address
+      - id
+      - last-seen
+      - local-address
+      - natt-peer
+      - ph2-total
+      - port
+      - port
+      - remote-address
+      - responder
+      - rx-bytes
+      - rx-packets
+      - side
+      - spii
+      - spii
+      - spir
+      - spir
+      - state
+      - tx-bytes
+      - tx-packets
+      - uptime
+  /ip/ipsec/identity:
+    tags:
+      - auth-method
+      - certificate
+      - comment
+      - disabled
+      - dynamic
+      - eap-methods
+      - generate-policy
+      - key
+      - match-by
+      - mode-config
+      - my-id
+      - notrack-chain
+      - password
+      - peer
+      - policy-template-group
+      - remote-certificate
+      - remote-id
+      - remote-key
+      - secret
+      - username
+  /ip/ipsec/installed-sa:
+    tags:
+AH
+ESP
+      - add-lifetime
+      - addtime
+      - auth-algorithm
+      - auth-key
+      - current-bytes
+      - current-packets
+      - dst-address
+      - enc-algorithm
+      - enc-key
+      - enc-key-size
+      - expires-in
+      - hw-aead
+      - invalid-packets
+      - replay
+      - seen-traffic
+      - spi
+      - src-address
+      - state
+  /ip/ipsec/key:
+    tags:
+      - key-size
+      - name
+      - private-key
+      - rsa
+  /ip/ipsec/mode-config:
+    tags:
+      - address
+      - address-pool
+      - address-prefix-length
+      - connection-mark
+      - default
+      - name
+      - responder
+      - responder
+      - split-dns
+      - split-include
+      - src-address-list
+      - static-dns
+      - system-dns
+      - use-responder-dns
+  /ip/ipsec/peer:
+    tags:
+      - address
+      - comment
+      - current-address
+      - disabled
+      - dynamic
+      - exchange-mode
+      - local-address
+      - name
+      - passive
+      - port
+      - profile
+      - responder
+      - send-initial-contact
+  /ip/ipsec/policy/group:
+    tags:
+      - comment
+      - default
+      - name
+  /ip/ipsec/policy:
+    tags:
+      - action
+      - active
+      - backup
+      - comment
+      - default
+      - disabled
+      - dst-address
+      - dst-port
+      - dynamic
+      - group
+      - invalid
+      - ipsec-protocols
+      - level
+      - peer
+      - ph2-count
+      - ph2-state
+      - proposal
+      - protocol
+      - sa-dst-address
+      - sa-src-address
+      - src-address
+      - src-port
+      - template
+      - template
+      - tunnel
+  /ip/ipsec/profile:
+    tags:
+      - default
+      - dh-group
+      - dpd-interval
+      - dpd-maximum-failures
+      - enc-algorithm
+      - hash-algorithm
+      - lifebytes
+      - lifetime
+      - name
+      - nat-traversal
+      - prf-algorithm
+      - proposal-check
+  /ip/ipsec/proposal:
+    tags:
+      - auth-algorithms
+      - comment
+      - default
+      - disabled
+      - enc-algorithms
+      - lifetime
+      - name
+      - pfs-group
+  /ip/ipsec/settings:
+    tags:
+  /ip/ipsec/statistics:
+    tags:
+  /ip/kid-control/device:
+    tags:
+      - activity
+      - blocked
+      - bytes-down
+      - bytes-up
+      - disabled
+      - dynamic
+      - idle-time
+      - inactive
+      - ip-address
+      - limited
+      - mac-address
+      - name
+      - rate-down
+      - rate-up
+      - user
+  /ip/kid-control:
+    tags:
+      - blocked
+      - disabled
+      - fri
+      - mon
+      - name
+      - pause-left
+      - pause-till
+      - paused
+      - rate-limit
+      - rate-limited
+      - sat
+      - sun
+      - thu
+      - tue
+      - tur-fri
+      - tur-mon
+      - tur-sat
+      - tur-sun
+      - tur-thu
+      - tur-tue
+      - tur-wed
+      - wed
+  /ip/media:
+    tags:
+      - allowed-hostname
+      - allowed-ip
+      - disabled
+      - dynamic
+      - friendly-name
+      - interface
+      - path
+      - status
+  /ip/media/settings:
+    tags:
+  /ip/nat-pmp/interfaces:
+    tags:
+      - disabled
+      - dynamic
+      - forced-ip
+      - interface
+      - type
+  /ip/nat-pmp:
+    tags:
+  /ip/neighbor/discovery-settings:
+    tags:
+  /ip/neighbor:
+    tags:
+      - address
+      - address4
+      - address6
+      - age
+      - board
+      - discovered-by
+      - identity
+      - interface
+      - interface-name
+      - ipv6
+      - mac-address
+      - platform
+      - software-id
+      - system-caps
+      - system-caps-enabled
+      - system-description
+      - unpack
+      - uptime
+      - version
+  /ip/packing:
+    tags:
+      - aggregated-size
+      - disabled
+      - interface
+      - packing
+      - unpacking
+  /ip/pool:
+    tags:
+      - available
+      - comment
+      - name
+      - next-pool
+      - ranges
+      - total
+      - used
+  /ip/pool/used:
+    tags:
+      - address
+      - info
+      - owner
+      - pool
+  /ip/proxy/access:
+    tags:
+      - action
+      - action-data
+      - comment
+      - disabled
+      - dst-address
+      - dst-host
+      - dst-port
+      - hits
+      - local-port
+      - method
+      - path
+      - src-address
+  /ip/proxy/cache:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - dst-host
+      - dst-port
+      - hits
+      - local-port
+      - method
+      - path
+      - src-address
+  /ip/proxy/cache-contents:
+    tags:
+      - file-size
+      - last-accessed
+      - last-accessed-time
+      - last-modified
+      - last-modified-time
+      - uri
+  /ip/proxy/connections:
+    tags:
+      - client
+      - comment
+      - dst-address
+      - last-protocol
+      - rx-bytes
+      - server
+      - src-address
+      - state
+      - tx-bytes
+  /ip/proxy/direct:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - dst-host
+      - dst-port
+      - hits
+      - local-port
+      - method
+      - path
+      - src-address
+  /ip/proxy/inserts:
+    tags:
+  /ip/proxy/lookups:
+    tags:
+  /ip/proxy:
+    tags:
+  /ip/proxy/refreshes:
+    tags:
+  /ip/route:
+    tags:
+      - active
+      - bgp
+      - bgp-mpls-vpn
+      - blackhole
+      - check-gateway
+      - comment
+      - connect
+      - dhcp
+      - disabled
+      - distance
+      - dst-address
+      - dynamic
+      - ecmp
+      - gateway
+      - hw-offloaded
+      - immediate-gw
+      - inactive
+      - is-is
+      - local-address
+      - modem
+      - ospf
+      - pref-src
+      - rip
+      - routing-table
+      - scope
+      - static
+      - suppress-hw-offload
+      - target-scope
+      - vpn
+      - vrf-interface
+  /ip/service:
+    tags:
+      - address
+      - certificate
+      - disabled
+      - invalid
+      - max-sessions
+      - name
+      - port
+      - tls-version
+      - vrf
+  /ip/settings:
+    tags:
+  /ip/smb:
+    tags:
+  /ip/smb/shares:
+    tags:
+      - comment
+      - default
+      - directory
+      - disabled
+      - dynamic
+      - invalid-users
+      - name
+      - read-only
+      - read-only
+      - require-encryption
+      - require-encryption
+      - valid-users
+  /ip/smb/users:
+    tags:
+      - comment
+      - default
+      - disabled
+      - dynamic
+      - name
+      - password
+      - read-only
+      - read-only
+  /ip/socks/access:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - dst-port
+      - src-address
+      - src-port
+  /ip/socks/connections:
+    tags:
+      - dst-address
+      - rx
+      - src-address
+      - tx
+      - type
+      - user
+  /ip/socks:
+    tags:
+  /ip/socks/users:
+    tags:
+      - disabled
+      - name
+      - only-one
+      - password
+      - rate-limit
+  /ip/ssh:
+    tags:
+  /ip/tftp:
+    tags:
+      - allow
+      - allow-overwrite
+      - allow-rollover
+      - comment
+      - disabled
+      - hits
+      - ip-addresses
+      - read-only
+      - reading-window-size
+      - real-filename
+      - req-filename
+  /ip/tftp/settings:
+    tags:
+  /ip/traffic-flow/ipfix:
+    tags:
+  /ip/traffic-flow:
+    tags:
+  /ip/traffic-flow/target:
+    tags:
+      - disabled
+      - dst-address
+      - port
+      - src-address
+      - v9-template-refresh
+      - v9-template-timeout
+      - version
+  /ip/upnp/interfaces:
+    tags:
+      - disabled
+      - dynamic
+      - forced-ip
+      - interface
+      - type
+  /ip/upnp:
+    tags:
+  /ip/vrf:
+    tags:
+      - builtin
+      - comment
+      - disabled
+      - interfaces
+      - name
+  /ipv6/address:
+    tags:
+      - actual-interface
+      - address
+      - advertise
+      - auto-link-local
+      - comment
+      - deprecated
+      - disabled
+      - dynamic
+      - eui-64
+      - from-pool
+      - global
+      - interface
+      - invalid
+      - link-local
+      - no-dad
+      - preferred
+      - slave
+      - valid
+  /ipv6/dhcp-client/option:
+    tags:
+      - code
+      - comment
+      - default
+      - name
+      - raw-value
+      - value
+  /ipv6/dhcp-client:
+    tags:
+      - add-default-route
+      - address
+      - allow-reconfigure
+      - comment
+      - custom-duid
+      - default-route-distance
+      - dhcp-options
+      - dhcp-options
+      - dhcp-server-v6
+      - disabled
+      - duid
+      - dynamic
+      - interface
+      - invalid
+      - pool-name
+      - pool-prefix-length
+      - prefix
+      - prefix-address-lists
+      - prefix-hint
+      - rapid-commit
+      - reconfigure-key
+      - reconfigure-last-counter
+      - request
+      - script
+      - status
+      - use-interface-duid
+      - use-peer-dns
+      - validate-server-duid
+  /ipv6/dhcp-relay:
+    tags:
+      - comment
+      - delay-threshold
+      - dhcp-server
+      - disabled
+      - interface
+      - invalid
+      - link-address
+      - name
+      - store-relayed-bindings
+  /ipv6/dhcp-relay/routes:
+    tags:
+      - last-seen
+      - life-time
+      - peer-address
+      - prefix
+      - relay
+  /ipv6/dhcp-server/binding:
+    tags:
+      - active-server
+      - address
+      - address-lists
+      - allow-dual-stack-queue
+      - client-address
+      - comment
+      - dhcp-option
+      - disabled
+      - duid
+      - dynamic
+      - expires-after
+      - ia-type
+      - iaid
+      - insert-queue-before
+      - invalid
+      - last-seen
+      - life-time
+      - parent-queue
+      - prefix-pool
+      - queue-type
+      - radius
+      - rate-limit
+      - reconfigure-key
+      - reconfigure-last-sent
+      - reconfigure-status
+      - server
+      - status
+  /ipv6/dhcp-server/option:
+    tags:
+      - code
+      - comment
+      - name
+      - raw-value
+      - value
+  /ipv6/dhcp-server/option/sets:
+    tags:
+      - name
+      - options
+  /ipv6/dhcp-server:
+    tags:
+      - address-lists
+      - address-pool
+      - allow-dual-stack-queue
+      - binding-script
+      - comment
+      - dhcp-option
+      - disabled
+      - duid
+      - dynamic
+      - insert-queue-before
+      - interface
+      - invalid
+      - lease-time
+      - name
+      - parent-queue
+      - preference
+      - prefix-pool
+      - rapid-commit
+      - route-distance
+      - use-radius
+      - use-reconfigure
+  /ipv6/firewall/address-list:
+    tags:
+      - address
+      - comment
+      - creation-time
+      - disabled
+      - dynamic
+      - dynamic
+      - list
+      - timeout
+  /ipv6/firewall/connection:
+    tags:
+      - assured
+      - confirmed
+      - connection-mark
+      - connection-type
+      - dst-address
+      - dst-port
+      - dstnat
+      - dying
+      - expected
+      - fasttrack
+      - gre-key
+      - gre-protocol
+      - gre-version
+      - icmp-code
+      - icmp-id
+      - icmp-type
+      - p2p
+      - protocol
+      - reply-dst-address
+      - reply-dst-port
+      - reply-src-address
+      - reply-src-port
+      - seen-reply
+      - src-address
+      - src-port
+      - srcnat
+      - tcp-state
+      - timeout
+  /ipv6/firewall/filter:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-nat-state
+      - connection-rate
+      - connection-state
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - headers
+      - hop-limit
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - random
+      - reject-with
+      - routing-mark
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-flags
+      - tcp-mss
+      - time
+      - tls-host
+  /ipv6/firewall/mangle:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-nat-state
+      - connection-rate
+      - connection-state
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dst-prefix
+      - dynamic
+      - headers
+      - hop-limit
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - new-connection-mark
+      - new-dscp
+      - new-hop-limit
+      - new-mss
+      - new-packet-mark
+      - new-priority
+      - new-routing-mark
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - passthrough
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - random
+      - routing-mark
+      - sniff-id
+      - sniff-target
+      - sniff-target-port
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - src-prefix
+      - tcp-flags
+      - tcp-mss
+      - time
+      - tls-host
+  /ipv6/firewall/nat:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - connection-bytes
+      - connection-limit
+      - connection-mark
+      - connection-rate
+      - connection-state
+      - connection-type
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - headers
+      - hop-limit
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - random
+      - routing-mark
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-flags
+      - tcp-mss
+      - time
+      - to-address
+      - to-ports
+  /ipv6/firewall/raw:
+    tags:
+      - action
+      - address-list
+      - address-list-timeout
+      - bytes
+      - chain
+      - comment
+      - content
+      - disabled
+      - dscp
+      - dst-address
+      - dst-address-list
+      - dst-address-type
+      - dst-limit
+      - dst-port
+      - dynamic
+      - headers
+      - hop-limit
+      - icmp-options
+      - in-bridge-port
+      - in-bridge-port-list
+      - in-interface
+      - in-interface-list
+      - ingress-priority
+      - invalid
+      - ipsec-policy
+      - jump-target
+      - limit
+      - log
+      - log-prefix
+      - nth
+      - out-bridge-port
+      - out-bridge-port-list
+      - out-interface
+      - out-interface-list
+      - packet-mark
+      - packet-size
+      - packets
+      - per-connection-classifier
+      - port
+      - priority
+      - protocol
+      - random
+      - src-address
+      - src-address-list
+      - src-address-type
+      - src-mac-address
+      - src-port
+      - tcp-flags
+      - tcp-mss
+      - time
+      - tls-host
+  /ipv6/nd/prefix/default:
+    tags:
+  /ipv6/nd/prefix:
+    tags:
+      - 6to4-interface
+      - autonomous
+      - comment
+      - disabled
+      - dynamic
+      - interface
+      - invalid
+      - on-link
+      - preferred-lifetime
+      - prefix
+      - valid-lifetime
+  /ipv6/nd:
+    tags:
+      - advertise-dns
+      - advertise-mac-address
+      - comment
+      - default
+      - disabled
+      - dns
+      - hop-limit
+      - interface
+      - invalid
+      - managed-address-configuration
+      - mtu
+      - other-configuration
+      - pref64
+      - ra-delay
+      - ra-interval
+      - ra-lifetime
+      - ra-preference
+      - reachable-time
+      - retransmit-interval
+  /ipv6/neighbor:
+    tags:
+      - address
+      - comment
+      - disabled
+      - dynamic
+      - interface
+      - mac-address
+      - router
+      - status
+  /ipv6/pool:
+    tags:
+      - comment
+      - dynamic
+      - expires-after
+      - name
+      - prefix
+      - prefix-length
+  /ipv6/pool/used:
+    tags:
+      - info
+      - owner
+      - pool
+      - prefix
+  /ipv6/route:
+    tags:
+      - active
+      - bgp
+      - bgp-aggregator
+      - bgp-as-path
+      - bgp-atomic-aggregate
+      - bgp-cluster-list
+      - bgp-communities
+      - bgp-ext-communities
+      - bgp-local-pref
+      - bgp-med
+      - bgp-mpls-vpn
+      - bgp-nexthop
+      - bgp-origin
+      - bgp-originator-id
+      - bgp-unknown
+      - bgp-weight
+      - blackhole
+      - check-gateway
+      - comment
+      - connect
+      - dhcp
+      - disabled
+      - distance
+      - dst-address
+      - dynamic
+      - ecmp
+      - gateway
+      - hw-offloaded
+      - immediate-gw
+      - inactive
+      - modem
+      - mpls-in-label
+      - mpls-labels
+      - mpls-out-label
+      - ospf
+      - ospf-metric
+      - ospf-type
+      - out-nexthop
+      - rip
+      - rip-metric
+      - route-tag
+      - routing-table
+      - scope
+      - slaac
+      - static
+      - suppress-hw-offload
+      - target-scope
+      - vpn
+      - vrf-interface
+  /ipv6/settings:
+    tags:
+  /log:
+    tags:
+      - buffer
+      - message
+      - time
+      - topics
+  /lora/channels:
+    tags:
+      - bandwidth
+      - datarate
+      - disabled
+      - freq
+      - freq-off
+      - name
+      - radio
+      - spread-factor
+      - type
+  /lora/joineui:
+    tags:
+      - joineuis
+      - logging
+      - name
+  /lora/netid:
+    tags:
+      - logging
+      - name
+      - netids
+  /lora:
+    tags:
+      - alt
+      - antenna
+      - antenna-gain
+      - band
+      - channel-plan
+      - disabled
+      - eui-id
+      - firmware-id
+      - forward
+      - gateway-id
+      - lat
+      - lbt-enabled
+      - listen-time
+      - locks
+      - long
+      - name
+      - network
+      - rssi-threshold
+      - rx-packets
+      - servers
+      - spoof-gps
+      - src-address
+      - status
+      - tx-packets
+      - tx-toa
+  /lora/radios:
+    tags:
+      - center-freq
+      - disabled
+      - name
+      - rssi-off
+      - tx-enabled
+      - tx-freq-max
+      - tx-freq-min
+      - type
+  /lora/servers:
+    tags:
+      - address
+      - certificate
+      - down-port
+      - interval
+      - joineui
+      - key
+      - name
+      - netid
+      - port
+      - protocol
+      - ssl
+      - up-port
+  /lora/traffic/options:
+    tags:
+  /lora/traffic:
+    tags:
+      - band
+      - coderate
+      - counter
+      - crc
+      - data
+      - datarate
+      - devaddr
+      - deveui
+      - devnonce
+      - fcnt
+      - freq
+      - freqhz
+      - gwid
+      - ifchain
+      - invertpol
+      - joineui
+      - joinnonce
+      - mod
+      - msgtype
+      - mver
+      - netid
+      - nocrc
+      - noheader
+      - preamblen
+      - rfchain
+      - rfpow
+      - rssi
+      - rxcrc
+      - size
+      - snr
+      - snrmax
+      - snrmin
+      - time
+      - txmode
+      - type
+  /mpls/forwarding-table:
+    tags:
+      - label
+      - ldp
+      - nexthops
+      - prefix
+      - te-sender
+      - te-session
+      - traffic-eng
+      - type
+      - vpls
+      - vpls
+      - vpn
+      - vrf
+  /mpls/interface:
+    tags:
+      - builtin
+      - comment
+      - disabled
+      - input
+      - interface
+      - mpls-mtu
+  /mpls/ldp/accept-filter:
+    tags:
+      - accept
+      - comment
+      - disabled
+      - neighbor
+      - prefix
+      - vrf
+  /mpls/ldp/advertise-filter:
+    tags:
+      - advertise
+      - comment
+      - disabled
+      - neighbor
+      - prefix
+      - vrf
+  /mpls/ldp/interface:
+    tags:
+      - accept-dynamic-neighbors
+      - afi
+      - comment
+      - disabled
+      - hello-interval
+      - hold-time
+      - interface
+      - transport-addresses
+  /mpls/ldp/local-mapping:
+    tags:
+      - adv-path
+      - comment
+      - disabled
+      - dst-address
+      - dynamic
+      - egress
+      - gateway
+      - inactive
+      - label
+      - local
+      - peers
+      - pw-fec
+      - vpls
+      - vrf
+  /mpls/ldp/neighbor:
+    tags:
+      - active-connect
+      - addresses
+      - comment
+      - disabled
+      - dynamic
+      - inactive
+      - local-transport
+      - on-demand
+      - on-demand
+      - operational
+      - passive
+      - passive-wait
+      - path-vector-limit
+      - peer
+      - send-targeted
+      - sending-targeted-hello
+      - throttled
+      - transport
+      - used-afi
+      - vpls
+  /mpls/ldp:
+    tags:
+      - afi
+      - comment
+      - disabled
+      - distribute-for-default
+      - hop-limit
+      - inactive
+      - loop-detect
+      - lsr-id
+      - path-vector-limit
+      - preferred-afi
+      - transport-addresses
+      - use-explicit-null
+      - vrf
+  /mpls/ldp/remote-mapping:
+    tags:
+      - comment
+      - disabled
+      - dst-address
+      - dynamic
+      - inactive
+      - label
+      - nexthop
+      - path
+      - peer
+      - pw-fec
+      - vpls
+      - vrf
+  /mpls/mangle:
+    tags:
+      - chain
+      - comment
+      - disabled
+      - exp
+      - packets
+      - set-exp
+      - set-mark
+  /mpls/settings:
+    tags:
+  /mpls/traffic-eng/flow:
+    tags:
+      - blockade
+      - bw
+      - egress
+      - forwarding
+      - ingress
+      - label
+      - out-labels
+      - out-nexthop
+      - psb
+      - reservation
+      - resv
+      - rsb
+      - sender
+      - session
+      - style
+      - vrf
+  /mpls/traffic-eng/interface:
+    tags:
+      - bandwidth
+      - blockade-k-factor
+      - comment
+      - disabled
+      - down-flood-thresholds
+      - igp-flood-period
+      - interface
+      - invalid
+      - k-factor
+      - lih
+      - local-address-ip
+      - local-address-ip6
+      - refresh-time
+      - remaining-bw
+      - remaining-bw-prios
+      - resource-class
+      - te-metric
+      - up-flood-thresholds
+      - use-udp
+  /mpls/traffic-eng/path:
+    tags:
+      - affinity-exclude
+      - affinity-include-all
+      - affinity-include-any
+      - comment
+      - disabled
+      - holding-priority
+      - hops
+      - name
+      - record-route
+      - reoptimize-interval
+      - setup-priority
+      - use-cspf
+  /mpls/traffic-eng/tunnel:
+    tags:
+      - affinity-exclude
+      - affinity-include-all
+      - affinity-include-any
+      - auto-bandwidth-avg-interval
+      - auto-bandwidth-range
+      - auto-bandwidth-reserve
+      - auto-bandwidth-update-interval
+      - bandwidth
+      - bandwidth-limit
+      - comment
+      - disabled
+      - forwarding
+      - forwarding-on
+      - from-address
+      - holding-priority
+      - invalid
+      - name
+      - primary
+      - primary-path
+      - primary-pending
+      - primary-retry-interval
+      - record-route
+      - reoptimize-interval
+      - secondary
+      - secondary-paths
+      - secondary-pending
+      - secondary-standby
+      - session
+      - setup-priority
+      - to-address
+      - vrf
+  /port:
+    tags:
+      - baud-rate
+      - channels
+      - data-bits
+      - device
+      - flow-control
+      - inactive
+      - line-state
+      - name
+      - parity
+      - stop-bits
+      - used-by
+  /port/remote-access:
+    tags:
+      - active
+      - allowed-addresses
+      - busy
+      - channel
+      - disabled
+      - inactive
+      - local-address
+      - log-file
+      - logging-active
+      - port
+      - protocol
+      - remote-address
+      - remote-port
+      - tcp-port
+  /ppp/aaa:
+    tags:
+  /ppp/active:
+    tags:
+      - address
+      - caller-id
+      - comment
+      - encoding
+      - limit-bytes-in
+      - limit-bytes-out
+      - name
+      - radius
+      - service
+      - session-id
+      - uptime
+  /ppp/l2tp-secret:
+    tags:
+      - address
+      - comment
+      - secret
+  /ppp/profile:
+    tags:
+      - address-list
+      - bridge
+      - bridge-horizon
+      - bridge-learning
+      - bridge-path-cost
+      - bridge-port-priority
+      - bridge-port-trusted
+      - bridge-port-vid
+      - change-tcp-mss
+      - comment
+      - default
+      - dhcpv6-pd-pool
+      - dns-server
+      - idle-timeout
+      - incoming-filter
+      - insert-queue-before
+      - interface-list
+      - local-address
+      - name
+      - on-down
+      - on-up
+      - only-one
+      - outgoing-filter
+      - parent-queue
+      - queue-type
+      - rate-limit
+      - remote-address
+      - remote-ipv6-prefix-pool
+      - session-timeout
+      - use-compression
+      - use-encryption
+      - use-ipv6
+      - use-mpls
+      - use-upnp
+      - wins-server
+  /ppp/secret:
+    tags:
+      - caller-id
+      - comment
+      - disabled
+      - ipv6-routes
+      - last-caller-id
+      - last-disconnect-reason
+      - last-logged-out
+      - limit-bytes-in
+      - limit-bytes-out
+      - local-address
+      - name
+      - password
+      - profile
+      - remote-address
+      - remote-ipv6-prefix
+      - routes
+      - service
+  /queue/interface:
+    tags:
+      - active-queue
+      - default-queue
+      - interface
+      - queue
+  /queue/simple:
+    tags:
+      - bucket-size
+      - burst-limit
+      - burst-threshold
+      - burst-time
+      - bytes
+      - comment
+      - disabled
+      - dropped
+      - dst
+      - dynamic
+      - invalid
+      - limit-at
+      - max-limit
+      - name
+      - packet-marks
+      - packet-rate
+      - packets
+      - parent
+      - pcq-queues
+      - priority
+      - queue
+      - queued-bytes
+      - queued-packets
+      - rate
+      - target
+      - time
+      - total-bucket-size
+      - total-burst-limit
+      - total-burst-threshold
+      - total-burst-time
+      - total-bytes
+      - total-dropped
+      - total-limit-at
+      - total-max-limit
+      - total-packet-rate
+      - total-packets
+      - total-pcq-queues
+      - total-priority
+      - total-queue
+      - total-queued-bytes
+      - total-queued-packets
+      - total-rate
+  /queue/tree:
+    tags:
+      - bucket-size
+      - burst-limit
+      - burst-threshold
+      - burst-time
+      - bytes
+      - comment
+      - disabled
+      - dropped
+      - invalid
+      - limit-at
+      - max-limit
+      - name
+      - packet-mark
+      - packet-rate
+      - packets
+      - parent
+      - pcq-queues
+      - priority
+      - queue
+      - queued-bytes
+      - queued-packets
+      - rate
+  /queue/type:
+    tags:
+      - bfifo-limit
+      - cake-ack-filter
+      - cake-atm
+      - cake-autorate-ingress
+      - cake-bandwidth
+      - cake-diffserv
+      - cake-flowmode
+      - cake-memlimit
+      - cake-mpu
+      - cake-nat
+      - cake-overhead
+      - cake-overhead-scheme
+      - cake-rtt
+      - cake-rtt-scheme
+      - cake-wash
+      - codel-ce-threshold
+      - codel-ecn
+      - codel-interval
+      - codel-limit
+      - codel-target
+      - default
+      - fq-codel-ce-threshold
+      - fq-codel-ecn
+      - fq-codel-flows
+      - fq-codel-interval
+      - fq-codel-limit
+      - fq-codel-memlimit
+      - fq-codel-quantum
+      - fq-codel-target
+      - kind
+      - mq-pfifo-limit
+      - name
+      - pcq-burst-rate
+      - pcq-burst-threshold
+      - pcq-burst-time
+      - pcq-classifier
+      - pcq-dst-address-mask
+      - pcq-dst-address6-mask
+      - pcq-limit
+      - pcq-rate
+      - pcq-src-address-mask
+      - pcq-src-address6-mask
+      - pcq-total-limit
+      - pfifo-limit
+      - red-avg-packet
+      - red-burst
+      - red-limit
+      - red-max-threshold
+      - red-min-threshold
+      - sfq-allot
+      - sfq-perturb
+  /radius/incoming:
+    tags:
+  /radius:
+    tags:
+      - accounting-backup
+      - accounting-port
+      - address
+      - authentication-port
+      - called-id
+      - certificate
+      - comment
+      - disabled
+      - domain
+      - protocol
+      - realm
+      - require-message-auth
+      - secret
+      - service
+      - src-address
+      - timeout
+  /routing/bfd/configuration:
+    tags:
+      - address-list
+      - addresses
+      - comment
+      - disabled
+      - forbid-bfd
+      - inactive
+      - interfaces
+      - min-rx
+      - min-tx
+      - multiplier
+      - vrf
+  /routing/bfd/session:
+    tags:
+      - actual-tx-interval
+      - desired-tx-interval
+      - hold-time
+      - inactive
+      - local-address
+      - multihop
+      - multiplier
+      - packets-rx
+      - packets-tx
+      - remote-address
+      - remote-min-rx
+      - remote-min-tx
+      - required-min-rx
+      - state
+      - state-changes
+      - up
+      - uptime
+      - vrf
+  /routing/bgp/advertisements:
+    tags:
+      - afi
+      - aggregator
+      - as-path
+      - as4-aggregator
+      - as4-path
+      - atomic-aggregate
+      - cluster-list
+      - communities
+      - dst
+      - ext-communities
+      - large-communities
+      - local-pref
+      - med
+      - nexthop
+      - nlri
+      - origin
+      - originator-id
+      - peer
+      - withdrawn
+  /routing/bgp/connection:
+    tags:
+      - add-path-out
+      - address-families
+      - as
+      - cisco-vpls-nlri-len-fmt
+      - cluster-id
+      - comment
+      - connect
+      - disabled
+      - dynamic
+      - hold-time
+      - inactive
+      - input.accept-communities
+      - input.accept-ext-communities
+      - input.accept-large-communities
+      - input.accept-nlri
+      - input.accept-unknown
+      - input.affinity
+      - input.allow-as
+      - input.filter
+      - input.ignore-as-path-len
+      - input.limit-process-routes-ipv4
+      - input.limit-process-routes-ipv6
+      - keepalive-time
+      - listen
+      - local.address
+      - local.default-address
+      - local.port
+      - local.role
+      - local.ttl
+      - multihop
+      - name
+      - nexthop-choice
+      - output.affinity
+      - output.as-override
+      - output.default-originate
+      - output.default-prepend
+      - output.filter-chain
+      - output.filter-select
+      - output.keep-sent-attributes
+      - output.network
+      - output.no-client-to-client-reflection
+      - output.no-early-cut
+      - output.redistribute
+      - output.remove-private-as
+      - remote.address
+      - remote.allowed-as
+      - remote.as
+      - remote.port
+      - remote.ttl
+      - router-id
+      - routing-table
+      - save-to
+      - tcp-md5-key
+      - templates
+      - use-bfd
+      - vrf
+  /routing/bgp/session:
+    tags:
+      - cisco-vpls-nlri-len-fmt
+      - ebgp
+      - established
+      - hold-time
+      - ibgp
+      - input.affinity
+      - input.allow-as
+      - input.as-override
+      - input.filter
+      - input.ignore-as-path-len
+      - input.last-notification
+      - input.limit-process-routes
+      - input.limit-process-routes
+      - input.procid
+      - keepalive-time
+      - keepalive-timer
+      - last-started
+      - last-stopped
+      - limit-exceeded
+      - local.address
+      - local.afi
+      - local.as
+      - local.bytes
+      - local.capabilities
+      - local.cluster-id
+      - local.eor
+      - local.id
+      - local.messages
+      - local.port
+      - local.role
+      - multihop
+      - name
+      - nexthop-choice
+      - output.add-path
+      - output.affinity
+      - output.default-originate
+      - output.default-prepend
+      - output.filter-chain
+      - output.filter-select
+      - output.keep-sent-attributes
+      - output.last-notification
+      - output.network
+      - output.no-client-to-client-reflection
+      - output.no-early-cut
+      - output.procid
+      - output.remove-private-as
+      - prefix-count
+      - remote.address
+      - remote.afi
+      - remote.as
+      - remote.bytes
+      - remote.capabilities
+      - remote.eor
+      - remote.gr-afi
+      - remote.gr-afi-fwp
+      - remote.gr-restart
+      - remote.gr-time
+      - remote.hold-time
+      - remote.id
+      - remote.messages
+      - remote.port
+      - remote.refused-cap-opt
+      - restart-timer
+      - routing-table
+      - save-to
+      - stopped
+      - uptime
+      - use-bfd
+      - vrf
+  /routing/bgp/template:
+    tags:
+      - add-path-out
+      - address-families
+      - as
+      - cisco-vpls-nlri-len-fmt
+      - cluster-id
+      - comment
+      - default
+      - disabled
+      - hold-time
+      - inactive
+      - input.accept-communities
+      - input.accept-ext-communities
+      - input.accept-large-communities
+      - input.accept-nlri
+      - input.accept-unknown
+      - input.affinity
+      - input.allow-as
+      - input.filter
+      - input.ignore-as-path-len
+      - input.limit-process-routes-ipv4
+      - input.limit-process-routes-ipv6
+      - keepalive-time
+      - multihop
+      - name
+      - nexthop-choice
+      - output.affinity
+      - output.as-override
+      - output.default-originate
+      - output.default-prepend
+      - output.filter-chain
+      - output.filter-select
+      - output.keep-sent-attributes
+      - output.network
+      - output.no-client-to-client-reflection
+      - output.no-early-cut
+      - output.redistribute
+      - output.remove-private-as
+      - router-id
+      - routing-table
+      - save-to
+      - templates
+      - use-bfd
+      - vrf
+  /routing/bgp/vpls:
+    tags:
+      - bridge
+      - bridge-cost
+      - bridge-horizon
+      - bridge-pvid
+      - cisco-id
+      - comment
+      - current-peers
+      - disabled
+      - export-route-targets
+      - import-route-targets
+      - inactive
+      - local-pref
+      - name
+      - pw-control-word
+      - pw-l2mtu
+      - pw-type
+      - rd
+      - site-id
+      - vrf
+  /routing/bgp/vpn:
+    tags:
+      - comment
+      - disabled
+      - export.filter-chain
+      - export.filter-select
+      - export.redistribute
+      - export.route-targets
+      - import.filter-chain
+      - import.route-targets
+      - import.router-id
+      - inactive
+      - label-allocation-policy
+      - name
+      - route-distinguisher
+      - vrf
+  /routing/fantasy:
+    tags:
+      - comment
+      - count
+      - dealer-id
+      - disabled
+      - dst-address
+      - gateway
+      - instance-id
+      - invalid
+      - name
+      - offset
+      - prefix-length
+      - priv-offs
+      - priv-size
+      - scope
+      - seed
+      - target-scope
+      - use-hold
+  /routing/filter/chain:
+    tags:
+      - dynamic
+      - inactive
+      - name
+  /routing/filter/community-ext-list:
+    tags:
+      - comment
+      - communities
+      - disabled
+      - list
+      - regexp
+  /routing/filter/community-large-list:
+    tags:
+      - comment
+      - communities
+      - disabled
+      - list
+      - regexp
+  /routing/filter/community-list:
+    tags:
+      - comment
+      - communities
+      - disabled
+      - list
+      - regexp
+  /routing/filter/num-list:
+    tags:
+      - comment
+      - disabled
+      - list
+      - range
+  /routing/filter/rule:
+    tags:
+      - chain
+      - comment
+      - disabled
+      - inactive
+      - rule
+  /routing/filter/select-rule:
+    tags:
+      - chain
+      - comment
+      - disabled
+      - do-group-num
+      - do-group-prfx
+      - do-jump
+      - do-select-num
+      - do-select-prfx
+      - do-take
+      - do-where
+      - invalid
+  /routing/gmp:
+    tags:
+      - disabled
+      - exclude
+      - groups
+      - interfaces
+      - sources
+  /routing/id:
+    tags:
+      - comment
+      - disabled
+      - dynamic
+      - dynamic-id
+      - id
+      - inactive
+      - name
+      - select-dynamic-id
+      - select-from-vrf
+  /routing/igmp-proxy/interface:
+    tags:
+      - alternative-subnets
+      - comment
+      - disabled
+      - dynamic
+      - inactive
+      - interface
+      - querier
+      - rx-bytes
+      - rx-packets
+      - source-ip-address
+      - threshold
+      - tx-bytes
+      - tx-packets
+      - upstream
+      - upstream
+  /routing/igmp-proxy/mfc:
+    tags:
+      - active
+      - active-downstream-interfaces
+      - bytes
+      - disabled
+      - downstream-interfaces
+      - dynamic
+      - group
+      - packets
+      - source
+      - upstream-interface
+      - wrong-packets
+  /routing/igmp-proxy:
+    tags:
+  /routing/isis/instance:
+    tags:
+      - afi
+      - areas
+      - areas-max
+      - comment
+      - disabled
+      - in-filter-chain
+      - inactive
+      - l1.lsp-max-age
+      - l1.lsp-max-size
+      - l1.lsp-refresh-interval
+      - l1.lsp-refresh-interval
+      - l1.lsp-update-interval
+      - l1.originate-default
+      - l1.out-filter-chain
+      - l1.out-filter-select
+      - l1.redistribute
+      - l2.lsp-max-age
+      - l2.lsp-max-size
+      - l2.lsp-update-interval
+      - l2.originate-default
+      - l2.out-filter-chain
+      - l2.out-filter-select
+      - l2.redistribute
+      - name
+      - system-id
+      - vrf
+  /routing/isis/interface:
+    tags:
+      - dynamic
+      - hello-interval
+      - instance
+      - interface
+      - l1.csnp-interval
+      - l1.hello-dr-interval
+      - l1.hello-interval
+      - l1.hello-multiplier
+      - l1.metric
+      - l1.passive
+      - l1.priority
+      - l1.psnp-interval
+      - l2.csnp-interval
+      - l2.hello-dr-interval
+      - l2.hello-interval
+      - l2.hello-multiplier
+      - l2.metric
+      - l2.passive
+      - l2.priority
+      - l2.psnp-interval
+      - ptp
+      - ptp.3way-state
+      - ptp.usage
+  /routing/isis/interface-template:
+    tags:
+      - bcast.l1.csnp-interval
+      - bcast.l1.hello-interval
+      - bcast.l1.hello-interval-dr
+      - bcast.l1.hello-multiplier
+      - bcast.l1.metric
+      - bcast.l1.priority
+      - bcast.l1.psnp-interval
+      - bcast.l2.csnp-interval
+      - bcast.l2.hello-interval
+      - bcast.l2.hello-interval-dr
+      - bcast.l2.hello-multiplier
+      - bcast.l2.metric
+      - bcast.l2.priority
+      - bcast.l2.psnp-interval
+      - comment
+      - disabled
+      - inactive
+      - instance
+      - interfaces
+      - levels
+      - ptp
+      - ptp.hello-3way
+      - ptp.hello-interval
+      - ptp.hello-multiplier
+      - ptp.l1.csnp-interval
+      - ptp.l1.metric
+      - ptp.l1.psnp-interval
+      - ptp.l2.csnp-interval
+      - ptp.l2.metric
+      - ptp.l2.psnp-interval
+  /routing/isis/lsp:
+    tags:
+      - age
+      - body
+      - checksum
+      - dynamic
+      - inactive
+      - instance
+      - level
+      - lsp-id
+      - sequence
+  /routing/isis/neighbor:
+    tags:
+      - dynamic
+      - instance
+      - interface
+      - level-type
+      - snpa
+      - srcid
+      - state
+  /routing/nexthop:
+    tags:
+      - address
+      - afi
+      - bgp-vpn
+      - check-gateway
+      - gw-check-ok
+      - gw-state
+      - hops
+      - immediate-gw.address
+      - immediate-gw.blackhole
+      - immediate-gw.flap-count
+      - immediate-gw.interface-idx
+      - immediate-gw.mpls-label
+      - immediate-gw.mpls-peer-id
+      - immediate-gw.weight
+      - interface-ok
+      - links
+      - prev-reachable
+      - reachable
+      - routes
+      - scope
+      - target-scope
+      - unresolved
+  /routing/ospf/area:
+    tags:
+      - area-id
+      - comment
+      - default-cost
+      - disabled
+      - dynamic
+      - inactive
+      - instance
+      - name
+      - no-summaries
+      - nssa-translator
+      - transit-capable
+      - transit-capable
+      - type
+  /routing/ospf/area/range:
+    tags:
+      - advertise
+      - advertise
+      - area
+      - comment
+      - cost
+      - disabled
+      - inactive
+      - prefix
+  /routing/ospf/instance:
+    tags:
+      - comment
+      - disabled
+      - domain-id
+      - domain-tag
+      - in-filter-chain
+      - inactive
+      - mpls-te-address
+      - mpls-te-area
+      - name
+      - originate-default
+      - out-filter-chain
+      - out-filter-select
+      - redistribute
+      - router-id
+      - routing-table
+      - use-dn
+      - version
+      - vrf
+  /routing/ospf/interface:
+    tags:
+      - address
+      - area
+      - bdr
+      - cost
+      - dead-interval
+      - dr
+      - dynamic
+      - hello-interval
+      - instance-id
+      - network-type
+      - priority
+      - retransmit-interval
+      - state
+      - transmit-delay
+      - use-bfd
+      - vlink-neighbor-id
+      - vlink-remote-address
+      - vlink-transit-area
+  /routing/ospf/interface-template:
+    tags:
+      - area
+      - auth
+      - auth-id
+      - auth-key
+      - comment
+      - cost
+      - dead-interval
+      - disabled
+      - hello-interval
+      - inactive
+      - instance-id
+      - interfaces
+      - networks
+      - passive
+      - prefix-list
+      - priority
+      - retransmit-interval
+      - transmit-delay
+      - type
+      - use-bfd
+      - vlink-neighbor-id
+      - vlink-transit-area
+  /routing/ospf/lsa:
+    tags:
+      - age
+      - area
+      - body
+      - checksum
+      - dynamic
+      - flushing
+      - id
+      - instance
+      - link
+      - link-instance-id
+      - originator
+      - self-originated
+      - sequence
+      - type
+      - wraparound
+  /routing/ospf/neighbor:
+    tags:
+      - address
+      - adjacency
+      - area
+      - bdr
+      - comment
+      - db-summaries
+      - dr
+      - dynamic
+      - instance
+      - ls-requests
+      - ls-retransmits
+      - priority
+      - router-id
+      - state
+      - state-changes
+      - timeout
+      - virtual
+  /routing/ospf/static-neighbor:
+    tags:
+      - address
+      - area
+      - comment
+      - disabled
+      - inactive
+      - instance-id
+      - poll-interval
+  /routing/pimsm/bsr/candidate:
+    tags:
+      - address
+      - disabled
+      - hashmask-length
+      - inactive
+      - instance
+      - priority
+      - scope4
+      - scope6
+      - state
+  /routing/pimsm/bsr:
+    tags:
+      - address
+      - dynamic
+      - hash-mask-length
+      - instance
+      - priority
+      - scope4
+      - scope6
+      - state
+  /routing/pimsm/bsr/rp-candidate:
+    tags:
+      - address
+      - disabled
+      - group
+      - holdtime
+      - inactive
+      - instance
+      - priority
+  /routing/pimsm/bsr/rp-set:
+    tags:
+      - group
+      - instance
+      - rp.address
+      - rp.priority
+      - rp.timeout
+  /routing/pimsm/igmp-interface-template:
+    tags:
+      - instance
+      - interfaces
+  /routing/pimsm/instance:
+    tags:
+      - afi
+      - bsm-forward-back
+      - crp-advertise-contained
+      - disabled
+      - inactive
+      - name
+      - rp-hash-mask-length
+      - rp-static-override
+      - ssm-range
+      - switch-to-spt
+      - switch-to-spt-bytes
+      - switch-to-spt-interval
+      - vrf
+  /routing/pimsm/interface:
+    tags:
+      - address
+      - designated-router
+      - dr
+      - dynamic
+      - instance
+      - join-tracking
+      - join-tracking
+      - override-interval
+      - priority
+      - propogation-delay
+  /routing/pimsm/interface-template:
+    tags:
+      - disabled
+      - hello-delay
+      - hello-period
+      - inactive
+      - instance
+      - interfaces
+      - join-prune-period
+      - join-tracking-support
+      - override-interval
+      - priority
+      - propagation-delay
+      - source-addresses
+  /routing/pimsm/neighbor:
+    tags:
+      - address
+      - designated-router
+      - designated-router
+      - instance
+      - join-tracking
+      - join-tracking
+      - override-interval
+      - priority
+      - propagation-delay
+      - timeout
+  /routing/pimsm/static-rp:
+    tags:
+      - address
+      - disabled
+      - group
+      - inactive
+      - instance
+  /routing/pimsm/uib-g:
+    tags:
+      - group
+      - instance
+      - rp
+      - rp-local
+      - rp-local
+      - rpf
+  /routing/pimsm/uib-sg:
+    tags:
+      - group
+      - instance
+      - keepalive
+      - register
+      - rpf
+      - source
+      - spt-bit
+  /routing/rip/instance:
+    tags:
+      - afi
+      - disabled
+      - in-filter-chain
+      - name
+      - originate-default
+      - out-filter-chain
+      - out-filter-select
+      - redistribute
+      - route-gc-timeout
+      - route-timeout
+      - routing-table
+      - update-interval
+      - vrf
+  /routing/rip/interface:
+    tags:
+      - address
+      - bfd
+      - instance
+  /routing/rip/interface-template:
+    tags:
+      - cost
+      - disabled
+      - instance
+      - interfaces
+      - key-chain
+      - mode
+      - password
+      - poison-reverse
+      - source-addresses
+      - split-horizon
+      - use-bfd
+  /routing/rip/keys:
+    tags:
+      - chain
+      - disabled
+      - key
+      - key-id
+      - valid-from
+      - valid-till
+  /routing/rip/neighbor:
+    tags:
+      - address
+      - dynamic
+      - entries-bad
+      - instance
+      - last-update
+      - packets-bad
+      - packets-total
+      - routes
+  /routing/rip/static-neighbor:
+    tags:
+      - address
+      - disabled
+      - instance
+  /routing/route:
+    tags:
+      - active
+      - afi
+      - belongs-to
+      - bgp
+      - bgp-mpls-vpn
+      - bgp.aggregator
+      - bgp.as-path
+      - bgp.atomic-aggregate
+      - bgp.cluster-list
+      - bgp.communities
+      - bgp.ext-communities
+      - bgp.igp-metric
+      - bgp.large-communities
+      - bgp.local-pref
+      - bgp.med
+      - bgp.nexthop
+      - bgp.origin
+      - bgp.originator-id
+      - bgp.out-nexthop
+      - bgp.session
+      - bgp.unknown
+      - bgp.weight
+      - blackhole
+      - check-gateway
+      - comment
+      - connect
+      - contribution
+      - debug.fwp-ptr
+      - debug.input.ptr
+      - debug.input.raw
+      - debug.input.refs
+      - debug.input.size
+      - debug.merge.ptr
+      - debug.merge.raw
+      - debug.merge.refs
+      - debug.merge.size
+      - debug.route-ptr
+      - dhcp
+      - disabled
+      - distance
+      - dst-address
+      - ecmp
+      - filtered
+      - gateway
+      - hoplimit
+      - hw-offloaded
+      - immediate-gw
+      - isis
+      - isis.metric
+      - isis.type
+      - label
+      - ldp-address
+      - ldp-mapping
+      - ldp.label
+      - ldp.peer-id
+      - local-address
+      - modem
+      - mpls.in-label
+      - mpls.labels
+      - mpls.out-label
+      - mtu
+      - nexthop-id
+      - ospf
+      - ospf.metric
+      - ospf.tag
+      - ospf.type
+      - pref-src
+      - rip
+      - rip.metric
+      - rip.tag
+      - route-cost
+      - route-distinguisher
+      - routing-table
+      - rpki
+      - scope
+      - slaac
+      - static
+      - target-scope
+      - total-cost
+      - unreachable
+      - ve-block-offset
+      - ve-block-size
+      - ve-id
+      - vpn
+      - vrf-interface
+  /routing/route/rule:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - inactive
+      - interface
+      - min-prefix
+      - routing-mark
+      - src-address
+      - table
+  /routing/rpki:
+    tags:
+      - address
+      - comment
+      - disabled
+      - expire-interval
+      - group
+      - port
+      - preference
+      - refresh-interval
+      - retry-interval
+      - vrf
+  /routing/rpki/session:
+    tags:
+      - address
+      - expires
+      - group
+      - port
+      - serial
+      - session
+      - state
+      - version
+  /routing/rule:
+    tags:
+      - action
+      - comment
+      - disabled
+      - dst-address
+      - inactive
+      - interface
+      - min-prefix
+      - routing-mark
+      - src-address
+      - table
+  /routing/settings:
+    tags:
+  /routing/stats/memory:
+    tags:
+      - name
+      - object-size
+      - objects
+      - page-cell-count
+      - page-slack
+      - pages
+      - procid
+      - unused
+      - unused-objects
+      - used
+  /routing/stats/origin:
+    tags:
+      - abandoned
+      - attrs-merge
+      - attrs-updated
+      - dealer-id
+      - hold
+      - in-policy
+      - instance-id
+      - name
+      - pid
+      - publisher-idx
+      - route-count
+      - route-type
+      - stopping
+      - synthetic
+      - terminal
+      - total-route-count
+      - type
+      - update.in-policy
+  /routing/stats/pcap:
+    tags:
+      - bgp.notification.code
+      - bgp.notification.subcode
+      - bgp.route-refresh.afi
+      - bgp.route-refresh.safi
+      - bgp.route-refresh.subtype
+      - bgp.type
+      - bgp.update.aggregator
+      - bgp.update.as-path
+      - bgp.update.as4-aggregator
+      - bgp.update.as4-path
+      - bgp.update.atomic-aggregate
+      - bgp.update.cluster-list
+      - bgp.update.communities
+      - bgp.update.ext-communities
+      - bgp.update.large-communities
+      - bgp.update.local-pref
+      - bgp.update.med
+      - bgp.update.nexthop
+      - bgp.update.nlri
+      - bgp.update.origin
+      - bgp.update.originator-id
+      - bgp.update.withdrawn
+      - data
+      - dst
+      - file
+      - protocol
+      - src
+      - timestamp
+  /routing/stats/process:
+    tags:
+      - abandoned
+      - cur-busy
+      - cur-calc
+      - id
+      - in-rpc-queue
+      - kernel-time
+      - max-busy
+      - max-calc
+      - out-rpc-queue
+      - pid
+      - private-mem-blocks
+      - process-time
+      - pss
+      - retired
+      - rpid
+      - rss
+      - shared-mem-blocks
+      - task-count
+      - tasks
+      - vms
+  /routing/stats/step:
+    tags:
+      - context
+      - cur-time
+      - max-time
+      - name
+      - order
+      - pid
+      - running
+      - runs
+      - sched
+      - state
+      - targets
+  /routing/table:
+    tags:
+      - comment
+      - disabled
+      - dynamic
+      - fib
+      - invalid
+      - name
+      - used
+  /safe-mode:
+    tags:
+  /snmp/community:
+    tags:
+      - addresses
+      - authentication-password
+      - authentication-protocol
+      - comment
+      - default
+      - disabled
+      - encryption-password
+      - encryption-protocol
+      - name
+      - read-access
+      - security
+      - write-access
+  /snmp:
+    tags:
+  /special-login:
+    tags:
+      - channel
+      - disabled
+      - port
+      - user
+  /system/backup/cloud:
+    tags:
+      - date
+      - name
+      - ros-version
+      - secret-download-key
+      - size
+      - status
+  /system/clock/manual:
+    tags:
+  /system/clock:
+    tags:
+  /system/console:
+    tags:
+      - channel
+      - default
+      - disabled
+      - free
+      - port
+      - term
+      - used
+      - vcno
+      - wedged
+  /system/console/screen:
+    tags:
+  /system/default-configuration/caps-mode-script:
+    tags:
+  /system/default-configuration/custom-script:
+    tags:
+  /system/default-configuration:
+    tags:
+  /system/default-configuration/script:
+    tags:
+  /system/device-mode:
+    tags:
+  /system/gps:
+    tags:
+  /system/hardware:
+    tags:
+  /system/health:
+    tags:
+  /system/history:
+    tags:
+      - action
+      - by
+      - floating-undo
+      - policy
+      - redo
+      - redoable
+      - time
+      - trace
+      - undo
+      - undoable
+  /system/identity:
+    tags:
+  /system/leds:
+    tags:
+      - default
+      - disabled
+      - interface
+      - leds
+      - modem-signal-threshold
+      - type
+  /system/leds/settings:
+    tags:
+  /system/license:
+    tags:
+  /system/logging/action:
+    tags:
+      - cef-event-delimiter
+      - comment
+      - default
+      - disk-file-count
+      - disk-file-name
+      - disk-lines-per-file
+      - disk-stop-on-full
+      - email-start-tls
+      - email-to
+      - memory-lines
+      - memory-stop-on-full
+      - name
+      - remember
+      - remote
+      - remote-log-format
+      - remote-port
+      - remote-protocol
+      - src-address
+      - syslog-facility
+      - syslog-severity
+      - syslog-time-format
+      - target
+  /system/logging:
+    tags:
+      - action
+      - default
+      - disabled
+      - invalid
+      - prefix
+      - regex
+      - topics
+  /system/note:
+    tags:
+  /system/ntp/client:
+    tags:
+  /system/ntp/client/servers:
+    tags:
+      - address
+      - auth-key
+      - comment
+      - disabled
+      - dynamic
+      - iburst
+      - max-poll
+      - min-poll
+      - resolved-address
+  /system/ntp/key:
+    tags:
+      - comment
+      - key-id
+      - key-val
+  /system/ntp/server:
+    tags:
+  /system/package/local-update/mirror:
+    tags:
+  /system/package/local-update:
+    tags:
+      - completed
+      - download
+      - name
+      - source
+      - status
+      - version
+  /system/package/local-update/update-package-source:
+    tags:
+      - address
+      - user
+  /system/package:
+    tags:
+      - available
+      - build-time
+      - bundle
+      - disabled
+      - name
+      - scheduled
+      - size
+      - version
+  /system/package/update:
+    tags:
+  /system/resource/cpu:
+    tags:
+      - cpu
+      - disk
+      - irq
+      - load
+  /system/resource/irq:
+    tags:
+      - active-cpu
+      - count
+      - cpu
+      - irq
+      - per-cpu-count
+      - read-only
+      - users
+  /system/resource/irq/rps:
+    tags:
+      - disabled
+      - name
+  /system/resource/pci:
+    tags:
+      - category
+      - device
+      - device-id
+      - io
+      - irq
+      - memory
+      - name
+      - vendor
+      - vendor-id
+  /system/resource:
+    tags:
+  /system/resource/usb:
+    tags:
+      - device
+      - device-id
+      - inactive
+      - name
+      - ports
+      - serial-number
+      - speed
+      - usb-version
+      - vendor
+      - vendor-id
+  /system/resource/usb/settings:
+    tags:
+  /system/rtrace:
+    tags:
+  /system/scheduler:
+    tags:
+      - comment
+      - disabled
+      - interval
+      - name
+      - next-run
+      - on-event
+      - owner
+      - policy
+      - run-count
+      - start-date
+      - start-time
+  /system/script/environment:
+    tags:
+      - comment
+      - name
+      - value
+  /system/script/job:
+    tags:
+      - comment
+      - owner
+      - parent
+      - policy
+      - script
+      - started
+      - trace
+      - type
+  /system/script:
+    tags:
+      - comment
+      - dont-require-permissions
+      - invalid
+      - last-started
+      - name
+      - owner
+      - policy
+      - run-count
+      - source
+  /system/ups:
+    tags:
+      - alarm-setting
+      - check-capabilities
+      - comment
+      - disabled
+      - invalid
+      - load
+      - manufacture-date
+      - min-runtime
+      - model
+      - name
+      - nominal-battery-voltage
+      - offline-after
+      - offline-time
+      - on-line
+      - port
+      - serial
+      - version
+  /system/watchdog:
+    tags:
+  /task:
+    tags:
+      - append
+      - autosave
+      - current
+      - file-name
+      - name
+      - save-interval
+      - source
+      - task-id
+      - term-pid
+      - terminated
+      - user
+  /tool/bandwidth-server:
+    tags:
+  /tool/bandwidth-server/session:
+    tags:
+      - client
+      - direction
+      - local-tx-speed
+      - lost-packets
+      - protocol
+      - random-data
+      - remote-tx-speed
+      - rx-10-second-average
+      - rx-current
+      - rx-size
+      - rx-total-average
+      - tcp-connection-count
+      - tx-10-second-average
+      - tx-current
+      - tx-size
+      - tx-total-average
+      - user
+  /tool/calea:
+    tags:
+      - access-session-id
+      - action
+      - bytes
+      - case-id
+      - case-name
+      - comment
+      - disabled
+      - file-root
+      - intercept-ip
+      - intercept-port
+      - limited-file-hash-method
+      - limited-file-stop-interval
+      - packets
+      - pcap-file-hash-method
+      - pcap-file-stop-count
+      - pcap-file-stop-interval
+      - pcap-file-stop-size
+  /tool/e-mail:
+    tags:
+  /tool/graphing/interface:
+    tags:
+      - allow-address
+      - comment
+      - disabled
+      - interface
+      - store-on-disk
+  /tool/graphing:
+    tags:
+  /tool/graphing/queue:
+    tags:
+      - allow-address
+      - allow-target
+      - comment
+      - disabled
+      - simple-queue
+      - store-on-disk
+  /tool/graphing/resource:
+    tags:
+      - allow-address
+      - comment
+      - disabled
+      - store-on-disk
+  /tool/mac-server/mac-winbox:
+    tags:
+  /tool/mac-server/ping:
+    tags:
+  /tool/mac-server:
+    tags:
+  /tool/mac-server/sessions:
+    tags:
+      - interface
+      - src-address
+      - uptime
+  /tool/netwatch:
+    tags:
+      - accept-icmp-time-exceeded
+      - certificate
+      - check-certificate
+      - comment
+      - disabled
+      - dns-server
+      - done-tests
+      - down-script
+      - failed-tests
+      - host
+      - http-codes
+      - http-resp-time
+      - http-status-code
+      - ignore-initial-down
+      - ignore-initial-up
+      - interval
+      - ip
+      - ip6
+      - loss-count
+      - loss-percent
+      - mail-servers
+      - name
+      - name-servers
+      - packet-count
+      - packet-interval
+      - packet-size
+      - port
+      - record-type
+      - response-count
+      - rtt-avg
+      - rtt-jitter
+      - rtt-max
+      - rtt-min
+      - rtt-stdev
+      - sent-count
+      - since
+      - src-address
+      - start-delay
+      - startup-delay
+      - status
+      - tcp-connect-time
+      - test-script
+      - thr-avg
+      - thr-http-time
+      - thr-jitter
+      - thr-loss-count
+      - thr-loss-percent
+      - thr-max
+      - thr-stdev
+      - thr-tcp-conn-time
+      - timeout
+      - ttl
+      - type
+      - up-script
+  /tool/romon/port:
+    tags:
+      - comment
+      - cost
+      - default
+      - disabled
+      - dynamic
+      - forbid
+      - interface
+      - secrets
+  /tool/romon:
+    tags:
+  /tool/sms/inbox:
+    tags:
+      - message
+      - pdu
+      - phone
+      - source
+      - timestamp
+      - type
+  /tool/sms:
+    tags:
+  /tool/sniffer/connection:
+    tags:
+      - active
+      - bytes
+      - dst-address
+      - mss
+      - resends
+      - src-address
+  /tool/sniffer/host:
+    tags:
+      - address
+      - peak-rate
+      - rate
+      - total
+  /tool/sniffer/packet:
+    tags:
+      - cpu
+      - data
+      - direction
+      - dscp
+      - dst-address
+      - dst-mac
+      - fragment-offset
+      - identification
+      - interface
+      - ip-header-size
+      - ip-packet-size
+      - ip-protocol
+      - num
+      - protocol
+      - size
+      - src-address
+      - src-mac
+      - tcp-flags
+      - time
+      - ttl
+      - vlan
+  /tool/sniffer:
+    tags:
+  /tool/sniffer/protocol:
+    tags:
+      - bytes
+      - ip-protocol
+      - packets
+      - port
+      - protocol
+      - share
+  /tool/traffic-generator/packet-template:
+    tags:
+      - assumed-interface
+      - assumed-ip-dscp
+      - assumed-ip-dst
+      - assumed-ip-frag-off
+      - assumed-ip-id
+      - assumed-ip-protocol
+      - assumed-ip-src
+      - assumed-ip-ttl
+      - assumed-ipv6-dst
+      - assumed-ipv6-flow-label
+      - assumed-ipv6-hop-limit
+      - assumed-ipv6-next-header
+      - assumed-ipv6-src
+      - assumed-ipv6-traffic-class
+      - assumed-mac-dst
+      - assumed-mac-protocol
+      - assumed-mac-src
+      - assumed-port
+      - assumed-raw-header
+      - assumed-tcp-ack
+      - assumed-tcp-data-offset
+      - assumed-tcp-dst-port
+      - assumed-tcp-flags
+      - assumed-tcp-src-port
+      - assumed-tcp-syn
+      - assumed-tcp-urgent-pointer
+      - assumed-tcp-window-size
+      - assumed-udp-checksum
+      - assumed-udp-dst-port
+      - assumed-udp-src-port
+      - assumed-vlan-id
+      - assumed-vlan-priority
+      - assumed-vlan-protocol
+      - comment
+      - compute-checksum-from-offset
+      - data
+      - data-byte
+      - header-stack
+      - interface
+      - ip-dscp
+      - ip-dst
+      - ip-frag-off
+      - ip-gateway
+      - ip-id
+      - ip-protocol
+      - ip-src
+      - ip-ttl
+      - ipv6-dst
+      - ipv6-flow-label
+      - ipv6-gateway
+      - ipv6-hop-limit
+      - ipv6-next-header
+      - ipv6-src
+      - ipv6-traffic-class
+      - mac-dst
+      - mac-protocol
+      - mac-src
+      - name
+      - port
+      - random-byte-offsets-and-masks
+      - random-ranges
+      - raw-header
+      - special-footer
+      - tcp-ack
+      - tcp-data-offset
+      - tcp-dst-port
+      - tcp-flags
+      - tcp-src-port
+      - tcp-syn
+      - tcp-urgent-pointer
+      - tcp-window-size
+      - udp-checksum
+      - udp-dst-port
+      - udp-src-port
+      - vlan-id
+      - vlan-priority
+      - vlan-protocol
+  /tool/traffic-generator/port:
+    tags:
+      - disabled
+      - dynamic
+      - first-header
+      - interface
+      - invalid
+      - name
+  /tool/traffic-generator:
+    tags:
+  /tool/traffic-generator/raw-packet-template:
+    tags:
+      - comment
+      - compute-checksum-from-offset
+      - data
+      - data-byte
+      - dynamic
+      - header
+      - header-length
+      - ip-header-offset
+      - ipv6-header-offset
+      - name
+      - port
+      - random-byte-offsets-and-masks
+      - random-ranges
+      - special-footer
+      - tcp-header-offset
+      - udp-compute-checksum
+      - udp-header-offset
+  /tool/traffic-generator/stats/latency-distribution:
+    tags:
+      - count
+      - graph
+      - latency
+      - share
+  /tool/traffic-generator/stats/port:
+    tags:
+      - jitter
+      - lat-avg
+      - lat-max
+      - lat-min
+      - lost-byte
+      - lost-packet
+      - lost-rate
+      - lost-ratio
+      - port
+      - rx-bad-csum
+      - rx-byte
+      - rx-ooo
+      - rx-packet
+      - rx-rate
+      - rx-unk-byte
+      - rx-unk-packet
+      - rx-unk-rate
+      - seq
+      - tx-byte
+      - tx-packet
+      - tx-rate
+  /tool/traffic-generator/stats/raw:
+    tags:
+      - id
+      - jitter
+      - lat-avg
+      - lat-max
+      - lat-min
+      - lost-byte
+      - lost-packet
+      - lost-rate
+      - lost-ratio
+      - port
+      - rx-bad-csum
+      - rx-byte
+      - rx-ooo
+      - rx-packet
+      - rx-rate
+      - seq
+      - tx-byte
+      - tx-packet
+      - tx-rate
+  /tool/traffic-generator/stats/stream:
+    tags:
+      - id
+      - jitter
+      - lat-avg
+      - lat-max
+      - lat-min
+      - lost-byte
+      - lost-packet
+      - lost-rate
+      - lost-ratio
+      - rx-bad-csum
+      - rx-byte
+      - rx-ooo
+      - rx-packet
+      - rx-rate
+      - seq
+      - tx-byte
+      - tx-packet
+      - tx-rate
+  /tool/traffic-generator/stream:
+    tags:
+      - cpu-core
+      - default-port
+      - disabled
+      - id
+      - invalid
+      - mbps
+      - name
+      - packet-count
+      - packet-size
+      - port
+      - pps
+      - tx-template
+  /tool/traffic-monitor:
+    tags:
+      - comment
+      - disabled
+      - interface
+      - invalid
+      - name
+      - on-event
+      - threshold
+      - traffic
+      - trigger
+  /tr069-client:
+    tags:
+  /user/aaa:
+    tags:
+  /user/active:
+    tags:
+      - address
+      - by-romon
+      - by-romon
+      - group
+      - name
+      - radius
+      - via
+      - when
+  /user/group:
+    tags:
+      - comment
+      - name
+      - policy
+      - skin
+  /user:
+    tags:
+      - address
+      - comment
+      - disabled
+      - expired
+      - group
+      - inactivity-policy
+      - inactivity-timeout
+      - last-logged-in
+      - name
+      - password
+  /user/settings:
+    tags:
+  /user/ssh-keys:
+    tags:
+      - bits
+      - comment
+      - key
+      - key-owner
+      - key-type
+      - user
+  /user/ssh-keys/private:
+    tags:
+      - bits
+      - comment
+      - key-owner
+      - key-type
+      - user
+  /user-manager/advanced:
+    tags:
+  /user-manager/attribute:
+    tags:
+      - default
+      - default-name
+      - name
+      - packet-types
+      - standard-name
+      - type-id
+      - value-type
+      - vendor-id
+  /user-manager/database:
+    tags:
+  /user-manager/limitation:
+    tags:
+      - comment
+      - download-limit
+      - name
+      - rate-limit-burst-rx
+      - rate-limit-burst-threshold-rx
+      - rate-limit-burst-threshold-tx
+      - rate-limit-burst-time-rx
+      - rate-limit-burst-time-tx
+      - rate-limit-burst-tx
+      - rate-limit-min-rx
+      - rate-limit-min-tx
+      - rate-limit-priority
+      - rate-limit-rx
+      - rate-limit-tx
+      - reset-counters-interval
+      - reset-counters-start-time
+      - transfer-limit
+      - upload-limit
+      - uptime-limit
+  /user-manager/payment:
+    tags:
+      - currency
+      - method
+      - price
+      - profile
+      - trans-end
+      - trans-start
+      - trans-status
+      - user
+      - user-message
+  /user-manager:
+    tags:
+  /user-manager/profile:
+    tags:
+      - comment
+      - name
+      - name-for-users
+      - override-shared-users
+      - price
+      - starts-when
+      - validity
+  /user-manager/profile-limitation:
+    tags:
+      - comment
+      - from-time
+      - limitation
+      - profile
+      - till-time
+      - weekdays
+  /user-manager/router:
+    tags:
+      - address
+      - coa-port
+      - comment
+      - disabled
+      - name
+      - shared-secret
+  /user-manager/session:
+    tags:
+      - acct-multi-session-id
+      - acct-session-id
+      - active
+      - calling-station-id
+      - download
+      - ended
+      - last-accounting-packet
+      - nas-ip-address
+      - nas-port-id
+      - nas-port-type
+      - started
+      - status
+      - terminate-cause
+      - upload
+      - uptime
+      - user
+      - user-address
+  /user-manager/user/group:
+    tags:
+      - attributes
+      - comment
+      - default
+      - default-name
+      - inner-auths
+      - name
+      - outer-auths
+  /user-manager/user:
+    tags:
+      - attributes
+      - caller-id
+      - comment
+      - disabled
+      - group
+      - name
+      - otp-secret
+      - password
+      - shared-users
+  /user-manager/user-profile:
+    tags:
+      - end-time
+      - profile
+      - state
+      - user
+      - 
