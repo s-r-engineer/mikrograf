@@ -1,13 +1,17 @@
+common:
+  tags:
+    - comment
+    - disabled
+    - name
 modules:
   /caps-man/access-list:
+    fields:
     tags:
       - action
       - allow-signal-out-of-range
       - ap-tx-limit
       - client-to-client-forwarding
       - client-tx-limit
-      - comment
-      - disabled
       - interface
       - mac-address
       - mac-address-mask
@@ -19,6 +23,7 @@ modules:
       - vlan-id
       - vlan-mode
   /caps-man/actual-interface-configuration:
+    fields:
     tags:
       - arp
       - arp-timeout
@@ -32,7 +37,6 @@ modules:
       - channel.secondary-frequency
       - channel.skip-dfs-channels
       - channel.tx-power
-      - comment
       - configuration.country
       - configuration.disconnect-timeout
       - configuration.distance
@@ -60,7 +64,6 @@ modules:
       - datapath.vlan-id
       - datapath.vlan-mode
       - disable-running-check
-      - disabled
       - dynamic
       - inactive
       - l2mtu
@@ -68,7 +71,6 @@ modules:
       - master
       - master-interface
       - mtu
-      - name
       - radio-mac
       - running
       - security.authentication-types
@@ -82,19 +84,19 @@ modules:
       - security.tls-certificate
       - security.tls-mode
   /caps-man/channel:
+    fields:
     tags:
       - band
-      - comment
       - control-channel-width
       - extension-channel
       - frequency
-      - name
       - reselect-interval
       - save-selected
       - secondary-frequency
       - skip-dfs-channels
       - tx-power
   /caps-man/configuration:
+    fields:
     tags:
       - channel
       - channel.band
@@ -106,7 +108,6 @@ modules:
       - channel.secondary-frequency
       - channel.skip-dfs-channels
       - channel.tx-power
-      - comment
       - country
       - datapath
       - datapath.arp
@@ -134,7 +135,6 @@ modules:
       - max-sta-count
       - mode
       - multicast-helper
-      - name
       - rates
       - rates.basic
       - rates.ht-basic-mcs
@@ -157,22 +157,22 @@ modules:
       - ssid
       - tx-chains
   /caps-man/datapath:
+    fields:
     tags:
       - arp
       - bridge
       - bridge-cost
       - bridge-horizon
       - client-to-client-forwarding
-      - comment
       - interface-list
       - l2mtu
       - local-forwarding
       - mtu
-      - name
       - openflow-switch
       - vlan-id
       - vlan-mode
   /caps-man/interface:
+    fields:
     tags:
       - arp
       - arp-timeout
@@ -187,7 +187,6 @@ modules:
       - channel.secondary-frequency
       - channel.skip-dfs-channels
       - channel.tx-power
-      - comment
       - configuration
       - configuration.country
       - configuration.disconnect-timeout
@@ -223,7 +222,6 @@ modules:
       - datapath.vlan-id
       - datapath.vlan-mode
       - disable-running-check
-      - disabled
       - dynamic
       - inactive
       - l2mtu
@@ -231,7 +229,6 @@ modules:
       - master
       - master-interface
       - mtu
-      - name
       - radio-mac
       - radio-name
       - rates
@@ -254,21 +251,17 @@ modules:
       - security.tls-certificate
       - security.tls-mode
   /caps-man/manager/interface:
+    fields:
     tags:
-      - comment
       - default
-      - disabled
       - dynamic
       - forbid
       - interface
-  /caps-man/manager:
-    tags:
   /caps-man/provisioning:
+    fields:
     tags:
       - action
-      - comment
       - common-name-regexp
-      - disabled
       - hw-supported-modes
       - identity-regexp
       - ip-address-ranges
@@ -278,6 +271,7 @@ modules:
       - radio-mac
       - slave-configurations
   /caps-man/radio:
+    fields:
     tags:
       - interface
       - local
@@ -286,19 +280,18 @@ modules:
       - remote-cap-identity
       - remote-cap-name
   /caps-man/rates:
+    fields:
     tags:
       - basic
-      - comment
       - ht-basic-mcs
       - ht-supported-mcs
-      - name
       - supported
       - vht-basic-mcs
       - vht-supported-mcs
   /caps-man/registration-table:
+    fields:
     tags:
       - bytes
-      - comment
       - eap-identity
       - interface
       - mac-address
@@ -313,31 +306,31 @@ modules:
       - uptime
       - vlan-id
   /caps-man/remote-cap:
+    fields:
     tags:
       - address
       - base-mac
       - board
       - identity
-      - name
       - radios
       - serial
       - state
       - version
   /caps-man/security:
+    fields:
     tags:
       - authentication-types
-      - comment
       - disable-pmkid
       - eap-methods
       - eap-radius-accounting
       - encryption
       - group-encryption
       - group-key-update
-      - name
       - passphrase
       - tls-certificate
       - tls-mode
   /certificate/crl:
+    fields:
     tags:
       - cert
       - dynamic
@@ -351,6 +344,7 @@ modules:
       - signature
       - url
   /certificate:
+    fields:
     tags:
       - akid
       - authority
@@ -374,7 +368,6 @@ modules:
       - key-type
       - key-usage
       - locality
-      - name
       - organization
       - private-key
       - req-fingerprint
@@ -391,27 +384,27 @@ modules:
       - trusted
       - unit
   /certificate/scep-server/otp:
+    fields:
     tags:
       - expired
       - expires
       - password
       - used
   /certificate/scep-server:
+    fields:
     tags:
       - ca-cert
       - days-valid
-      - disabled
       - next-ca-cert
       - path
       - request-lifetime
   /certificate/scep-server/ra:
+    fields:
     tags:
       - ca-fingerprint
       - ca-identity
       - challenge-password
-      - disabled
       - fingerprint-algorithm
-      - name
       - on-smart-card
       - ra-path
       - ra-transaction-lifetime
@@ -421,6 +414,7 @@ modules:
       - status
       - template
   /certificate/scep-server/requests:
+    fields:
     tags:
       - authority
       - common-name
@@ -435,29 +429,21 @@ modules:
       - subject-alt-name
       - transaction-id
       - unit
-  /certificate/settings:
-    tags:
-  /console/settings:
-    tags:
-  /container/config:
-    tags:
   /container/envs:
+    fields:
     tags:
-      - comment
       - key
-      - name
       - value
   /container/mounts:
+    fields:
     tags:
-      - comment
       - dst
-      - name
       - src
   /container:
+    fields:
     tags:
       - arch
       - cmd
-      - comment
       - dns
       - domain-name
       - entrypoint
@@ -467,7 +453,6 @@ modules:
       - interface
       - logging
       - mounts
-      - name
       - os
       - remote-image
       - repo
@@ -478,6 +463,7 @@ modules:
       - user
       - workdir
   /disk/btrfs/filesystem:
+    fields:
     tags:
       - balance-status
       - balancing
@@ -498,6 +484,7 @@ modules:
       - uuid
       - write-errors
   /disk/btrfs/subvolume:
+    fields:
     tags:
       - creation-time
       - dead
@@ -509,7 +496,6 @@ modules:
       - mount
       - mounted
       - mountpoint
-      - name
       - parent
       - path
       - read-only
@@ -526,6 +512,7 @@ modules:
       - top-level
       - uuid
   /disk/btrfs/transfer:
+    fields:
     tags:
       - bytes
       - file
@@ -539,19 +526,18 @@ modules:
       - status
       - type
   /disk:
+    fields:
     tags:
       - active-time
       - available-spare
       - available-spare-threshold
       - block-device
-      - comment
       - compress
       - controller-busy-time
       - critical-temperature
       - critical-temperature-time
       - critical-warning
       - crypted-backend
-      - disabled
       - discard-bytes
       - discard-merges
       - discard-ops
@@ -679,51 +665,25 @@ modules:
       - write-ops-per-second
       - write-rate
       - write-time
-  /disk/settings:
-    tags:
-  /dude/agent:
-    tags:
-      - comment
-      - name
-  /dude/device:
-    tags:
-      - comment
-      - name
-  /dude/device-type:
-    tags:
-      - comment
-      - name
-  /dude/notification:
-    tags:
-      - comment
-      - name
-  /dude:
-    tags:
-  /dude/probe:
-    tags:
-      - comment
-      - name
   /dude/ros/address:
+    fields:
     tags:
       - actual-interface
       - address
       - broadcast
-      - comment
       - device
-      - disabled
       - dynamic
       - interface
       - invalid
       - netmask
       - network
   /dude/ros/arp:
+    fields:
     tags:
 DHCP
       - address
-      - comment
       - complete
       - device
-      - disabled
       - dynamic
       - interface
       - invalid
@@ -731,6 +691,7 @@ DHCP
       - published
       - published
   /dude/ros/health:
+    fields:
     tags:
       - active-fan
       - active-fan2
@@ -767,12 +728,11 @@ DHCP
       - use-fan2
       - voltage
   /dude/ros/interface:
+    fields:
     tags:
       - actual-mtu
-      - comment
       - default-name
       - device
-      - disabled
       - dynamic
       - fast-path
       - fp-rx-byte
@@ -786,7 +746,6 @@ DHCP
       - mac-address
       - max-l2mtu
       - mtu
-      - name
       - running
       - rx-byte
       - rx-drop
@@ -799,6 +758,7 @@ DHCP
       - tx-packet
       - type
   /dude/ros/lease:
+    fields:
     tags:
       - active-address
       - active-client-id
@@ -812,11 +772,9 @@ DHCP
       - block-access
       - blocked
       - client-id
-      - comment
       - device
       - dhcp-option
       - dhcp-option-set
-      - disabled
       - dynamic
       - expires-after
       - host-name
@@ -831,6 +789,7 @@ DHCP
       - status
       - use-src-mac
   /dude/ros/neighbor:
+    fields:
     tags:
       - address
       - address4
@@ -849,22 +808,20 @@ DHCP
       - uptime
       - version
   /dude/ros/queue:
+    fields:
     tags:
       - bucket-size
       - burst-limit
       - burst-threshold
       - burst-time
       - bytes
-      - comment
       - device
-      - disabled
       - dropped
       - dst
       - dynamic
       - invalid
       - limit-at
       - max-limit
-      - name
       - packet-marks
       - packet-rate
       - packets
@@ -894,6 +851,7 @@ DHCP
       - total-queued-packets
       - total-rate
   /dude/ros/registration-table:
+    fields:
     tags:
       - 802.1x-port-enabled
       - ack-timeout
@@ -903,7 +861,6 @@ DHCP
       - bridge
       - bytes
       - client-tx-limit
-      - comment
       - compression
       - device
       - distance
@@ -960,6 +917,7 @@ DHCP
       - wmm-enabled
       - wmm-ps-enabled
   /dude/ros/resource:
+    fields:
     tags:
       - architecture-name
       - bad-blocks
@@ -980,6 +938,7 @@ DHCP
       - write-sect-since-reboot
       - write-sect-total
   /dude/ros/route:
+    fields:
     tags:
       - active
       - bgp
@@ -994,10 +953,8 @@ DHCP
       - bgp-weight
       - blackhole
       - check-gateway
-      - comment
       - connect
       - device
-      - disabled
       - distance
       - dst-address
       - dynamic
@@ -1020,6 +977,7 @@ DHCP
       - unreachable
       - vrf-interface
   /dude/ros/routerboard:
+    fields:
     tags:
       - current-firmware
       - device
@@ -1029,31 +987,20 @@ DHCP
       - routerboard
       - serial-number
       - upgrade-firmware
-  /dude/service:
-    tags:
-      - comment
-      - name
-  /dude/settings:
-    tags:
-  /environment:
-    tags:
   /file:
+    fields:
     tags:
       - contents
       - last-modified
-      - name
       - package-architecture
       - package-build-time
       - package-name
       - package-version
       - size
       - type
-  /file/rsync-daemon:
-    tags:
   /file/sync:
+    fields:
     tags:
-      - comment
-      - disabled
       - dynamic
       - invalid
       - local-path
@@ -1064,25 +1011,22 @@ DHCP
       - status
       - user
   /interface/6to4:
+    fields:
     tags:
       - actual-mtu
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dont-fragment
       - dscp
       - ipsec-secret
       - keepalive
       - local-address
       - mtu
-      - name
       - remote-address
       - running
   /interface/amt:
+    fields:
     tags:
-      - comment
-      - disabled
       - discovery-ip
       - dont-fragment
       - gateway-port
@@ -1091,17 +1035,15 @@ DHCP
       - mac-address
       - max-tunnels
       - mode
-      - name
       - relay-port
       - running
   /interface/bonding:
+    fields:
     tags:
       - arp
       - arp-interval
       - arp-ip-targets
       - arp-timeout
-      - comment
-      - disabled
       - down-delay
       - forced-mac-address
       - lacp-rate
@@ -1112,13 +1054,13 @@ DHCP
       - min-links
       - mode
       - mtu
-      - name
       - primary
       - running
       - slaves
       - transmit-hash-policy
       - up-delay
   /interface/bridge/calea:
+    fields:
     tags:
       - 802.3-sap
       - 802.3-type
@@ -1133,8 +1075,6 @@ DHCP
       - arp-src-mac-address
       - bytes
       - chain
-      - comment
-      - disabled
       - dst-address
       - dst-address6
       - dst-mac-address
@@ -1182,6 +1122,7 @@ DHCP
       - vlan-id
       - vlan-priority
   /interface/bridge/filter:
+    fields:
     tags:
       - 802.3-sap
       - 802.3-type
@@ -1196,8 +1137,6 @@ DHCP
       - arp-src-mac-address
       - bytes
       - chain
-      - comment
-      - disabled
       - dst-address
       - dst-address6
       - dst-mac-address
@@ -1246,10 +1185,9 @@ DHCP
       - vlan-id
       - vlan-priority
   /interface/bridge/host:
+    fields:
     tags:
       - bridge
-      - comment
-      - disabled
       - dynamic
       - external
       - interface
@@ -1260,10 +1198,9 @@ DHCP
       - remote-ip
       - vid
   /interface/bridge/mdb:
+    fields:
     tags:
       - bridge
-      - comment
-      - disabled
       - dynamic
       - group
       - invalid
@@ -1271,15 +1208,15 @@ DHCP
       - ports
       - vid
   /interface/bridge/msti:
+    fields:
     tags:
       - bridge
-      - comment
-      - disabled
       - dynamic
       - identifier
       - priority
       - vlan-mapping
   /interface/bridge/nat:
+    fields:
     tags:
       - 802.3-sap
       - 802.3-type
@@ -1294,8 +1231,6 @@ DHCP
       - arp-src-mac-address
       - bytes
       - chain
-      - comment
-      - disabled
       - dst-address
       - dst-address6
       - dst-mac-address
@@ -1347,27 +1282,25 @@ DHCP
       - vlan-id
       - vlan-priority
   /interface/bridge/port/mst-override:
+    fields:
     tags:
-      - comment
       - debug-info
-      - disabled
       - dynamic
       - identifier
       - interface
       - internal-path-cost
       - priority
   /interface/bridge/port:
+    fields:
     tags:
       - auto-isolate
       - bpdu-guard
       - bridge
       - broadcast-flood
-      - comment
       - debug-info
       - designated-bridge
       - designated-cost
       - designated-port-number
-      - disabled
       - dynamic
       - edge
       - edge-port
@@ -1408,6 +1341,7 @@ DHCP
       - unknown-multicast-flood
       - unknown-unicast-flood
   /interface/bridge:
+    fields:
     tags:
       - actual-mtu
       - add-dhcp-option82
@@ -1416,9 +1350,7 @@ DHCP
       - arp
       - arp-timeout
       - auto-mac
-      - comment
       - dhcp-snooping
-      - disabled
       - dynamic
       - ether-type
       - fast-forward
@@ -1441,7 +1373,6 @@ DHCP
       - multicast-querier
       - multicast-router
       - mvrp
-      - name
       - port-cost-mode
       - priority
       - protocol-mode
@@ -1456,9 +1387,8 @@ DHCP
       - startup-query-interval
       - transmit-hold-count
       - vlan-filtering
-  /interface/bridge/settings:
-    tags:
   /interface/bridge/vlan/mvrp:
+    fields:
     tags:
       - applicant-state
       - bridge
@@ -1467,31 +1397,27 @@ DHCP
       - registrar-state
       - vlan-id
   /interface/bridge/vlan:
+    fields:
     tags:
       - bridge
-      - comment
       - current-tagged
       - current-untagged
-      - disabled
       - dynamic
       - mvrp-forbidden
       - tagged
       - untagged
       - vlan-ids
-  /interface/detect-internet:
-    tags:
   /interface/detect-internet/state:
+    fields:
     tags:
       - cloud-rtt
-      - name
       - state
       - state-change-time
   /interface/dot1x/client:
+    fields:
     tags:
       - anon-identity
       - certificate
-      - comment
-      - disabled
       - eap-methods
       - identity
       - inactive
@@ -1499,6 +1425,7 @@ DHCP
       - password
       - status
   /interface/dot1x/server/active:
+    fields:
     tags:
       - auth-info
       - client-mac
@@ -1507,12 +1434,11 @@ DHCP
       - username
       - vlan-id
   /interface/dot1x/server:
+    fields:
     tags:
       - accounting
       - auth-timeout
       - auth-types
-      - comment
-      - disabled
       - guest-vlan-id
       - inactive
       - interface
@@ -1524,19 +1450,19 @@ DHCP
       - retrans-timeout
       - server-fail-vlan-id
   /interface/dot1x/server/state:
+    fields:
     tags:
       - interface
       - status
   /interface/eoip:
+    fields:
     tags:
       - actual-mtu
       - allow-fast-path
       - arp
       - arp-timeout
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dont-fragment
       - dscp
       - ipsec-secret
@@ -1549,19 +1475,17 @@ DHCP
       - loop-protect-status
       - mac-address
       - mtu
-      - name
       - remote-address
       - running
       - tunnel-id
   /interface/eoipv6:
+    fields:
     tags:
       - actual-mtu
       - arp
       - arp-timeout
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dscp
       - ipsec-secret
       - keepalive
@@ -1573,11 +1497,11 @@ DHCP
       - loop-protect-status
       - mac-address
       - mtu
-      - name
       - remote-address
       - running
       - tunnel-id
   /interface/ethernet:
+    fields:
     tags:
       - advertise
       - arp
@@ -1585,12 +1509,10 @@ DHCP
       - auto-negotiation
       - cable-settings
       - combo-mode
-      - comment
       - current-learned
       - custom-drop-packet
       - default-name
       - disable-running-check
-      - disabled
       - driver-rx-byte
       - driver-rx-packet
       - driver-tx-byte
@@ -1607,7 +1529,6 @@ DHCP
       - mac-address
       - mdix-enable
       - mtu
-      - name
       - not-learned
       - orig-mac-address
       - policy-drop-packet
@@ -1717,45 +1638,40 @@ DHCP
       - tx-underrun
       - tx-unicast
   /interface/gre:
+    fields:
     tags:
       - actual-mtu
       - allow-fast-path
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dont-fragment
       - dscp
       - ipsec-secret
       - keepalive
       - local-address
       - mtu
-      - name
       - remote-address
       - running
   /interface/gre6:
+    fields:
     tags:
       - actual-mtu
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dscp
       - ipsec-secret
       - keepalive
       - local-address
       - mtu
-      - name
       - remote-address
       - running
   /interface/ipip:
+    fields:
     tags:
       - actual-mtu
       - allow-fast-path
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dont-fragment
       - dscp
       - dynamic
@@ -1763,34 +1679,30 @@ DHCP
       - keepalive
       - local-address
       - mtu
-      - name
       - remote-address
       - running
   /interface/ipipv6:
+    fields:
     tags:
       - actual-mtu
       - clamp-tcp-mss
-      - comment
       - current-remote-address
-      - disabled
       - dscp
       - ipsec-secret
       - keepalive
       - local-address
       - mtu
-      - name
       - remote-address
       - running
   /interface/l2tp-client:
+    fields:
     tags:
       - add-default-route
       - allow
       - allow-fast-path
-      - comment
       - connect-to
       - default-route-distance
       - dial-on-demand
-      - disabled
       - ipsec-secret
       - keepalive-timeout
       - l2tp-proto-version
@@ -1800,7 +1712,6 @@ DHCP
       - max-mru
       - max-mtu
       - mrru
-      - name
       - password
       - profile
       - random-source-port
@@ -1810,15 +1721,14 @@ DHCP
       - use-peer-dns
       - user
   /interface/l2tp-ether:
+    fields:
     tags:
       - actual-mtu
       - allow-fast-path
       - circuit-id
-      - comment
       - connect-to
       - cookie-length
       - digest-hash
-      - disabled
       - dynamic
       - ipsec-secret
       - l2tp-proto-version
@@ -1827,7 +1737,6 @@ DHCP
       - local-tunnel-id
       - mac-address
       - mtu
-      - name
       - peer-cookie
       - remote-session-id
       - remote-tunnel-id
@@ -1838,48 +1747,41 @@ DHCP
       - use-ipsec
       - use-l2-specific-sublayer
   /interface/l2tp-server:
+    fields:
     tags:
       - client-address
-      - comment
-      - disabled
       - dynamic
       - encoding
       - mru
       - mtu
-      - name
       - running
       - uptime
       - user
-  /interface/l2tp-server/server:
-    tags:
   /interface/list/member:
+    fields:
     tags:
-      - comment
-      - disabled
       - dynamic
       - dynamic
       - interface
       - list
   /interface/list:
+    fields:
     tags:
       - builtin
-      - comment
       - dynamic
       - dynamic
       - exclude
       - include
-      - name
   /interface/lte/apn:
+    fields:
     tags:
       - add-default-route
       - apn
       - authentication
-      - comment
       - default
       - default-route-distance
       - ip-type
       - ipv6-interface
-      - name
       - passthrough-interface
       - passthrough-mac
       - passthrough-subnet-size
@@ -1888,26 +1790,24 @@ DHCP
       - use-peer-dns
       - user
   /interface/lte/esim:
+    fields:
     tags:
       - active
       - interface
-      - name
       - nickname
       - spn
       - uiccid
   /interface/lte:
+    fields:
     tags:
       - allow-roaming
       - apn-profiles
       - band
-      - comment
       - default-name
-      - disabled
       - inactive
       - master
       - modem-init
       - mtu
-      - name
       - network-mode
       - nr-band
       - operator
@@ -1915,33 +1815,28 @@ DHCP
       - running
       - sms-protocol
       - sms-read
-  /interface/lte/settings:
-    tags:
   /interface/macsec:
+    fields:
     tags:
       - cak
       - ckn
-      - comment
-      - disabled
       - inactive
       - interface
       - mtu
-      - name
       - profile
       - running
       - status
   /interface/macsec/profile:
+    fields:
     tags:
       - default
       - default-name
-      - name
       - server-priority
   /interface/macvlan:
+    fields:
     tags:
       - arp
       - arp-timeout
-      - comment
-      - disabled
       - interface
       - l2mtu
       - loop-protect
@@ -1951,9 +1846,9 @@ DHCP
       - mac-address
       - mode
       - mtu
-      - name
       - running
   /interface/mesh/fdb:
+    fields:
     tags:
       - active
       - age
@@ -1966,10 +1861,9 @@ DHCP
       - seq-number
       - type
   /interface/mesh/port:
+    fields:
     tags:
       - active-port-type
-      - comment
-      - disabled
       - dr-address
       - dynamic
       - hello-interval
@@ -1979,13 +1873,12 @@ DHCP
       - path-cost
       - port-type
   /interface/mesh:
+    fields:
     tags:
       - admin-mac
       - arp
       - arp-timeout
       - auto-mac
-      - comment
-      - disabled
       - hwmp-default-hoplimit
       - hwmp-prep-lifetime
       - hwmp-preq-destination-only
@@ -1998,24 +1891,21 @@ DHCP
       - mac-address
       - mesh-portal
       - mtu
-      - name
       - reoptimize-paths
       - running
   /interface/ovpn-client:
+    fields:
     tags:
       - add-default-route
       - auth
       - certificate
       - cipher
-      - comment
       - connect-to
-      - disabled
       - disconnect-notify
       - hw-crypto
       - mac-address
       - max-mtu
       - mode
-      - name
       - password
       - port
       - profile
@@ -2029,26 +1919,23 @@ DHCP
       - user
       - verify-server-certificate
   /interface/ovpn-server:
+    fields:
     tags:
       - client-address
-      - comment
-      - disabled
       - dynamic
       - encoding
       - hw-crypto
       - mtu
-      - name
       - running
       - uptime
       - user
   /interface/ovpn-server/server:
+    fields:
     tags:
       - auth
       - certificate
       - cipher
-      - comment
       - default-profile
-      - disabled
       - enable-tun-ipv6
       - inactive
       - ipv6-prefix-len
@@ -2056,7 +1943,6 @@ DHCP
       - mac-address
       - max-mtu
       - mode
-      - name
       - netmask
       - port
       - protocol
@@ -2069,23 +1955,21 @@ DHCP
       - user-auth-method
       - vrf
   /interface/ppp-client:
+    fields:
     tags:
       - add-default-route
       - allow
       - apn
-      - comment
       - data-channel
       - default-route-distance
       - dial-command
       - dial-on-demand
-      - disabled
       - info-channel
       - keepalive-timeout
       - max-mru
       - max-mtu
       - modem-init
       - mrru
-      - name
       - null-modem
       - password
       - phone
@@ -2097,30 +1981,27 @@ DHCP
       - use-peer-dns
       - user
   /interface/ppp-server:
+    fields:
     tags:
       - authentication
-      - comment
       - data-channel
-      - disabled
       - max-mru
       - max-mtu
       - modem-init
       - mrru
-      - name
       - null-modem
       - port
       - profile
       - ring-count
       - running
   /interface/pppoe-client:
+    fields:
     tags:
       - ac-name
       - add-default-route
       - allow
-      - comment
       - default-route-distance
       - dial-on-demand
-      - disabled
       - host-uniq
       - interface
       - invalid
@@ -2128,7 +2009,6 @@ DHCP
       - max-mru
       - max-mtu
       - mrru
-      - name
       - password
       - profile
       - running
@@ -2136,15 +2016,13 @@ DHCP
       - use-peer-dns
       - user
   /interface/pppoe-server:
+    fields:
     tags:
-      - comment
-      - disabled
       - dynamic
       - encoding
       - interface
       - mru
       - mtu
-      - name
       - remote-address
       - running
       - service
@@ -2152,12 +2030,11 @@ DHCP
       - user
       - vid
   /interface/pppoe-server/server:
+    fields:
     tags:
       - accept-empty-service
       - authentication
-      - comment
       - default-profile
-      - disabled
       - interface
       - invalid
       - keepalive-timeout
@@ -2170,92 +2047,77 @@ DHCP
       - pppoe-over-vlan-range
       - service-name
   /interface/pptp-client:
+    fields:
     tags:
       - add-default-route
       - allow
-      - comment
       - connect-to
       - default-route-distance
       - dial-on-demand
-      - disabled
       - keepalive-timeout
       - max-mru
       - max-mtu
       - mrru
-      - name
       - password
       - profile
       - running
       - use-peer-dns
       - user
   /interface/pptp-server:
+    fields:
+      - uptime
     tags:
       - client-address
-      - comment
-      - disabled
       - dynamic
       - encoding
       - mru
       - mtu
-      - name
       - running
-      - uptime
       - user
-  /interface/pptp-server/server:
-    tags:
   /interface:
-    tags:
-      - actual-mtu
-      - comment
-      - default-name
-      - disabled
-      - dynamic
+    fields:
       - fp-rx-byte
       - fp-rx-packet
       - fp-tx-byte
       - fp-tx-packet
-      - inactive
-      - l2mtu
       - last-link-down-time
       - last-link-up-time
       - link-downs
-      - mac-address
-      - max-l2mtu
-      - mtu
-      - name
-      - passthrough
-      - running
       - rx-byte
       - rx-drop
       - rx-error
       - rx-packet
-      - slave
       - tx-byte
       - tx-drop
       - tx-error
       - tx-packet
       - tx-queue-drop
+    tags:
+      - default-name
+      - dynamic
+      - inactive
+      - mac-address
+      - passthrough
+      - running
+      - slave
       - type
-      - vrf
   /interface/sstp-client:
+    fields:
     tags:
       - add-default-route
       - add-sni
       - authentication
       - certificate
       - ciphers
-      - comment
       - connect-to
       - default-route-distance
       - dial-on-demand
-      - disabled
       - http-proxy
       - hw-crypto
       - keepalive-timeout
       - max-mru
       - max-mtu
       - mrru
-      - name
       - password
       - pfs
       - port
@@ -2267,35 +2129,28 @@ DHCP
       - verify-server-address-from-certificate
       - verify-server-certificate
   /interface/sstp-server:
+    fields:
     tags:
       - client-address
-      - comment
-      - disabled
       - dynamic
       - encoding
       - hw-crypto
       - mtu
-      - name
       - running
       - uptime
       - user
-  /interface/sstp-server/server:
-    tags:
   /interface/veth:
+    fields:
     tags:
       - address
-      - comment
-      - disabled
       - gateway
       - gateway6
-      - name
       - running
   /interface/vlan:
+    fields:
     tags:
       - arp
       - arp-timeout
-      - comment
-      - disabled
       - interface
       - l2mtu
       - loop-protect
@@ -2305,11 +2160,11 @@ DHCP
       - mac-address
       - mtu
       - mvrp
-      - name
       - running
       - use-service-tag
       - vlan-id
   /interface/vpls:
+    fields:
     tags:
       - arp
       - arp-timeout
@@ -2322,13 +2177,10 @@ DHCP
       - bridge-pvid
       - cisco-bgp-signaled
       - cisco-static-id
-      - comment
       - disable-running-check
-      - disabled
       - dynamic
       - mac-address
       - mtu
-      - name
       - peer
       - pw-control-word
       - pw-l2mtu
@@ -2336,13 +2188,12 @@ DHCP
       - running
       - vpls-id
   /interface/vrrp:
+    fields:
     tags:
       - arp
       - arp-timeout
       - authentication
       - backup
-      - comment
-      - disabled
       - failure
       - group-authority
       - group-master
@@ -2354,7 +2205,6 @@ DHCP
       - mac-address
       - master
       - mtu
-      - name
       - on-backup
       - on-fail
       - on-master
@@ -2368,19 +2218,19 @@ DHCP
       - version
       - vrid
   /interface/vxlan/fdb:
+    fields:
     tags:
       - interface
       - mac-address
       - remote-ip
   /interface/vxlan:
+    fields:
     tags:
       - allow-fast-path
       - arp
       - arp-timeout
       - bridge
       - bridge-pvid
-      - comment
-      - disabled
       - dont-fragment
       - group
       - hw
@@ -2395,7 +2245,6 @@ DHCP
       - mac-address
       - max-fdb-size
       - mtu
-      - name
       - port
       - running
       - ttl
@@ -2403,31 +2252,27 @@ DHCP
       - vrf
       - vteps-ip-version
   /interface/vxlan/vteps:
+    fields:
     tags:
-      - comment
-      - disabled
       - hw-offloaded
       - interface
       - remote-ip
   /interface/wifi/aaa:
+    fields:
     tags:
       - called-format
       - calling-format
-      - comment
-      - disabled
       - interim-update
       - mac-caching
-      - name
       - nas-identifier
       - password-format
       - username-format
   /interface/wifi/access-list:
+    fields:
     tags:
       - action
       - allow-signal-out-of-range
       - client-isolation
-      - comment
-      - disabled
       - interface
       - last-logged-in
       - last-logged-out
@@ -2441,11 +2286,8 @@ DHCP
       - ssid-regexp
       - time
       - vlan-id
-  /interface/wifi/cap:
-    tags:
-  /interface/wifi/capsman:
-    tags:
   /interface/wifi/capsman/remote-cap:
+    fields:
     tags:
       - address
       - base-mac
@@ -2456,17 +2298,16 @@ DHCP
       - state
       - version
   /interface/wifi/channel:
+    fields:
     tags:
       - band
-      - comment
-      - disabled
       - frequency
-      - name
       - reselect-interval
       - secondary-frequency
       - skip-dfs-channels
       - width
   /interface/wifi/configuration:
+    fields:
     tags:
       - aaa
       - aaa.called-format
@@ -2486,7 +2327,6 @@ DHCP
       - channel.secondary-frequency
       - channel.skip-dfs-channels
       - channel.width
-      - comment
       - country
       - datapath
       - datapath.bridge
@@ -2495,7 +2335,6 @@ DHCP
       - datapath.client-isolation
       - datapath.interface-list
       - datapath.vlan-id
-      - disabled
       - distance
       - dtim-period
       - hide-ssid
@@ -2532,7 +2371,6 @@ DHCP
       - max-clients
       - mode
       - multicast-enhance
-      - name
       - qos-classifier
       - security
       - security.authentication-types
@@ -2576,23 +2414,20 @@ DHCP
       - tx-chains
       - tx-power
   /interface/wifi/datapath:
+    fields:
     tags:
       - bridge
       - bridge-cost
       - bridge-horizon
       - client-isolation
-      - comment
-      - disabled
       - interface-list
-      - name
       - vlan-id
   /interface/wifi/interworking:
+    fields:
     tags:
       - 3gpp-info
       - authentication-types
-      - comment
       - connection-capabilities
-      - disabled
       - domain-names
       - esr
       - hessid
@@ -2601,7 +2436,6 @@ DHCP
       - internet
       - ipv4-availability
       - ipv6-availability
-      - name
       - network-type
       - operational-classes
       - operator-names
@@ -2619,6 +2453,7 @@ DHCP
       - wan-uplink
       - wan-uplink-load
   /interface/wifi:
+    fields:
     tags:
       - aaa
       - aaa.called-format
@@ -2638,7 +2473,6 @@ DHCP
       - channel.secondary-frequency
       - channel.skip-dfs-channels
       - channel.width
-      - comment
       - configuration
       - configuration.antenna-gain
       - configuration.beacon-interval
@@ -2666,7 +2500,6 @@ DHCP
       - datapath.vlan-id
       - default-name
       - disable-running-check
-      - disabled
       - dynamic
       - inactive
       - interworking
@@ -2702,7 +2535,6 @@ DHCP
       - master
       - master-interface
       - mtu
-      - name
       - radio-mac
       - running
       - security
@@ -2743,12 +2575,11 @@ DHCP
       - steering.rrm
       - steering.wnm
   /interface/wifi/provisioning:
+    fields:
     tags:
       - action
       - address-ranges
-      - comment
       - common-name-regexp
-      - disabled
       - identity-regexp
       - master-configuration
       - name-format
@@ -2757,6 +2588,7 @@ DHCP
       - slave-name-format
       - supported-bands
   /interface/wifi/radio:
+    fields:
     tags:
       - 2g-channels
       - 5g-channels
@@ -2783,15 +2615,13 @@ DHCP
       - rx-chains
       - s1g-channels
       - tx-chains
-  /interface/wifi/radio/settings:
-    tags:
   /interface/wifi/registration-table:
+    fields:
     tags:
       - auth-type
       - authorized
       - band
       - bytes
-      - comment
       - interface
       - last-activity
       - mac-address
@@ -2805,9 +2635,8 @@ DHCP
       - uptime
       - vlan-id
   /interface/wifi/security/multi-passphrase:
+    fields:
     tags:
-      - comment
-      - disabled
       - expired
       - expires
       - group
@@ -2815,14 +2644,13 @@ DHCP
       - passphrase
       - vlan-id
   /interface/wifi/security:
+    fields:
     tags:
       - authentication-types
-      - comment
       - connect-group
       - connect-priority
       - dh-groups
       - disable-pmkid
-      - disabled
       - eap-accounting
       - eap-anonymous-identity
       - eap-certificate-mode
@@ -2843,7 +2671,6 @@ DHCP
       - management-encryption
       - management-protection
       - multi-passphrase-group
-      - name
       - owe-transition-interface
       - passphrase
       - sae-anti-clogging-threshold
@@ -2851,62 +2678,41 @@ DHCP
       - sae-pwe
       - wps
   /interface/wifi/steering/neighbor-group:
+    fields:
     tags:
       - bssids
-      - comment
-      - name
   /interface/wifi/steering:
+    fields:
     tags:
       - 2g-probe-delay
-      - comment
-      - disabled
-      - name
       - neighbor-group
       - rrm
       - wnm
   /interface/wireguard/peers:
+    fields:
+      - rx
+      - tx
+      - last-handshake
     tags:
-      - allowed-address
       - client-address
-      - client-dns
       - client-endpoint
       - client-keepalive
       - client-listen-port
-      - comment
       - current-endpoint-address
       - current-endpoint-port
-      - disabled
       - dynamic
       - endpoint-address
       - endpoint-port
       - interface
-      - last-handshake
-      - name
       - persistent-keepalive
-      - preshared-key
-      - private-key
-      - public-key
       - responder
-      - rx
-      - tx
-  /interface/wireguard:
-    tags:
-      - comment
-      - disabled
-      - listen-port
-      - mtu
-      - name
-      - private-key
-      - public-key
-      - running
   /interface/wireless/access-list:
+    fields:
     tags:
       - allow-signal-out-of-range
       - ap-tx-limit
       - authentication
       - client-tx-limit
-      - comment
-      - disabled
       - forwarding
       - interface
       - mac-address
@@ -2918,28 +2724,21 @@ DHCP
       - time
       - vlan-id
       - vlan-mode
-  /interface/wireless/align:
-    tags:
-  /interface/wireless/cap:
-    tags:
   /interface/wireless/channels:
+    fields:
     tags:
       - band
-      - comment
-      - disabled
       - extension-channel
       - frequency
       - list
-      - name
       - width
   /interface/wireless/connect-list:
+    fields:
     tags:
       - 3gpp
       - allow-signal-out-of-range
       - area-prefix
-      - comment
       - connect
-      - disabled
       - interface
       - interworking
       - iw-asra
@@ -2963,12 +2762,12 @@ DHCP
       - ssid
       - wireless-protocol
   /interface/wireless/interworking-profiles:
+    fields:
     tags:
       - 3gpp-info
       - 3gpp-raw
       - asra
       - authentication-types
-      - comment
       - connection-capabilities
       - domain-names
       - esr
@@ -2978,7 +2777,6 @@ DHCP
       - internet
       - ipv4-availability
       - ipv6-availability
-      - name
       - network-type
       - operational-classes
       - operator-names
@@ -2997,27 +2795,24 @@ DHCP
       - wan-uplink
       - wan-uplink-load
   /interface/wireless/manual-tx-power-table:
+    fields:
     tags:
-      - comment
       - manual-tx-powers
-      - name
   /interface/wireless/nstreme:
+    fields:
     tags:
-      - comment
       - disable-csma
       - enable-nstreme
       - enable-polling
       - framer-limit
       - framer-policy
-      - name
   /interface/wireless/nstreme-dual:
+    fields:
     tags:
       - arp
       - arp-timeout
-      - comment
       - disable-csma
       - disable-running-check
-      - disabled
       - framer-limit
       - framer-policy
       - ht-channel-width
@@ -3027,7 +2822,6 @@ DHCP
       - l2mtu
       - mac-address
       - mtu
-      - name
 rates-a/g
       - rates-b
       - remote-mac
@@ -3041,6 +2835,7 @@ rates-a/g
       - tx-frequency
       - tx-radio
   /interface/wireless:
+    fields:
     tags:
       - adaptive-noise-immunity
       - allow-sharedkey
@@ -3058,7 +2853,6 @@ basic-rates-a/g
       - bridge-mode
       - burst-time
       - channel-width
-      - comment
       - compression
       - country
       - default-ap-tx-limit
@@ -3067,7 +2861,6 @@ basic-rates-a/g
       - default-forwarding
       - default-name
       - disable-running-check
-      - disabled
       - disconnect-timeout
       - distance
       - frame-lifetime
@@ -3094,7 +2887,6 @@ basic-rates-a/g
       - mtu
       - multicast-buffering
       - multicast-helper
-      - name
       - noise-floor-threshold
       - nv2-cell-radius
       - nv2-downlink-ratio
@@ -3141,6 +2933,7 @@ supported-rates-a/g
       - wmm-support
       - wps-mode
   /interface/wireless/registration-table:
+    fields:
     tags:
       - 802.1x-port-enabled
       - ack-timeout
@@ -3150,7 +2943,6 @@ supported-rates-a/g
       - bridge
       - bytes
       - client-tx-limit
-      - comment
       - compression
       - distance
       - encryption
@@ -3212,9 +3004,9 @@ supported-rates-a/g
       - wmm-enabled
       - wmm-ps-enabled
   /interface/wireless/security-profiles:
+    fields:
     tags:
       - authentication-types
-      - comment
       - default
       - disable-pmkid
       - eap-methods
@@ -3226,7 +3018,6 @@ supported-rates-a/g
       - mode
       - mschapv2-password
       - mschapv2-username
-      - name
       - radius-called-format
       - radius-eap-accounting
       - radius-mac-accounting
@@ -3252,6 +3043,7 @@ supported-rates-a/g
       - wpa-pre-shared-key
       - wpa2-pre-shared-key
   /interface/wireless/sniffer/packet:
+    fields:
     tags:
       - channel
       - crc-error
@@ -3261,41 +3053,36 @@ supported-rates-a/g
       - src
       - time
       - type
-  /interface/wireless/sniffer:
-    tags:
-  /interface/wireless/snooper:
-    tags:
   /interface/wireless/wds:
+    fields:
     tags:
       - arp
       - arp-timeout
-      - comment
       - disable-running-check
-      - disabled
       - dynamic
       - l2mtu
       - mac-address
       - master-interface
       - mtu
-      - name
       - running
       - wds-address
   /iot/bluetooth/advertisers/ad-structures:
+    fields:
     tags:
       - data
-      - name
       - type
   /iot/bluetooth/advertisers:
+    fields:
     tags:
       - ad-size
       - ad-structures
       - channel-map
       - device
-      - disabled
       - max-interval
       - min-interval
       - own-address-type
   /iot/bluetooth/connections/async-data:
+    fields:
     tags:
       - data-bytes
       - data-hex
@@ -3305,19 +3092,20 @@ supported-rates-a/g
       - type
       - uuid
   /iot/bluetooth/connections/characteristics:
+    fields:
     tags:
       - handle
-      - name
       - pdev
       - props
       - service-name
       - service-uuid
       - uuid
   /iot/bluetooth/connections:
+    fields:
     tags:
       - direction
-      - name
   /iot/bluetooth/peripheral-devices:
+    fields:
     tags:
       - address
       - address-type
@@ -3348,13 +3136,12 @@ supported-rates-a/g
       - mtik-temperature
       - mtik-uptime
       - mtik-version
-      - name
       - persist
       - rssi
   /iot/bluetooth:
+    fields:
     tags:
       - antenna
-      - name
       - offline
       - public-address
       - random-static-address
@@ -3367,6 +3154,7 @@ supported-rates-a/g
       - tx-cmd
       - tx-errors
   /iot/bluetooth/scanners/advertisements:
+    fields:
     tags:
       - address
       - address-type
@@ -3379,9 +3167,9 @@ supported-rates-a/g
       - rssi
       - time
   /iot/bluetooth/scanners:
+    fields:
     tags:
       - device
-      - disabled
       - filter-duplicates
       - filter-policy
       - interval
@@ -3389,41 +3177,39 @@ supported-rates-a/g
       - type
       - window
   /iot/bluetooth/whitelist:
+    fields:
     tags:
       - address
       - address-type
-      - comment
       - device
-      - disabled
   /iot/lora/channels:
+    fields:
     tags:
       - bandwidth
       - datarate
-      - disabled
       - freq
       - freq-off
-      - name
       - radio
       - spread-factor
       - type
   /iot/lora/joineui:
+    fields:
     tags:
       - joineuis
       - logging
-      - name
   /iot/lora/netid:
+    fields:
     tags:
       - logging
-      - name
       - netids
   /iot/lora:
+    fields:
     tags:
       - alt
       - antenna
       - antenna-gain
       - band
       - channel-plan
-      - disabled
       - eui-id
       - firmware-id
       - forward
@@ -3433,7 +3219,6 @@ supported-rates-a/g
       - listen-time
       - locks
       - long
-      - name
       - network
       - rssi-threshold
       - rx-packets
@@ -3444,16 +3229,16 @@ supported-rates-a/g
       - tx-packets
       - tx-toa
   /iot/lora/radios:
+    fields:
     tags:
       - center-freq
-      - disabled
-      - name
       - rssi-off
       - tx-enabled
       - tx-freq-max
       - tx-freq-min
       - type
   /iot/lora/servers:
+    fields:
     tags:
       - address
       - certificate
@@ -3461,15 +3246,13 @@ supported-rates-a/g
       - interval
       - joineui
       - key
-      - name
       - netid
       - port
       - protocol
       - ssl
       - up-port
-  /iot/lora/traffic/options:
-    tags:
   /iot/lora/traffic:
+    fields:
     tags:
       - band
       - coderate
@@ -3506,15 +3289,13 @@ supported-rates-a/g
       - time
       - txmode
       - type
-  /iot/modbus:
-    tags:
   /iot/modbus/security-rules:
+    fields:
     tags:
       - allowed-function-codes
-      - comment
-      - disabled
       - ip-range
   /iot/mqtt/brokers:
+    fields:
     tags:
       - address
       - auto-connect
@@ -3522,33 +3303,31 @@ supported-rates-a/g
       - client-id
       - connected
       - keep-alive
-      - name
       - parallel-scripts-limit
       - password
       - port
       - ssl
       - username
-  /iot/mqtt:
-    tags:
   /iot/mqtt/subscriptions:
+    fields:
     tags:
       - broker
       - on-message
       - qos
       - topic
   /iot/mqtt/subscriptions/recv:
+    fields:
     tags:
       - broker
       - data
       - time
       - topic
   /ip/address:
+    fields:
     tags:
       - actual-interface
       - address
       - broadcast
-      - comment
-      - disabled
       - dynamic
       - interface
       - invalid
@@ -3556,12 +3335,11 @@ supported-rates-a/g
       - network
       - slave
   /ip/arp:
+    fields:
     tags:
       - address
-      - comment
       - complete
       - dhcp
-      - disabled
       - dynamic
       - interface
       - invalid
@@ -3569,29 +3347,23 @@ supported-rates-a/g
       - published
       - published
       - status
-  /ip/cloud/advanced:
-    tags:
-  /ip/cloud:
-    tags:
   /ip/dhcp-client/option:
+    fields:
     tags:
       - code
-      - comment
       - default
-      - name
       - raw-value
       - value
   /ip/dhcp-client:
+    fields:
     tags:
       - add-default-route
       - address
       - caps-managers
-      - comment
       - default-route-distance
       - default-route-tables
       - dhcp-options
       - dhcp-server
-      - disabled
       - dynamic
       - expires-after
       - gateway
@@ -3607,31 +3379,28 @@ supported-rates-a/g
       - use-peer-dns
       - use-peer-ntp
   /ip/dhcp-relay:
+    fields:
     tags:
       - add-relay-info
       - delay-threshold
       - dhcp-server
       - dhcp-server-vrf
-      - disabled
       - interface
       - invalid
       - local-address
       - local-address-as-src-ip
-      - name
       - relay-info-remote-id
   /ip/dhcp-server/alert:
+    fields:
     tags:
       - alert-timeout
-      - comment
-      - disabled
       - interface
       - invalid
       - on-alert
       - unknown-server
       - valid-server
-  /ip/dhcp-server/config:
-    tags:
   /ip/dhcp-server/lease:
+    fields:
     tags:
       - active-address
       - active-client-id
@@ -3648,10 +3417,8 @@ supported-rates-a/g
       - blocked
       - class-id
       - client-id
-      - comment
       - dhcp-option
       - dhcp-option-set
-      - disabled
       - dynamic
       - expires-after
       - host-name
@@ -3669,22 +3436,20 @@ supported-rates-a/g
       - status
       - use-src-mac
   /ip/dhcp-server/matcher:
+    fields:
     tags:
       - address-pool
       - code
-      - comment
-      - disabled
       - matching-type
-      - name
       - option-set
       - server
       - value
   /ip/dhcp-server/network:
+    fields:
     tags:
       - address
       - boot-file-name
       - caps-manager
-      - comment
       - dhcp-option
       - dhcp-option-set
       - dns-
@@ -3697,18 +3462,18 @@ supported-rates-a/g
       - ntp-server
       - wins-server
   /ip/dhcp-server/option:
+    fields:
     tags:
       - code
-      - comment
       - force
-      - name
       - raw-value
       - value
   /ip/dhcp-server/option/sets:
+    fields:
     tags:
-      - name
       - options
   /ip/dhcp-server:
+    fields:
     tags:
       - add-arp
       - address-lists
@@ -3719,38 +3484,34 @@ supported-rates-a/g
       - bootp-lease-time
       - bootp-support
       - client-mac-limit
-      - comment
       - conflict-detection
       - delay-threshold
       - dhcp-option-set
-      - disabled
       - dynamic
       - insert-queue-before
       - interface
       - invalid
       - lease-script
       - lease-time
-      - name
       - parent-queue
       - relay
       - server-address
       - use-framed-as-classless
       - use-radius
   /ip/dns/adlist:
+    fields:
     tags:
-      - comment
-      - disabled
       - file
       - match-count
       - name-count
       - ssl-verify
       - url
   /ip/dns/cache/all:
+    fields:
     tags:
       - data
       - expire
       - minimum
-      - name
       - negative
       - refresh
       - responsible
@@ -3760,35 +3521,29 @@ supported-rates-a/g
       - ttl
       - type
   /ip/dns/cache:
+    fields:
     tags:
       - data
-      - name
       - static
       - ttl
       - type
   /ip/dns/forwarders:
+    fields:
     tags:
-      - comment
-      - disabled
       - dns-servers
       - doh-servers
-      - name
       - verify-doh-cert
-  /ip/dns:
-    tags:
   /ip/dns/static:
+    fields:
     tags:
       - address
       - address-list
       - cname
-      - comment
-      - disabled
       - dynamic
       - forward-to
       - match-subdomain
       - mx-exchange
       - mx-preference
-      - name
       - ns
       - regexp
       - srv-port
@@ -3799,30 +3554,28 @@ supported-rates-a/g
       - ttl
       - type
   /ip/firewall/address-list:
+    fields:
     tags:
       - address
-      - comment
       - creation-time
-      - disabled
       - dynamic
       - dynamic
       - list
       - timeout
   /ip/firewall/calea:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
       - connection-rate
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -3874,6 +3627,7 @@ supported-rates-a/g
       - tls-host
       - ttl
   /ip/firewall/connection:
+    fields:
     tags:
       - assured
       - confirmed
@@ -3909,16 +3663,14 @@ supported-rates-a/g
       - srcnat
       - tcp-state
       - timeout
-  /ip/firewall/connection/tracking:
-    tags:
   /ip/firewall/filter:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
@@ -3927,7 +3679,6 @@ supported-rates-a/g
       - connection-state
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -3981,18 +3732,17 @@ supported-rates-a/g
       - tls-host
       - ttl
   /ip/firewall/layer7-protocol:
+    fields:
     tags:
-      - comment
-      - name
       - regexp
   /ip/firewall/mangle:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
@@ -4001,7 +3751,6 @@ supported-rates-a/g
       - connection-state
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -4065,20 +3814,19 @@ supported-rates-a/g
       - tls-host
       - ttl
   /ip/firewall/nat:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
       - connection-rate
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -4131,15 +3879,14 @@ supported-rates-a/g
       - to-ports
       - ttl
   /ip/firewall/raw:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -4187,21 +3934,20 @@ supported-rates-a/g
       - tls-host
       - ttl
   /ip/firewall/service-port:
+    fields:
     tags:
-      - disabled
       - invalid
-      - name
       - ports
       - sip-direct-media
       - sip-timeout
   /ip/hotspot/active:
+    fields:
     tags:
       - address
       - advertisement
       - blocked
       - bytes-in
       - bytes-out
-      - comment
       - domain
       - idle-time
       - idle-timeout
@@ -4219,6 +3965,7 @@ supported-rates-a/g
       - uptime
       - user
   /ip/hotspot/cookie:
+    fields:
     tags:
       - domain
       - expires-in
@@ -4226,6 +3973,7 @@ supported-rates-a/g
       - mac-cookie
       - user
   /ip/hotspot/host:
+    fields:
     tags:
 DHCP
       - address
@@ -4234,7 +3982,6 @@ DHCP
       - bypassed
       - bytes-in
       - bytes-out
-      - comment
       - dynamic
       - found-by
       - host-dead-time
@@ -4251,32 +3998,31 @@ DHCP
       - uptime
       - vlan-id
   /ip/hotspot/ip-binding:
+    fields:
     tags:
       - address
       - blocked
       - bypassed
-      - comment
-      - disabled
       - mac-address
       - server
       - to-address
       - type
   /ip/hotspot:
+    fields:
     tags:
 HTTPS
       - address-pool
       - addresses-per-mac
-      - disabled
       - idle-timeout
       - interface
       - invalid
       - ip-of-dns-name
       - keepalive-timeout
       - login-timeout
-      - name
       - profile
       - proxy-status
   /ip/hotspot/profile:
+    fields:
     tags:
       - default
       - dns-name
@@ -4289,7 +4035,6 @@ HTTPS
       - login-by
       - mac-auth-mode
       - mac-auth-password
-      - name
       - nas-port-type
       - radius-accounting
       - radius-default-domain
@@ -4306,18 +4051,16 @@ HTTPS
       - trial-user-profile
       - use-radius
   /ip/hotspot/service-port:
+    fields:
     tags:
-      - disabled
-      - name
       - ports
   /ip/hotspot/user:
+    fields:
     tags:
       - address
       - bytes-in
       - bytes-out
-      - comment
       - default
-      - disabled
       - dynamic
       - email
       - limit-bytes-in
@@ -4325,7 +4068,6 @@ HTTPS
       - limit-bytes-total
       - limit-uptime
       - mac-address
-      - name
       - packets-in
       - packets-out
       - password
@@ -4334,6 +4076,7 @@ HTTPS
       - server
       - uptime
   /ip/hotspot/user/profile:
+    fields:
     tags:
       - add-mac-cookie
       - address-list
@@ -4349,7 +4092,6 @@ HTTPS
       - insert-queue-before
       - keepalive-timeout
       - mac-cookie-timeout
-      - name
       - on-login
       - on-logout
       - open-status-page
@@ -4363,10 +4105,9 @@ HTTPS
       - status-autorefresh
       - transparent-proxy
   /ip/hotspot/walled-garden/ip:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - dst-address-list
       - dst-host
@@ -4377,10 +4118,9 @@ HTTPS
       - src-address
       - src-address-list
   /ip/hotspot/walled-garden:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - dst-host
       - dst-port
@@ -4391,8 +4131,8 @@ HTTPS
       - server
       - src-address
   /ip/ipsec/active-peers:
+    fields:
     tags:
-      - comment
       - dynamic-address
       - id
       - last-seen
@@ -4415,11 +4155,10 @@ HTTPS
       - tx-packets
       - uptime
   /ip/ipsec/identity:
+    fields:
     tags:
       - auth-method
       - certificate
-      - comment
-      - disabled
       - dynamic
       - eap-methods
       - generate-policy
@@ -4437,6 +4176,7 @@ HTTPS
       - secret
       - username
   /ip/ipsec/installed-sa:
+    fields:
     tags:
 AH
 ESP
@@ -4459,19 +4199,19 @@ ESP
       - src-address
       - state
   /ip/ipsec/key:
+    fields:
     tags:
       - key-size
-      - name
       - private-key
       - rsa
   /ip/ipsec/mode-config:
+    fields:
     tags:
       - address
       - address-pool
       - address-prefix-length
       - connection-mark
       - default
-      - name
       - responder
       - responder
       - split-dns
@@ -4481,33 +4221,29 @@ ESP
       - system-dns
       - use-responder-dns
   /ip/ipsec/peer:
+    fields:
     tags:
       - address
-      - comment
       - current-address
-      - disabled
       - dynamic
       - exchange-mode
       - local-address
-      - name
       - passive
       - port
       - profile
       - responder
       - send-initial-contact
   /ip/ipsec/policy/group:
+    fields:
     tags:
-      - comment
       - default
-      - name
   /ip/ipsec/policy:
+    fields:
     tags:
       - action
       - active
       - backup
-      - comment
       - default
-      - disabled
       - dst-address
       - dst-port
       - dynamic
@@ -4528,6 +4264,7 @@ ESP
       - template
       - tunnel
   /ip/ipsec/profile:
+    fields:
     tags:
       - default
       - dh-group
@@ -4537,48 +4274,39 @@ ESP
       - hash-algorithm
       - lifebytes
       - lifetime
-      - name
       - nat-traversal
       - prf-algorithm
       - proposal-check
   /ip/ipsec/proposal:
+    fields:
     tags:
       - auth-algorithms
-      - comment
       - default
-      - disabled
       - enc-algorithms
       - lifetime
-      - name
       - pfs-group
-  /ip/ipsec/settings:
-    tags:
-  /ip/ipsec/statistics:
-    tags:
   /ip/kid-control/device:
+    fields:
     tags:
       - activity
       - blocked
       - bytes-down
       - bytes-up
-      - disabled
       - dynamic
       - idle-time
       - inactive
       - ip-address
       - limited
       - mac-address
-      - name
       - rate-down
       - rate-up
       - user
   /ip/kid-control:
+    fields:
     tags:
       - blocked
-      - disabled
       - fri
       - mon
-      - name
       - pause-left
       - pause-till
       - paused
@@ -4597,29 +4325,24 @@ ESP
       - tur-wed
       - wed
   /ip/media:
+    fields:
     tags:
       - allowed-hostname
       - allowed-ip
-      - disabled
       - dynamic
       - friendly-name
       - interface
       - path
       - status
-  /ip/media/settings:
-    tags:
   /ip/nat-pmp/interfaces:
+    fields:
     tags:
-      - disabled
       - dynamic
       - forced-ip
       - interface
       - type
-  /ip/nat-pmp:
-    tags:
-  /ip/neighbor/discovery-settings:
-    tags:
   /ip/neighbor:
+    fields:
     tags:
       - address
       - address4
@@ -4641,33 +4364,32 @@ ESP
       - uptime
       - version
   /ip/packing:
+    fields:
     tags:
       - aggregated-size
-      - disabled
       - interface
       - packing
       - unpacking
   /ip/pool:
+    fields:
     tags:
       - available
-      - comment
-      - name
       - next-pool
       - ranges
       - total
       - used
   /ip/pool/used:
+    fields:
     tags:
       - address
       - info
       - owner
       - pool
   /ip/proxy/access:
+    fields:
     tags:
       - action
       - action-data
-      - comment
-      - disabled
       - dst-address
       - dst-host
       - dst-port
@@ -4677,10 +4399,9 @@ ESP
       - path
       - src-address
   /ip/proxy/cache:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - dst-host
       - dst-port
@@ -4690,6 +4411,7 @@ ESP
       - path
       - src-address
   /ip/proxy/cache-contents:
+    fields:
     tags:
       - file-size
       - last-accessed
@@ -4698,9 +4420,9 @@ ESP
       - last-modified-time
       - uri
   /ip/proxy/connections:
+    fields:
     tags:
       - client
-      - comment
       - dst-address
       - last-protocol
       - rx-bytes
@@ -4709,10 +4431,9 @@ ESP
       - state
       - tx-bytes
   /ip/proxy/direct:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - dst-host
       - dst-port
@@ -4721,25 +4442,16 @@ ESP
       - method
       - path
       - src-address
-  /ip/proxy/inserts:
-    tags:
-  /ip/proxy/lookups:
-    tags:
-  /ip/proxy:
-    tags:
-  /ip/proxy/refreshes:
-    tags:
   /ip/route:
+    fields:
     tags:
       - active
       - bgp
       - bgp-mpls-vpn
       - blackhole
       - check-gateway
-      - comment
       - connect
       - dhcp
-      - disabled
       - distance
       - dst-address
       - dynamic
@@ -4762,54 +4474,45 @@ ESP
       - vpn
       - vrf-interface
   /ip/service:
+    fields:
     tags:
       - address
       - certificate
-      - disabled
       - invalid
       - max-sessions
-      - name
       - port
       - tls-version
       - vrf
-  /ip/settings:
-    tags:
-  /ip/smb:
-    tags:
   /ip/smb/shares:
+    fields:
     tags:
-      - comment
       - default
       - directory
-      - disabled
       - dynamic
       - invalid-users
-      - name
       - read-only
       - read-only
       - require-encryption
       - require-encryption
       - valid-users
   /ip/smb/users:
+    fields:
     tags:
-      - comment
       - default
-      - disabled
       - dynamic
-      - name
       - password
       - read-only
       - read-only
   /ip/socks/access:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - dst-port
       - src-address
       - src-port
   /ip/socks/connections:
+    fields:
     tags:
       - dst-address
       - rx
@@ -4817,39 +4520,27 @@ ESP
       - tx
       - type
       - user
-  /ip/socks:
-    tags:
   /ip/socks/users:
+    fields:
     tags:
-      - disabled
-      - name
       - only-one
       - password
       - rate-limit
-  /ip/ssh:
-    tags:
   /ip/tftp:
+    fields:
     tags:
       - allow
       - allow-overwrite
       - allow-rollover
-      - comment
-      - disabled
       - hits
       - ip-addresses
       - read-only
       - reading-window-size
       - real-filename
       - req-filename
-  /ip/tftp/settings:
-    tags:
-  /ip/traffic-flow/ipfix:
-    tags:
-  /ip/traffic-flow:
-    tags:
   /ip/traffic-flow/target:
+    fields:
     tags:
-      - disabled
       - dst-address
       - port
       - src-address
@@ -4857,30 +4548,25 @@ ESP
       - v9-template-timeout
       - version
   /ip/upnp/interfaces:
+    fields:
     tags:
-      - disabled
       - dynamic
       - forced-ip
       - interface
       - type
-  /ip/upnp:
-    tags:
   /ip/vrf:
+    fields:
     tags:
       - builtin
-      - comment
-      - disabled
       - interfaces
-      - name
   /ipv6/address:
+    fields:
     tags:
       - actual-interface
       - address
       - advertise
       - auto-link-local
-      - comment
       - deprecated
-      - disabled
       - dynamic
       - eui-64
       - from-pool
@@ -4893,25 +4579,23 @@ ESP
       - slave
       - valid
   /ipv6/dhcp-client/option:
+    fields:
     tags:
       - code
-      - comment
       - default
-      - name
       - raw-value
       - value
   /ipv6/dhcp-client:
+    fields:
     tags:
       - add-default-route
       - address
       - allow-reconfigure
-      - comment
       - custom-duid
       - default-route-distance
       - dhcp-options
       - dhcp-options
       - dhcp-server-v6
-      - disabled
       - duid
       - dynamic
       - interface
@@ -4931,17 +4615,16 @@ ESP
       - use-peer-dns
       - validate-server-duid
   /ipv6/dhcp-relay:
+    fields:
     tags:
-      - comment
       - delay-threshold
       - dhcp-server
-      - disabled
       - interface
       - invalid
       - link-address
-      - name
       - store-relayed-bindings
   /ipv6/dhcp-relay/routes:
+    fields:
     tags:
       - last-seen
       - life-time
@@ -4949,15 +4632,14 @@ ESP
       - prefix
       - relay
   /ipv6/dhcp-server/binding:
+    fields:
     tags:
       - active-server
       - address
       - address-lists
       - allow-dual-stack-queue
       - client-address
-      - comment
       - dhcp-option
-      - disabled
       - duid
       - dynamic
       - expires-after
@@ -4978,32 +4660,29 @@ ESP
       - server
       - status
   /ipv6/dhcp-server/option:
+    fields:
     tags:
       - code
-      - comment
-      - name
       - raw-value
       - value
   /ipv6/dhcp-server/option/sets:
+    fields:
     tags:
-      - name
       - options
   /ipv6/dhcp-server:
+    fields:
     tags:
       - address-lists
       - address-pool
       - allow-dual-stack-queue
       - binding-script
-      - comment
       - dhcp-option
-      - disabled
       - duid
       - dynamic
       - insert-queue-before
       - interface
       - invalid
       - lease-time
-      - name
       - parent-queue
       - preference
       - prefix-pool
@@ -5012,16 +4691,16 @@ ESP
       - use-radius
       - use-reconfigure
   /ipv6/firewall/address-list:
+    fields:
     tags:
       - address
-      - comment
       - creation-time
-      - disabled
       - dynamic
       - dynamic
       - list
       - timeout
   /ipv6/firewall/connection:
+    fields:
     tags:
       - assured
       - confirmed
@@ -5052,13 +4731,13 @@ ESP
       - tcp-state
       - timeout
   /ipv6/firewall/filter:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
@@ -5067,7 +4746,6 @@ ESP
       - connection-state
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -5114,13 +4792,13 @@ ESP
       - time
       - tls-host
   /ipv6/firewall/mangle:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
@@ -5129,7 +4807,6 @@ ESP
       - connection-state
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -5188,13 +4865,13 @@ ESP
       - time
       - tls-host
   /ipv6/firewall/nat:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - connection-bytes
       - connection-limit
       - connection-mark
@@ -5202,7 +4879,6 @@ ESP
       - connection-state
       - connection-type
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -5249,15 +4925,14 @@ ESP
       - to-address
       - to-ports
   /ipv6/firewall/raw:
+    fields:
     tags:
       - action
       - address-list
       - address-list-timeout
       - bytes
       - chain
-      - comment
       - content
-      - disabled
       - dscp
       - dst-address
       - dst-address-list
@@ -5301,14 +4976,11 @@ ESP
       - tcp-mss
       - time
       - tls-host
-  /ipv6/nd/prefix/default:
-    tags:
   /ipv6/nd/prefix:
+    fields:
     tags:
       - 6to4-interface
       - autonomous
-      - comment
-      - disabled
       - dynamic
       - interface
       - invalid
@@ -5317,12 +4989,11 @@ ESP
       - prefix
       - valid-lifetime
   /ipv6/nd:
+    fields:
     tags:
       - advertise-dns
       - advertise-mac-address
-      - comment
       - default
-      - disabled
       - dns
       - hop-limit
       - interface
@@ -5338,30 +5009,30 @@ ESP
       - reachable-time
       - retransmit-interval
   /ipv6/neighbor:
+    fields:
     tags:
       - address
-      - comment
-      - disabled
       - dynamic
       - interface
       - mac-address
       - router
       - status
   /ipv6/pool:
+    fields:
     tags:
-      - comment
       - dynamic
       - expires-after
-      - name
       - prefix
       - prefix-length
   /ipv6/pool/used:
+    fields:
     tags:
       - info
       - owner
       - pool
       - prefix
   /ipv6/route:
+    fields:
     tags:
       - active
       - bgp
@@ -5381,10 +5052,8 @@ ESP
       - bgp-weight
       - blackhole
       - check-gateway
-      - comment
       - connect
       - dhcp
-      - disabled
       - distance
       - dst-address
       - dynamic
@@ -5412,43 +5081,41 @@ ESP
       - target-scope
       - vpn
       - vrf-interface
-  /ipv6/settings:
-    tags:
   /log:
+    fields:
     tags:
       - buffer
       - message
       - time
       - topics
   /lora/channels:
+    fields:
     tags:
       - bandwidth
       - datarate
-      - disabled
       - freq
       - freq-off
-      - name
       - radio
       - spread-factor
       - type
   /lora/joineui:
+    fields:
     tags:
       - joineuis
       - logging
-      - name
   /lora/netid:
+    fields:
     tags:
       - logging
-      - name
       - netids
   /lora:
+    fields:
     tags:
       - alt
       - antenna
       - antenna-gain
       - band
       - channel-plan
-      - disabled
       - eui-id
       - firmware-id
       - forward
@@ -5458,7 +5125,6 @@ ESP
       - listen-time
       - locks
       - long
-      - name
       - network
       - rssi-threshold
       - rx-packets
@@ -5469,16 +5135,16 @@ ESP
       - tx-packets
       - tx-toa
   /lora/radios:
+    fields:
     tags:
       - center-freq
-      - disabled
-      - name
       - rssi-off
       - tx-enabled
       - tx-freq-max
       - tx-freq-min
       - type
   /lora/servers:
+    fields:
     tags:
       - address
       - certificate
@@ -5486,15 +5152,13 @@ ESP
       - interval
       - joineui
       - key
-      - name
       - netid
       - port
       - protocol
       - ssl
       - up-port
-  /lora/traffic/options:
-    tags:
   /lora/traffic:
+    fields:
     tags:
       - band
       - coderate
@@ -5532,6 +5196,7 @@ ESP
       - txmode
       - type
   /mpls/forwarding-table:
+    fields:
     tags:
       - label
       - ldp
@@ -5546,44 +5211,39 @@ ESP
       - vpn
       - vrf
   /mpls/interface:
+    fields:
     tags:
       - builtin
-      - comment
-      - disabled
       - input
       - interface
       - mpls-mtu
   /mpls/ldp/accept-filter:
+    fields:
     tags:
       - accept
-      - comment
-      - disabled
       - neighbor
       - prefix
       - vrf
   /mpls/ldp/advertise-filter:
+    fields:
     tags:
       - advertise
-      - comment
-      - disabled
       - neighbor
       - prefix
       - vrf
   /mpls/ldp/interface:
+    fields:
     tags:
       - accept-dynamic-neighbors
       - afi
-      - comment
-      - disabled
       - hello-interval
       - hold-time
       - interface
       - transport-addresses
   /mpls/ldp/local-mapping:
+    fields:
     tags:
       - adv-path
-      - comment
-      - disabled
       - dst-address
       - dynamic
       - egress
@@ -5596,11 +5256,10 @@ ESP
       - vpls
       - vrf
   /mpls/ldp/neighbor:
+    fields:
     tags:
       - active-connect
       - addresses
-      - comment
-      - disabled
       - dynamic
       - inactive
       - local-transport
@@ -5618,10 +5277,9 @@ ESP
       - used-afi
       - vpls
   /mpls/ldp:
+    fields:
     tags:
       - afi
-      - comment
-      - disabled
       - distribute-for-default
       - hop-limit
       - inactive
@@ -5633,9 +5291,8 @@ ESP
       - use-explicit-null
       - vrf
   /mpls/ldp/remote-mapping:
+    fields:
     tags:
-      - comment
-      - disabled
       - dst-address
       - dynamic
       - inactive
@@ -5647,17 +5304,15 @@ ESP
       - vpls
       - vrf
   /mpls/mangle:
+    fields:
     tags:
       - chain
-      - comment
-      - disabled
       - exp
       - packets
       - set-exp
       - set-mark
-  /mpls/settings:
-    tags:
   /mpls/traffic-eng/flow:
+    fields:
     tags:
       - blockade
       - bw
@@ -5676,11 +5331,10 @@ ESP
       - style
       - vrf
   /mpls/traffic-eng/interface:
+    fields:
     tags:
       - bandwidth
       - blockade-k-factor
-      - comment
-      - disabled
       - down-flood-thresholds
       - igp-flood-period
       - interface
@@ -5697,20 +5351,19 @@ ESP
       - up-flood-thresholds
       - use-udp
   /mpls/traffic-eng/path:
+    fields:
     tags:
       - affinity-exclude
       - affinity-include-all
       - affinity-include-any
-      - comment
-      - disabled
       - holding-priority
       - hops
-      - name
       - record-route
       - reoptimize-interval
       - setup-priority
       - use-cspf
   /mpls/traffic-eng/tunnel:
+    fields:
     tags:
       - affinity-exclude
       - affinity-include-all
@@ -5721,14 +5374,11 @@ ESP
       - auto-bandwidth-update-interval
       - bandwidth
       - bandwidth-limit
-      - comment
-      - disabled
       - forwarding
       - forwarding-on
       - from-address
       - holding-priority
       - invalid
-      - name
       - primary
       - primary-path
       - primary-pending
@@ -5744,6 +5394,7 @@ ESP
       - to-address
       - vrf
   /port:
+    fields:
     tags:
       - baud-rate
       - channels
@@ -5752,17 +5403,16 @@ ESP
       - flow-control
       - inactive
       - line-state
-      - name
       - parity
       - stop-bits
       - used-by
   /port/remote-access:
+    fields:
     tags:
       - active
       - allowed-addresses
       - busy
       - channel
-      - disabled
       - inactive
       - local-address
       - log-file
@@ -5772,27 +5422,25 @@ ESP
       - remote-address
       - remote-port
       - tcp-port
-  /ppp/aaa:
-    tags:
   /ppp/active:
+    fields:
     tags:
       - address
       - caller-id
-      - comment
       - encoding
       - limit-bytes-in
       - limit-bytes-out
-      - name
       - radius
       - service
       - session-id
       - uptime
   /ppp/l2tp-secret:
+    fields:
     tags:
       - address
-      - comment
       - secret
   /ppp/profile:
+    fields:
     tags:
       - address-list
       - bridge
@@ -5803,7 +5451,6 @@ ESP
       - bridge-port-trusted
       - bridge-port-vid
       - change-tcp-mss
-      - comment
       - default
       - dhcpv6-pd-pool
       - dns-server
@@ -5812,7 +5459,6 @@ ESP
       - insert-queue-before
       - interface-list
       - local-address
-      - name
       - on-down
       - on-up
       - only-one
@@ -5830,10 +5476,9 @@ ESP
       - use-upnp
       - wins-server
   /ppp/secret:
+    fields:
     tags:
       - caller-id
-      - comment
-      - disabled
       - ipv6-routes
       - last-caller-id
       - last-disconnect-reason
@@ -5841,7 +5486,6 @@ ESP
       - limit-bytes-in
       - limit-bytes-out
       - local-address
-      - name
       - password
       - profile
       - remote-address
@@ -5849,27 +5493,26 @@ ESP
       - routes
       - service
   /queue/interface:
+    fields:
     tags:
       - active-queue
       - default-queue
       - interface
       - queue
   /queue/simple:
+    fields:
     tags:
       - bucket-size
       - burst-limit
       - burst-threshold
       - burst-time
       - bytes
-      - comment
-      - disabled
       - dropped
       - dst
       - dynamic
       - invalid
       - limit-at
       - max-limit
-      - name
       - packet-marks
       - packet-rate
       - packets
@@ -5899,19 +5542,17 @@ ESP
       - total-queued-packets
       - total-rate
   /queue/tree:
+    fields:
     tags:
       - bucket-size
       - burst-limit
       - burst-threshold
       - burst-time
       - bytes
-      - comment
-      - disabled
       - dropped
       - invalid
       - limit-at
       - max-limit
-      - name
       - packet-mark
       - packet-rate
       - packets
@@ -5923,6 +5564,7 @@ ESP
       - queued-packets
       - rate
   /queue/type:
+    fields:
     tags:
       - bfifo-limit
       - cake-ack-filter
@@ -5955,7 +5597,6 @@ ESP
       - fq-codel-target
       - kind
       - mq-pfifo-limit
-      - name
       - pcq-burst-rate
       - pcq-burst-threshold
       - pcq-burst-time
@@ -5975,9 +5616,8 @@ ESP
       - red-min-threshold
       - sfq-allot
       - sfq-perturb
-  /radius/incoming:
-    tags:
   /radius:
+    fields:
     tags:
       - accounting-backup
       - accounting-port
@@ -5985,8 +5625,6 @@ ESP
       - authentication-port
       - called-id
       - certificate
-      - comment
-      - disabled
       - domain
       - protocol
       - realm
@@ -5996,11 +5634,10 @@ ESP
       - src-address
       - timeout
   /routing/bfd/configuration:
+    fields:
     tags:
       - address-list
       - addresses
-      - comment
-      - disabled
       - forbid-bfd
       - inactive
       - interfaces
@@ -6009,6 +5646,7 @@ ESP
       - multiplier
       - vrf
   /routing/bfd/session:
+    fields:
     tags:
       - actual-tx-interval
       - desired-tx-interval
@@ -6029,6 +5667,7 @@ ESP
       - uptime
       - vrf
   /routing/bgp/advertisements:
+    fields:
     tags:
       - afi
       - aggregator
@@ -6050,15 +5689,14 @@ ESP
       - peer
       - withdrawn
   /routing/bgp/connection:
+    fields:
     tags:
       - add-path-out
       - address-families
       - as
       - cisco-vpls-nlri-len-fmt
       - cluster-id
-      - comment
       - connect
-      - disabled
       - dynamic
       - hold-time
       - inactive
@@ -6081,7 +5719,6 @@ ESP
       - local.role
       - local.ttl
       - multihop
-      - name
       - nexthop-choice
       - output.affinity
       - output.as-override
@@ -6108,6 +5745,7 @@ ESP
       - use-bfd
       - vrf
   /routing/bgp/session:
+    fields:
     tags:
       - cisco-vpls-nlri-len-fmt
       - ebgp
@@ -6140,7 +5778,6 @@ ESP
       - local.port
       - local.role
       - multihop
-      - name
       - nexthop-choice
       - output.add-path
       - output.affinity
@@ -6179,15 +5816,14 @@ ESP
       - use-bfd
       - vrf
   /routing/bgp/template:
+    fields:
     tags:
       - add-path-out
       - address-families
       - as
       - cisco-vpls-nlri-len-fmt
       - cluster-id
-      - comment
       - default
-      - disabled
       - hold-time
       - inactive
       - input.accept-communities
@@ -6203,7 +5839,6 @@ ESP
       - input.limit-process-routes-ipv6
       - keepalive-time
       - multihop
-      - name
       - nexthop-choice
       - output.affinity
       - output.as-override
@@ -6224,20 +5859,18 @@ ESP
       - use-bfd
       - vrf
   /routing/bgp/vpls:
+    fields:
     tags:
       - bridge
       - bridge-cost
       - bridge-horizon
       - bridge-pvid
       - cisco-id
-      - comment
       - current-peers
-      - disabled
       - export-route-targets
       - import-route-targets
       - inactive
       - local-pref
-      - name
       - pw-control-word
       - pw-l2mtu
       - pw-type
@@ -6245,9 +5878,8 @@ ESP
       - site-id
       - vrf
   /routing/bgp/vpn:
+    fields:
     tags:
-      - comment
-      - disabled
       - export.filter-chain
       - export.filter-select
       - export.redistribute
@@ -6257,20 +5889,17 @@ ESP
       - import.router-id
       - inactive
       - label-allocation-policy
-      - name
       - route-distinguisher
       - vrf
   /routing/fantasy:
+    fields:
     tags:
-      - comment
       - count
       - dealer-id
-      - disabled
       - dst-address
       - gateway
       - instance-id
       - invalid
-      - name
       - offset
       - prefix-length
       - priv-offs
@@ -6280,49 +5909,43 @@ ESP
       - target-scope
       - use-hold
   /routing/filter/chain:
+    fields:
     tags:
       - dynamic
       - inactive
-      - name
   /routing/filter/community-ext-list:
+    fields:
     tags:
-      - comment
       - communities
-      - disabled
       - list
       - regexp
   /routing/filter/community-large-list:
+    fields:
     tags:
-      - comment
       - communities
-      - disabled
       - list
       - regexp
   /routing/filter/community-list:
+    fields:
     tags:
-      - comment
       - communities
-      - disabled
       - list
       - regexp
   /routing/filter/num-list:
+    fields:
     tags:
-      - comment
-      - disabled
       - list
       - range
   /routing/filter/rule:
+    fields:
     tags:
       - chain
-      - comment
-      - disabled
       - inactive
       - rule
   /routing/filter/select-rule:
+    fields:
     tags:
       - chain
-      - comment
-      - disabled
       - do-group-num
       - do-group-prfx
       - do-jump
@@ -6332,28 +5955,25 @@ ESP
       - do-where
       - invalid
   /routing/gmp:
+    fields:
     tags:
-      - disabled
       - exclude
       - groups
       - interfaces
       - sources
   /routing/id:
+    fields:
     tags:
-      - comment
-      - disabled
       - dynamic
       - dynamic-id
       - id
       - inactive
-      - name
       - select-dynamic-id
       - select-from-vrf
   /routing/igmp-proxy/interface:
+    fields:
     tags:
       - alternative-subnets
-      - comment
-      - disabled
       - dynamic
       - inactive
       - interface
@@ -6367,11 +5987,11 @@ ESP
       - upstream
       - upstream
   /routing/igmp-proxy/mfc:
+    fields:
     tags:
       - active
       - active-downstream-interfaces
       - bytes
-      - disabled
       - downstream-interfaces
       - dynamic
       - group
@@ -6379,15 +5999,12 @@ ESP
       - source
       - upstream-interface
       - wrong-packets
-  /routing/igmp-proxy:
-    tags:
   /routing/isis/instance:
+    fields:
     tags:
       - afi
       - areas
       - areas-max
-      - comment
-      - disabled
       - in-filter-chain
       - inactive
       - l1.lsp-max-age
@@ -6406,10 +6023,10 @@ ESP
       - l2.out-filter-chain
       - l2.out-filter-select
       - l2.redistribute
-      - name
       - system-id
       - vrf
   /routing/isis/interface:
+    fields:
     tags:
       - dynamic
       - hello-interval
@@ -6435,6 +6052,7 @@ ESP
       - ptp.3way-state
       - ptp.usage
   /routing/isis/interface-template:
+    fields:
     tags:
       - bcast.l1.csnp-interval
       - bcast.l1.hello-interval
@@ -6450,8 +6068,6 @@ ESP
       - bcast.l2.metric
       - bcast.l2.priority
       - bcast.l2.psnp-interval
-      - comment
-      - disabled
       - inactive
       - instance
       - interfaces
@@ -6467,6 +6083,7 @@ ESP
       - ptp.l2.metric
       - ptp.l2.psnp-interval
   /routing/isis/lsp:
+    fields:
     tags:
       - age
       - body
@@ -6478,6 +6095,7 @@ ESP
       - lsp-id
       - sequence
   /routing/isis/neighbor:
+    fields:
     tags:
       - dynamic
       - instance
@@ -6487,6 +6105,7 @@ ESP
       - srcid
       - state
   /routing/nexthop:
+    fields:
     tags:
       - address
       - afi
@@ -6511,41 +6130,36 @@ ESP
       - target-scope
       - unresolved
   /routing/ospf/area:
+    fields:
     tags:
       - area-id
-      - comment
       - default-cost
-      - disabled
       - dynamic
       - inactive
       - instance
-      - name
       - no-summaries
       - nssa-translator
       - transit-capable
       - transit-capable
       - type
   /routing/ospf/area/range:
+    fields:
     tags:
       - advertise
       - advertise
       - area
-      - comment
       - cost
-      - disabled
       - inactive
       - prefix
   /routing/ospf/instance:
+    fields:
     tags:
-      - comment
-      - disabled
       - domain-id
       - domain-tag
       - in-filter-chain
       - inactive
       - mpls-te-address
       - mpls-te-area
-      - name
       - originate-default
       - out-filter-chain
       - out-filter-select
@@ -6556,6 +6170,7 @@ ESP
       - version
       - vrf
   /routing/ospf/interface:
+    fields:
     tags:
       - address
       - area
@@ -6576,15 +6191,14 @@ ESP
       - vlink-remote-address
       - vlink-transit-area
   /routing/ospf/interface-template:
+    fields:
     tags:
       - area
       - auth
       - auth-id
       - auth-key
-      - comment
       - cost
       - dead-interval
-      - disabled
       - hello-interval
       - inactive
       - instance-id
@@ -6600,6 +6214,7 @@ ESP
       - vlink-neighbor-id
       - vlink-transit-area
   /routing/ospf/lsa:
+    fields:
     tags:
       - age
       - area
@@ -6617,12 +6232,12 @@ ESP
       - type
       - wraparound
   /routing/ospf/neighbor:
+    fields:
     tags:
       - address
       - adjacency
       - area
       - bdr
-      - comment
       - db-summaries
       - dr
       - dynamic
@@ -6636,18 +6251,17 @@ ESP
       - timeout
       - virtual
   /routing/ospf/static-neighbor:
+    fields:
     tags:
       - address
       - area
-      - comment
-      - disabled
       - inactive
       - instance-id
       - poll-interval
   /routing/pimsm/bsr/candidate:
+    fields:
     tags:
       - address
-      - disabled
       - hashmask-length
       - inactive
       - instance
@@ -6656,6 +6270,7 @@ ESP
       - scope6
       - state
   /routing/pimsm/bsr:
+    fields:
     tags:
       - address
       - dynamic
@@ -6666,15 +6281,16 @@ ESP
       - scope6
       - state
   /routing/pimsm/bsr/rp-candidate:
+    fields:
     tags:
       - address
-      - disabled
       - group
       - holdtime
       - inactive
       - instance
       - priority
   /routing/pimsm/bsr/rp-set:
+    fields:
     tags:
       - group
       - instance
@@ -6682,17 +6298,17 @@ ESP
       - rp.priority
       - rp.timeout
   /routing/pimsm/igmp-interface-template:
+    fields:
     tags:
       - instance
       - interfaces
   /routing/pimsm/instance:
+    fields:
     tags:
       - afi
       - bsm-forward-back
       - crp-advertise-contained
-      - disabled
       - inactive
-      - name
       - rp-hash-mask-length
       - rp-static-override
       - ssm-range
@@ -6701,6 +6317,7 @@ ESP
       - switch-to-spt-interval
       - vrf
   /routing/pimsm/interface:
+    fields:
     tags:
       - address
       - designated-router
@@ -6713,8 +6330,8 @@ ESP
       - priority
       - propogation-delay
   /routing/pimsm/interface-template:
+    fields:
     tags:
-      - disabled
       - hello-delay
       - hello-period
       - inactive
@@ -6727,6 +6344,7 @@ ESP
       - propagation-delay
       - source-addresses
   /routing/pimsm/neighbor:
+    fields:
     tags:
       - address
       - designated-router
@@ -6739,13 +6357,14 @@ ESP
       - propagation-delay
       - timeout
   /routing/pimsm/static-rp:
+    fields:
     tags:
       - address
-      - disabled
       - group
       - inactive
       - instance
   /routing/pimsm/uib-g:
+    fields:
     tags:
       - group
       - instance
@@ -6754,6 +6373,7 @@ ESP
       - rp-local
       - rpf
   /routing/pimsm/uib-sg:
+    fields:
     tags:
       - group
       - instance
@@ -6763,11 +6383,10 @@ ESP
       - source
       - spt-bit
   /routing/rip/instance:
+    fields:
     tags:
       - afi
-      - disabled
       - in-filter-chain
-      - name
       - originate-default
       - out-filter-chain
       - out-filter-select
@@ -6778,14 +6397,15 @@ ESP
       - update-interval
       - vrf
   /routing/rip/interface:
+    fields:
     tags:
       - address
       - bfd
       - instance
   /routing/rip/interface-template:
+    fields:
     tags:
       - cost
-      - disabled
       - instance
       - interfaces
       - key-chain
@@ -6796,14 +6416,15 @@ ESP
       - split-horizon
       - use-bfd
   /routing/rip/keys:
+    fields:
     tags:
       - chain
-      - disabled
       - key
       - key-id
       - valid-from
       - valid-till
   /routing/rip/neighbor:
+    fields:
     tags:
       - address
       - dynamic
@@ -6814,11 +6435,12 @@ ESP
       - packets-total
       - routes
   /routing/rip/static-neighbor:
+    fields:
     tags:
       - address
-      - disabled
       - instance
   /routing/route:
+    fields:
     tags:
       - active
       - afi
@@ -6844,7 +6466,6 @@ ESP
       - bgp.weight
       - blackhole
       - check-gateway
-      - comment
       - connect
       - contribution
       - debug.fwp-ptr
@@ -6858,7 +6479,6 @@ ESP
       - debug.merge.size
       - debug.route-ptr
       - dhcp
-      - disabled
       - distance
       - dst-address
       - ecmp
@@ -6906,10 +6526,9 @@ ESP
       - vpn
       - vrf-interface
   /routing/route/rule:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - inactive
       - interface
@@ -6918,10 +6537,9 @@ ESP
       - src-address
       - table
   /routing/rpki:
+    fields:
     tags:
       - address
-      - comment
-      - disabled
       - expire-interval
       - group
       - port
@@ -6930,6 +6548,7 @@ ESP
       - retry-interval
       - vrf
   /routing/rpki/session:
+    fields:
     tags:
       - address
       - expires
@@ -6940,10 +6559,9 @@ ESP
       - state
       - version
   /routing/rule:
+    fields:
     tags:
       - action
-      - comment
-      - disabled
       - dst-address
       - inactive
       - interface
@@ -6951,11 +6569,9 @@ ESP
       - routing-mark
       - src-address
       - table
-  /routing/settings:
-    tags:
   /routing/stats/memory:
+    fields:
     tags:
-      - name
       - object-size
       - objects
       - page-cell-count
@@ -6966,6 +6582,7 @@ ESP
       - unused-objects
       - used
   /routing/stats/origin:
+    fields:
     tags:
       - abandoned
       - attrs-merge
@@ -6974,7 +6591,6 @@ ESP
       - hold
       - in-policy
       - instance-id
-      - name
       - pid
       - publisher-idx
       - route-count
@@ -6986,6 +6602,7 @@ ESP
       - type
       - update.in-policy
   /routing/stats/pcap:
+    fields:
     tags:
       - bgp.notification.code
       - bgp.notification.subcode
@@ -7016,6 +6633,7 @@ ESP
       - src
       - timestamp
   /routing/stats/process:
+    fields:
     tags:
       - abandoned
       - cur-busy
@@ -7038,11 +6656,11 @@ ESP
       - tasks
       - vms
   /routing/stats/step:
+    fields:
     tags:
       - context
       - cur-time
       - max-time
-      - name
       - order
       - pid
       - running
@@ -7051,80 +6669,51 @@ ESP
       - state
       - targets
   /routing/table:
+    fields:
     tags:
-      - comment
-      - disabled
       - dynamic
       - fib
       - invalid
-      - name
       - used
-  /safe-mode:
-    tags:
   /snmp/community:
+    fields:
     tags:
       - addresses
       - authentication-password
       - authentication-protocol
-      - comment
       - default
-      - disabled
       - encryption-password
       - encryption-protocol
-      - name
       - read-access
       - security
       - write-access
-  /snmp:
-    tags:
   /special-login:
+    fields:
     tags:
       - channel
-      - disabled
       - port
       - user
   /system/backup/cloud:
+    fields:
     tags:
       - date
-      - name
       - ros-version
       - secret-download-key
       - size
       - status
-  /system/clock/manual:
-    tags:
-  /system/clock:
-    tags:
   /system/console:
+    fields:
     tags:
       - channel
       - default
-      - disabled
       - free
       - port
       - term
       - used
       - vcno
       - wedged
-  /system/console/screen:
-    tags:
-  /system/default-configuration/caps-mode-script:
-    tags:
-  /system/default-configuration/custom-script:
-    tags:
-  /system/default-configuration:
-    tags:
-  /system/default-configuration/script:
-    tags:
-  /system/device-mode:
-    tags:
-  /system/gps:
-    tags:
-  /system/hardware:
-    tags:
-  /system/health:
-    tags:
   /system/history:
+    fields:
     tags:
       - action
       - by
@@ -7136,24 +6725,18 @@ ESP
       - trace
       - undo
       - undoable
-  /system/identity:
-    tags:
   /system/leds:
+    fields:
     tags:
       - default
-      - disabled
       - interface
       - leds
       - modem-signal-threshold
       - type
-  /system/leds/settings:
-    tags:
-  /system/license:
-    tags:
   /system/logging/action:
+    fields:
     tags:
       - cef-event-delimiter
-      - comment
       - default
       - disk-file-count
       - disk-file-name
@@ -7163,7 +6746,6 @@ ESP
       - email-to
       - memory-lines
       - memory-stop-on-full
-      - name
       - remember
       - remote
       - remote-log-format
@@ -7175,69 +6757,60 @@ ESP
       - syslog-time-format
       - target
   /system/logging:
+    fields:
     tags:
       - action
       - default
-      - disabled
       - invalid
       - prefix
       - regex
       - topics
-  /system/note:
-    tags:
-  /system/ntp/client:
-    tags:
   /system/ntp/client/servers:
+    fields:
     tags:
       - address
       - auth-key
-      - comment
-      - disabled
       - dynamic
       - iburst
       - max-poll
       - min-poll
       - resolved-address
   /system/ntp/key:
+    fields:
     tags:
-      - comment
       - key-id
       - key-val
-  /system/ntp/server:
-    tags:
-  /system/package/local-update/mirror:
-    tags:
   /system/package/local-update:
+    fields:
     tags:
       - completed
       - download
-      - name
       - source
       - status
       - version
   /system/package/local-update/update-package-source:
+    fields:
     tags:
       - address
       - user
   /system/package:
+    fields:
     tags:
       - available
       - build-time
       - bundle
-      - disabled
-      - name
       - scheduled
       - size
       - version
-  /system/package/update:
-    tags:
   /system/resource/cpu:
+    fields:
     tags:
       - cpu
       - disk
       - irq
       - load
   /system/resource/irq:
+    fields:
     tags:
       - active-cpu
       - count
@@ -7246,11 +6819,8 @@ ESP
       - per-cpu-count
       - read-only
       - users
-  /system/resource/irq/rps:
-    tags:
-      - disabled
-      - name
   /system/resource/pci:
+    fields:
     tags:
       - category
       - device
@@ -7258,33 +6828,24 @@ ESP
       - io
       - irq
       - memory
-      - name
       - vendor
       - vendor-id
-  /system/resource:
-    tags:
   /system/resource/usb:
+    fields:
     tags:
       - device
       - device-id
       - inactive
-      - name
       - ports
       - serial-number
       - speed
       - usb-version
       - vendor
       - vendor-id
-  /system/resource/usb/settings:
-    tags:
-  /system/rtrace:
-    tags:
   /system/scheduler:
+    fields:
     tags:
-      - comment
-      - disabled
       - interval
-      - name
       - next-run
       - on-event
       - owner
@@ -7293,13 +6854,12 @@ ESP
       - start-date
       - start-time
   /system/script/environment:
+    fields:
     tags:
-      - comment
-      - name
       - value
   /system/script/job:
+    fields:
     tags:
-      - comment
       - owner
       - parent
       - policy
@@ -7308,28 +6868,25 @@ ESP
       - trace
       - type
   /system/script:
+    fields:
     tags:
-      - comment
       - dont-require-permissions
       - invalid
       - last-started
-      - name
       - owner
       - policy
       - run-count
       - source
   /system/ups:
+    fields:
     tags:
       - alarm-setting
       - check-capabilities
-      - comment
-      - disabled
       - invalid
       - load
       - manufacture-date
       - min-runtime
       - model
-      - name
       - nominal-battery-voltage
       - offline-after
       - offline-time
@@ -7337,24 +6894,21 @@ ESP
       - port
       - serial
       - version
-  /system/watchdog:
-    tags:
   /task:
+    fields:
     tags:
       - append
       - autosave
       - current
       - file-name
-      - name
       - save-interval
       - source
       - task-id
       - term-pid
       - terminated
       - user
-  /tool/bandwidth-server:
-    tags:
   /tool/bandwidth-server/session:
+    fields:
     tags:
       - client
       - direction
@@ -7374,14 +6928,13 @@ ESP
       - tx-total-average
       - user
   /tool/calea:
+    fields:
     tags:
       - access-session-id
       - action
       - bytes
       - case-id
       - case-name
-      - comment
-      - disabled
       - file-root
       - intercept-ip
       - intercept-port
@@ -7392,49 +6945,36 @@ ESP
       - pcap-file-stop-count
       - pcap-file-stop-interval
       - pcap-file-stop-size
-  /tool/e-mail:
-    tags:
   /tool/graphing/interface:
+    fields:
     tags:
       - allow-address
-      - comment
-      - disabled
       - interface
       - store-on-disk
-  /tool/graphing:
-    tags:
   /tool/graphing/queue:
+    fields:
     tags:
       - allow-address
       - allow-target
-      - comment
-      - disabled
       - simple-queue
       - store-on-disk
   /tool/graphing/resource:
+    fields:
     tags:
       - allow-address
-      - comment
-      - disabled
       - store-on-disk
-  /tool/mac-server/mac-winbox:
-    tags:
-  /tool/mac-server/ping:
-    tags:
-  /tool/mac-server:
-    tags:
   /tool/mac-server/sessions:
+    fields:
     tags:
       - interface
       - src-address
       - uptime
   /tool/netwatch:
+    fields:
     tags:
       - accept-icmp-time-exceeded
       - certificate
       - check-certificate
-      - comment
-      - disabled
       - dns-server
       - done-tests
       - down-script
@@ -7451,7 +6991,6 @@ ESP
       - loss-count
       - loss-percent
       - mail-servers
-      - name
       - name-servers
       - packet-count
       - packet-interval
@@ -7485,18 +7024,16 @@ ESP
       - type
       - up-script
   /tool/romon/port:
+    fields:
     tags:
-      - comment
       - cost
       - default
-      - disabled
       - dynamic
       - forbid
       - interface
       - secrets
-  /tool/romon:
-    tags:
   /tool/sms/inbox:
+    fields:
     tags:
       - message
       - pdu
@@ -7504,9 +7041,8 @@ ESP
       - source
       - timestamp
       - type
-  /tool/sms:
-    tags:
   /tool/sniffer/connection:
+    fields:
     tags:
       - active
       - bytes
@@ -7515,12 +7051,14 @@ ESP
       - resends
       - src-address
   /tool/sniffer/host:
+    fields:
     tags:
       - address
       - peak-rate
       - rate
       - total
   /tool/sniffer/packet:
+    fields:
     tags:
       - cpu
       - data
@@ -7543,9 +7081,8 @@ ESP
       - time
       - ttl
       - vlan
-  /tool/sniffer:
-    tags:
   /tool/sniffer/protocol:
+    fields:
     tags:
       - bytes
       - ip-protocol
@@ -7554,6 +7091,7 @@ ESP
       - protocol
       - share
   /tool/traffic-generator/packet-template:
+    fields:
     tags:
       - assumed-interface
       - assumed-ip-dscp
@@ -7588,7 +7126,6 @@ ESP
       - assumed-vlan-id
       - assumed-vlan-priority
       - assumed-vlan-protocol
-      - comment
       - compute-checksum-from-offset
       - data
       - data-byte
@@ -7612,7 +7149,6 @@ ESP
       - mac-dst
       - mac-protocol
       - mac-src
-      - name
       - port
       - random-byte-offsets-and-masks
       - random-ranges
@@ -7633,18 +7169,15 @@ ESP
       - vlan-priority
       - vlan-protocol
   /tool/traffic-generator/port:
+    fields:
     tags:
-      - disabled
       - dynamic
       - first-header
       - interface
       - invalid
-      - name
-  /tool/traffic-generator:
-    tags:
   /tool/traffic-generator/raw-packet-template:
+    fields:
     tags:
-      - comment
       - compute-checksum-from-offset
       - data
       - data-byte
@@ -7653,7 +7186,6 @@ ESP
       - header-length
       - ip-header-offset
       - ipv6-header-offset
-      - name
       - port
       - random-byte-offsets-and-masks
       - random-ranges
@@ -7662,12 +7194,14 @@ ESP
       - udp-compute-checksum
       - udp-header-offset
   /tool/traffic-generator/stats/latency-distribution:
+    fields:
     tags:
       - count
       - graph
       - latency
       - share
   /tool/traffic-generator/stats/port:
+    fields:
     tags:
       - jitter
       - lat-avg
@@ -7691,6 +7225,7 @@ ESP
       - tx-packet
       - tx-rate
   /tool/traffic-generator/stats/raw:
+    fields:
     tags:
       - id
       - jitter
@@ -7712,6 +7247,7 @@ ESP
       - tx-packet
       - tx-rate
   /tool/traffic-generator/stats/stream:
+    fields:
     tags:
       - id
       - jitter
@@ -7732,98 +7268,81 @@ ESP
       - tx-packet
       - tx-rate
   /tool/traffic-generator/stream:
+    fields:
     tags:
       - cpu-core
       - default-port
-      - disabled
       - id
       - invalid
       - mbps
-      - name
       - packet-count
       - packet-size
       - port
       - pps
       - tx-template
   /tool/traffic-monitor:
+    fields:
     tags:
-      - comment
-      - disabled
       - interface
       - invalid
-      - name
       - on-event
       - threshold
       - traffic
       - trigger
-  /tr069-client:
-    tags:
-  /user/aaa:
-    tags:
   /user/active:
+    fields:
     tags:
       - address
       - by-romon
       - by-romon
       - group
-      - name
       - radius
       - via
       - when
   /user/group:
+    fields:
     tags:
-      - comment
-      - name
       - policy
       - skin
   /user:
+    fields:
     tags:
       - address
-      - comment
-      - disabled
       - expired
       - group
       - inactivity-policy
       - inactivity-timeout
       - last-logged-in
-      - name
       - password
-  /user/settings:
-    tags:
   /user/ssh-keys:
+    fields:
     tags:
       - bits
-      - comment
       - key
       - key-owner
       - key-type
       - user
   /user/ssh-keys/private:
+    fields:
     tags:
       - bits
-      - comment
       - key-owner
       - key-type
       - user
-  /user-manager/advanced:
-    tags:
   /user-manager/attribute:
+    fields:
     tags:
       - default
       - default-name
-      - name
       - packet-types
       - standard-name
       - type-id
       - value-type
       - vendor-id
-  /user-manager/database:
-    tags:
   /user-manager/limitation:
+    fields:
     tags:
-      - comment
       - download-limit
-      - name
       - rate-limit-burst-rx
       - rate-limit-burst-threshold-rx
       - rate-limit-burst-threshold-tx
@@ -7841,6 +7360,7 @@ ESP
       - upload-limit
       - uptime-limit
   /user-manager/payment:
+    fields:
     tags:
       - currency
       - method
@@ -7851,34 +7371,30 @@ ESP
       - trans-status
       - user
       - user-message
-  /user-manager:
-    tags:
   /user-manager/profile:
+    fields:
     tags:
-      - comment
-      - name
       - name-for-users
       - override-shared-users
       - price
       - starts-when
       - validity
   /user-manager/profile-limitation:
+    fields:
     tags:
-      - comment
       - from-time
       - limitation
       - profile
       - till-time
       - weekdays
   /user-manager/router:
+    fields:
     tags:
       - address
       - coa-port
-      - comment
-      - disabled
-      - name
       - shared-secret
   /user-manager/session:
+    fields:
     tags:
       - acct-multi-session-id
       - acct-session-id
@@ -7898,26 +7414,24 @@ ESP
       - user
       - user-address
   /user-manager/user/group:
+    fields:
     tags:
       - attributes
-      - comment
       - default
       - default-name
       - inner-auths
-      - name
       - outer-auths
   /user-manager/user:
+    fields:
     tags:
       - attributes
       - caller-id
-      - comment
-      - disabled
       - group
-      - name
       - otp-secret
       - password
       - shared-users
   /user-manager/user-profile:
+    fields:
     tags:
       - end-time
       - profile
