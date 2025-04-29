@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mikrograf-conf
+data:
+  mikrograf.conf: |
+{{- range .Values.mikrotiks }}
+    [[inputs.exec]]
+      commands = ["/usr/local/bin/mikrograf"]
+      environment = ["MIKROGRAF_TARGET_HOSTS={{ default "https" .proto }}://{{ .username }}:{{ .password }}@{{ .host }}?modules={{ default "all"  (join "," .modules) }}&ignoreDisabled={{ default "true" .ignoreDisabled }}&ignoreCertificate={{ default "false" .ignoreCertificate }}{{- if .ignoreComments }}&ignoreComments={{ join "," .ignoreComments }}{{- end }}"]
+      data_format = "influx"
+{{- end }}
+{{- range .Values.influxOutput }}
+    [[outputs.influxdb]]
+      urls = [ "{{ .url }}" ]
+      database = "{{ .db }}"
+      skip_database_creation = true
+      exclude_retention_policy_tag = true
+      content_encoding = "gzip"
+      insecure_skip_verify = {{ .insecure_skip_verify }}
+{{- end }}

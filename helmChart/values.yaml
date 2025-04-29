@@ -1,0 +1,19 @@
+mikrotiks:
+  - host: 192.168.88.1
+    username: admin
+    password: admin
+    proto: https
+    modules:
+      - all
+    ignoreDisabled: true
+    ignoreCertificate: true
+    ignoreComments:
+      - verySecretShit
+influxOutput:
+  - url: http://192.168.88.2
+    username: admin
+    password: admin
+    db: mikrotik
+    insecure_skip_verify: true
+
+image: sreng1neer/mikrograf:0.1.1

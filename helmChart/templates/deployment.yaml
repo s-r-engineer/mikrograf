@@ -1,0 +1,41 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mikrograf
+  labels:
+    app: mikrograf
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mikrograf
+  template:
+    metadata:
+      annotations:
+        checksum/restartAt: "{{ now }}"
+      labels:
+        app: mikrograf
+    spec:
+      volumes:
+        - name: config
+          configMap:
+            name: mikrograf-conf
+      containers:
+        - name: mikrograf
+          image: {{ .Values.image }}
+          command:
+            - telegraf
+            - --config
+            - /config/mikrograf.conf
+          imagePullPolicy: IfNotPresent
+          resources:
+            limits:
+              cpu: 1000m
+              memory: 512Mi
+            requests:
+              cpu: 250m
+              memory: 64Mi
+          volumeMounts:
+            - name: config
+              mountPath: "/config"
+              readOnly: true
