@@ -4,24 +4,6 @@ common:
     - disabled
     - name
 modules:
-  /caps-man/access-list:
-    fields:
-    tags:
-      - action
-      - allow-signal-out-of-range
-      - ap-tx-limit
-      - client-to-client-forwarding
-      - client-tx-limit
-      - interface
-      - mac-address
-      - mac-address-mask
-      - private-passphrase
-      - radius-accounting
-      - signal-range
-      - ssid-regexp
-      - time
-      - vlan-id
-      - vlan-mode
   /caps-man/actual-interface-configuration:
     fields:
     tags:
@@ -80,7 +62,6 @@ modules:
       - security.encryption
       - security.group-encryption
       - security.group-key-update
-      - security.passphrase
       - security.tls-certificate
       - security.tls-mode
   /caps-man/channel:
@@ -151,7 +132,6 @@ modules:
       - security.encryption
       - security.group-encryption
       - security.group-key-update
-      - security.passphrase
       - security.tls-certificate
       - security.tls-mode
       - ssid
@@ -187,24 +167,6 @@ modules:
       - channel.secondary-frequency
       - channel.skip-dfs-channels
       - channel.tx-power
-      - configuration
-      - configuration.country
-      - configuration.disconnect-timeout
-      - configuration.distance
-      - configuration.frame-lifetime
-      - configuration.guard-interval
-      - configuration.hide-ssid
-      - configuration.hw-protection-mode
-      - configuration.hw-retries
-      - configuration.installation
-      - configuration.keepalive-frames
-      - configuration.load-balancing-group
-      - configuration.max-sta-count
-      - configuration.mode
-      - configuration.multicast-helper
-      - configuration.rx-chains
-      - configuration.ssid
-      - configuration.tx-chains
       - current-authorized-clients
       - current-basic-rate-set
       - current-channel
@@ -247,7 +209,6 @@ modules:
       - security.encryption
       - security.group-encryption
       - security.group-key-update
-      - security.passphrase
       - security.tls-certificate
       - security.tls-mode
   /caps-man/manager/interface:
@@ -290,19 +251,19 @@ modules:
       - vht-supported-mcs
   /caps-man/registration-table:
     fields:
-    tags:
-      - bytes
-      - eap-identity
-      - interface
-      - mac-address
-      - packets
-      - radio-name
       - rx-rate
       - rx-signal
-      - ssid
+      - bytes
+      - packets
       - tx-rate
       - tx-rate-set
       - tx-signal
+    tags:
+      - eap-identity
+      - interface
+      - mac-address
+      - radio-name
+      - ssid
       - uptime
       - vlan-id
   /caps-man/remote-cap:
@@ -326,7 +287,6 @@ modules:
       - encryption
       - group-encryption
       - group-key-update
-      - passphrase
       - tls-certificate
       - tls-mode
   /certificate/crl:
@@ -351,7 +311,6 @@ modules:
       - ca
       - ca-crl-host
       - ca-fingerprint
-      - challenge-password
       - common-name
       - country
       - crl
@@ -369,7 +328,6 @@ modules:
       - key-usage
       - locality
       - organization
-      - private-key
       - req-fingerprint
       - revoked
       - revoked
@@ -388,7 +346,6 @@ modules:
     tags:
       - expired
       - expires
-      - password
       - used
   /certificate/scep-server:
     fields:
@@ -403,7 +360,6 @@ modules:
     tags:
       - ca-fingerprint
       - ca-identity
-      - challenge-password
       - fingerprint-algorithm
       - on-smart-card
       - ra-path
@@ -589,13 +545,9 @@ modules:
       - nvme-tcp-export
       - nvme-tcp-host-name
       - nvme-tcp-name
-      - nvme-tcp-password
       - nvme-tcp-port
-      - nvme-tcp-secret
       - nvme-tcp-server-allow-host-name
-      - nvme-tcp-server-password
       - nvme-tcp-server-port
-      - nvme-tcp-server-secret
       - nvme-tcp-state
       - parent
       - partition
@@ -625,14 +577,12 @@ modules:
       - read-rate
       - read-time
       - sector-size
-      - self-encryption-password
       - serial
       - size
       - slot
       - slot-default
       - smb-address
       - smb-encryption
-      - smb-password
       - smb-share
       - smb-sharing
       - smb-sharing
@@ -640,7 +590,6 @@ modules:
       - smb-user
       - sshfs-address
       - sshfs-local-user
-      - sshfs-password
       - sshfs-path
       - sshfs-port
       - sshfs-state
@@ -1005,7 +954,6 @@ DHCP
       - invalid
       - local-path
       - mode
-      - password
       - remote-address
       - remote-path
       - status
@@ -1018,7 +966,6 @@ DHCP
       - current-remote-address
       - dont-fragment
       - dscp
-      - ipsec-secret
       - keepalive
       - local-address
       - mtu
@@ -1422,7 +1369,6 @@ DHCP
       - identity
       - inactive
       - interface
-      - password
       - status
   /interface/dot1x/server/active:
     fields:
@@ -1465,7 +1411,6 @@ DHCP
       - current-remote-address
       - dont-fragment
       - dscp
-      - ipsec-secret
       - keepalive
       - l2mtu
       - local-address
@@ -1487,7 +1432,6 @@ DHCP
       - clamp-tcp-mss
       - current-remote-address
       - dscp
-      - ipsec-secret
       - keepalive
       - l2mtu
       - local-address
@@ -1646,7 +1590,6 @@ DHCP
       - current-remote-address
       - dont-fragment
       - dscp
-      - ipsec-secret
       - keepalive
       - local-address
       - mtu
@@ -1659,7 +1602,6 @@ DHCP
       - clamp-tcp-mss
       - current-remote-address
       - dscp
-      - ipsec-secret
       - keepalive
       - local-address
       - mtu
@@ -1675,7 +1617,6 @@ DHCP
       - dont-fragment
       - dscp
       - dynamic
-      - ipsec-secret
       - keepalive
       - local-address
       - mtu
@@ -1688,7 +1629,6 @@ DHCP
       - clamp-tcp-mss
       - current-remote-address
       - dscp
-      - ipsec-secret
       - keepalive
       - local-address
       - mtu
@@ -1703,7 +1643,6 @@ DHCP
       - connect-to
       - default-route-distance
       - dial-on-demand
-      - ipsec-secret
       - keepalive-timeout
       - l2tp-proto-version
       - l2tpv3-circuit-id
@@ -1712,7 +1651,6 @@ DHCP
       - max-mru
       - max-mtu
       - mrru
-      - password
       - profile
       - random-source-port
       - running
@@ -1730,7 +1668,6 @@ DHCP
       - cookie-length
       - digest-hash
       - dynamic
-      - ipsec-secret
       - l2tp-proto-version
       - local-address
       - local-session-id
@@ -1785,7 +1722,6 @@ DHCP
       - passthrough-interface
       - passthrough-mac
       - passthrough-subnet-size
-      - password
       - use-network-apn
       - use-peer-dns
       - user
@@ -1906,7 +1842,6 @@ DHCP
       - mac-address
       - max-mtu
       - mode
-      - password
       - port
       - profile
       - protocol
@@ -1971,7 +1906,6 @@ DHCP
       - modem-init
       - mrru
       - null-modem
-      - password
       - phone
       - pin
       - port
@@ -2009,7 +1943,6 @@ DHCP
       - max-mru
       - max-mtu
       - mrru
-      - password
       - profile
       - running
       - service-name
@@ -2058,7 +1991,6 @@ DHCP
       - max-mru
       - max-mtu
       - mrru
-      - password
       - profile
       - running
       - use-peer-dns
@@ -2066,13 +1998,13 @@ DHCP
   /interface/pptp-server:
     fields:
       - uptime
+      - running
     tags:
       - client-address
       - dynamic
       - encoding
       - mru
       - mtu
-      - running
       - user
   /interface:
     fields:
@@ -2118,7 +2050,6 @@ DHCP
       - max-mru
       - max-mtu
       - mrru
-      - password
       - pfs
       - port
       - profile
@@ -2208,7 +2139,6 @@ DHCP
       - on-backup
       - on-fail
       - on-master
-      - password
       - preemption-mode
       - priority
       - remote-address
@@ -2264,8 +2194,7 @@ DHCP
       - calling-format
       - interim-update
       - mac-caching
-      - nas-identifier
-      - password-format
+      - nas-identifier-format
       - username-format
   /interface/wifi/access-list:
     fields:
@@ -2279,8 +2208,6 @@ DHCP
       - mac-address
       - mac-address-mask
       - match-count
-      - multi-passphrase-group
-      - passphrase
       - radius-accounting
       - signal-range
       - ssid-regexp
@@ -2315,7 +2242,6 @@ DHCP
       - aaa.interim-update
       - aaa.mac-caching
       - aaa.nas-identifier
-      - aaa.password-format
       - aaa.username-format
       - antenna-gain
       - beacon-interval
@@ -2382,7 +2308,6 @@ DHCP
       - security.eap-anonymous-identity
       - security.eap-certificate-mode
       - security.eap-methods
-      - security.eap-password
       - security.eap-tls-certificate
       - security.eap-username
       - security.encryption
@@ -2397,9 +2322,7 @@ DHCP
       - security.group-key-update
       - security.management-encryption
       - security.management-protection
-      - security.multi-passphrase-group
       - security.owe-transition-interface
-      - security.passphrase
       - security.sae-anti-clogging-threshold
       - security.sae-max-failure-rate
       - security.sae-pwe
@@ -2461,7 +2384,6 @@ DHCP
       - aaa.interim-update
       - aaa.mac-caching
       - aaa.nas-identifier
-      - aaa.password-format
       - aaa.username-format
       - arp
       - arp-timeout
@@ -2547,7 +2469,6 @@ DHCP
       - security.eap-anonymous-identity
       - security.eap-certificate-mode
       - security.eap-methods
-      - security.eap-password
       - security.eap-tls-certificate
       - security.eap-username
       - security.encryption
@@ -2562,9 +2483,7 @@ DHCP
       - security.group-key-update
       - security.management-encryption
       - security.management-protection
-      - security.multi-passphrase-group
       - security.owe-transition-interface
-      - security.passphrase
       - security.sae-anti-clogging-threshold
       - security.sae-max-failure-rate
       - security.sae-pwe
@@ -2634,14 +2553,12 @@ DHCP
       - tx-rate
       - uptime
       - vlan-id
-  /interface/wifi/security/multi-passphrase:
     fields:
     tags:
       - expired
       - expires
       - group
       - isolation
-      - passphrase
       - vlan-id
   /interface/wifi/security:
     fields:
@@ -2655,7 +2572,6 @@ DHCP
       - eap-anonymous-identity
       - eap-certificate-mode
       - eap-methods
-      - eap-password
       - eap-tls-certificate
       - eap-username
       - encryption
@@ -2670,9 +2586,7 @@ DHCP
       - group-key-update
       - management-encryption
       - management-protection
-      - multi-passphrase-group
       - owe-transition-interface
-      - passphrase
       - sae-anti-clogging-threshold
       - sae-max-failure-rate
       - sae-pwe
@@ -2718,8 +2632,6 @@ DHCP
       - mac-address
       - management-protection-key
       - private-algo
-      - private-key
-      - private-pre-shared-key
       - signal-range
       - time
       - vlan-id
@@ -2896,7 +2808,6 @@ basic-rates-a/g
       - nv2-qos
       - nv2-queue-count
       - nv2-security
-      - nv2-sync-secret
       - on-fail-retry-time
       - pci-info
       - preamble-mode
@@ -3016,7 +2927,6 @@ supported-rates-a/g
       - management-protection
       - management-protection-key
       - mode
-      - mschapv2-password
       - mschapv2-username
       - radius-called-format
       - radius-eap-accounting
@@ -3034,7 +2944,6 @@ supported-rates-a/g
       - static-key-2
       - static-key-3
       - static-sta-private-algo
-      - static-sta-private-key
       - static-transmit-key
       - supplicant-identity
       - tls-certificate
@@ -3304,7 +3213,6 @@ supported-rates-a/g
       - connected
       - keep-alive
       - parallel-scripts-limit
-      - password
       - port
       - ssl
       - username
@@ -4034,7 +3942,6 @@ HTTPS
       - install-hotspot-queue
       - login-by
       - mac-auth-mode
-      - mac-auth-password
       - nas-port-type
       - radius-accounting
       - radius-default-domain
@@ -4070,7 +3977,6 @@ HTTPS
       - mac-address
       - packets-in
       - packets-out
-      - password
       - profile
       - routes
       - server
@@ -4167,13 +4073,11 @@ HTTPS
       - mode-config
       - my-id
       - notrack-chain
-      - password
       - peer
       - policy-template-group
       - remote-certificate
       - remote-id
       - remote-key
-      - secret
       - username
   /ip/ipsec/installed-sa:
     fields:
@@ -4202,7 +4106,6 @@ ESP
     fields:
     tags:
       - key-size
-      - private-key
       - rsa
   /ip/ipsec/mode-config:
     fields:
@@ -4500,7 +4403,6 @@ ESP
     tags:
       - default
       - dynamic
-      - password
       - read-only
       - read-only
   /ip/socks/access:
@@ -4524,7 +4426,6 @@ ESP
     fields:
     tags:
       - only-one
-      - password
       - rate-limit
   /ip/tftp:
     fields:
@@ -5438,7 +5339,6 @@ ESP
     fields:
     tags:
       - address
-      - secret
   /ppp/profile:
     fields:
     tags:
@@ -5486,7 +5386,6 @@ ESP
       - limit-bytes-in
       - limit-bytes-out
       - local-address
-      - password
       - profile
       - remote-address
       - remote-ipv6-prefix
@@ -5629,7 +5528,6 @@ ESP
       - protocol
       - realm
       - require-message-auth
-      - secret
       - service
       - src-address
       - timeout
@@ -6410,7 +6308,6 @@ ESP
       - interfaces
       - key-chain
       - mode
-      - password
       - poison-reverse
       - source-addresses
       - split-horizon
@@ -6679,10 +6576,8 @@ ESP
     fields:
     tags:
       - addresses
-      - authentication-password
       - authentication-protocol
       - default
-      - encryption-password
       - encryption-protocol
       - read-access
       - security
@@ -6697,8 +6592,7 @@ ESP
     fields:
     tags:
       - date
-      - ros-version
-      - secret-download-key
+      - ros-version-download-key
       - size
       - status
   /system/console:
@@ -7030,8 +6924,7 @@ ESP
       - default
       - dynamic
       - forbid
-      - interface
-      - secrets
+      - interfaces
   /tool/sms/inbox:
     fields:
     tags:
@@ -7313,7 +7206,6 @@ ESP
       - inactivity-policy
       - inactivity-timeout
       - last-logged-in
-      - password
   /user/ssh-keys:
     fields:
     tags:
@@ -7392,7 +7284,6 @@ ESP
     tags:
       - address
       - coa-port
-      - shared-secret
   /user-manager/session:
     fields:
     tags:
@@ -7427,8 +7318,6 @@ ESP
       - attributes
       - caller-id
       - group
-      - otp-secret
-      - password
       - shared-users
   /user-manager/user-profile:
     fields:
